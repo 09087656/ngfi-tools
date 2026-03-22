@@ -2,22 +2,22 @@
 
 ## 1️⃣ MULTI-CHANNEL OUTREACH - NGFI (PRIMARY TASK)
 
-**Fréquence:** Quotidienne (Sub-agent autonome)
+**Fréquence:** Quotidienne (Sub-agent autonome) — PRODUCTION STARTS MONDAY 24 MARCH
 **Type:** Cold email warm-up (3 semaines)
 **Manager:** NGFI Cold Email Manager (sub-agent autonome)
 
 ### Phase Actuelle:
-- **Week 1 (March 22-28):** Soft test 10-15 emails → Learn best template
-- **Week 2 (March 29-April 4):** Scale 30-50 emails → Optimize by sector  
-- **Week 3 (April 5-11):** Full velocity 100+ emails → Maximize leads
-- **Week 4 (April 12):** Final analysis → Report results
+- **Week 1 (March 24-30):** Soft test 3-5 emails/day → Learn best template
+- **Week 2 (March 31-April 6):** Scale 10-15 emails/day → Optimize by sector  
+- **Week 3 (April 7-13):** Full velocity 20-25 emails/day → Maximize leads
+- **Final:** Analysis + pivot based on engagement
 
-### Actions du Sub-Agent:
-1. Load NGFI_LEADS_DATABASE.json daily
-2. Send personalized emails via idirakriche@getngfi.com (space 30min-2hrs apart)
+### Actions du Sub-Agent (Daily):
+1. Load NGFI_LEADS_DATABASE.json
+2. Send personalized emails via idirakriche@getngfi.com (spacing 45min-2hrs apart)
 3. Track opens, replies, bounces
 4. Log all attempts in database
-5. Generate daily standup (18:00 GMT+1)
+5. Generate daily standup (13:00 GMT+1) — UPDATED TIME
 6. Weekly analysis + adjustments
 7. Follow-up sequences (Day 5, Day 10)
 
@@ -34,11 +34,11 @@
 - Email D: Teaser ("Ça change 100% la façon de faire")
 
 ### Statuts de notification:
-- ✅ **Réponse positive** → NOTIFIER IMMÉDIATEMENT (priorité haute)
-- ✅ **Demo booked** → NOTIFIER IMMÉDIATEMENT (priorité critique)
-- ✅ **Daily standup** → Report 18:00 GMT+1 (routine)
+- 🔴 **Demo booked** → NOTIFIER IMMÉDIATEMENT (priorité CRITIQUE)
+- 🟠 **Réponse positive** → NOTIFIER IMMÉDIATEMENT (priorité haute)
+- 🟡 **Daily standup** → Report 13:00 GMT+1 (routine)
 - ⚠️ **Issues** → Bounce >5%, Response <3% → Action taken
-- ⚠️ **Weekly review** → Analysis + next week plan
+- 🟢 **No activity** → HEARTBEAT_OK (silent/routine)
 
 ### Notes:
 - Sub-agent est AUTONOME (décisions propres)
@@ -50,14 +50,14 @@
 
 ## 1b️⃣ MICRO-TOOLS FACTORY (LINKEDIN LEAD MAGNET)
 
-**Fréquence:** Quotidienne (Sub-agent autonome) — Débute lundi 24 mars
+**Fréquence:** Quotidienne (Sub-agent autonome) — PRODUCTION STARTS MONDAY 24 MARCH
 **Type:** LinkedIn lead magnet (free tools to convert on LinkedIn)
 **Manager:** NGFI Tools Factory (sub-agent autonome)
 
 ### Phase Actuelle:
-- **Queue:** 10 micro-tools (Lundi 24 - Mardi 2 avril)
-- **Daily at 09:00 AM:** Generate tool + push GitHub
-- **Daily at 13:00 PM:** Deploy verification + LinkedIn post ready + daily standup
+- **Queue:** 10 micro-tools (Monday 24 - Tuesday 2 April — 10 consecutive days)
+- **Daily at 09:00 AM:** Generate tool + push GitHub → Vercel auto-deploys
+- **Daily at 13:00 PM:** Deploy verification + LinkedIn post ready + X post ready + daily standup
 - **Strategy:** Post free tool on LinkedIn → Users try tool → Convert to NGFI
 
 ### Actions du Sub-Agent (Daily):
@@ -88,15 +88,18 @@
 10. Simulateur impact congés sur CA
 
 ### Statuts de notification:
-- ✅ **Tool deployed + posts generated** → Daily standup 13:00 GMT+1
-- ⚠️ **Deploy failed** → ALERT IMMÉDIAT
-- ✅ **Lead emails captured** → Include in daily standup
+- 🟢 **Tool deployed + posts generated** → Daily standup 13:00 GMT+1 (routine)
+- 🔴 **Deploy failed** → ALERT IMMÉDIAT (critical)
+- 🟡 **Vercel error** → Rollback + redeploy (auto-handled)
 
 ### Notes:
-- Sub-agent AUTONOME (decisions propres)
-- Starts: **Lundi 24 mars** (outil #1: Vérificateur facture)
-- Posts: LinkedIn + X (copier/coller ready)
-- Leads: Stockés Google Sheets (leads-outils)
+- Sub-agent AUTONOME (decisions + error handling propres)
+- **PRODUCTION START:** Monday 24 March, 09:00 AM
+- **Tool #1:** Vérificateur Conformité Facture (already tested ✅)
+- **Tools #2-10:** Queue ready in NGFI_TOOLS_QUEUE.json
+- **Posts:** LinkedIn + X (100% copier/coller ready)
+- **Deploy:** GitHub push → Vercel auto-deploy (no manual intervention)
+- **Leads capture:** Optional (webhook if configured)
 
 ---
 
