@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>📋 Vérificateur Conformité Facture - NGFI</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+        .container {
+            background: white;
+            border-radius: 16px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            max-width: 600px;
+            width: 100%;
+            padding: 40px;
+        }
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .emoji {
+            font-size: 48px;
+            margin-bottom: 10px;
+        }
+        h1 {
+            font-size: 28px;
+            font-weight: 700;
+            color: #1a202c;
+            margin-bottom: 10px;
+        }
+        .subtitle {
+            color: #718096;
+            font-size: 14px;
+        }
+        .email-form {
+            margin-bottom: 30px;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        label {
+            display: block;
+            font-size: 12px;
+            font-weight: 600;
+            color: #2d3748;
+            margin-bottom: 8px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        input[type="email"] {
+            width: 100%;
+            padding: 12px;
+            border: 2px solid #e2e8f0;
+            border-radius: 8px;
+            font-size: 14px;
+            transition: all 0.3s;
+        }
+        input[type="email"]:focus {
+            outline: none;
+            border-color: #667eea;
+            box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+        }
+        .btn-submit {
+            width: 100%;
+            padding: 12px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        .btn-submit:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(102, 126, 234, 0.3);
+        }
+        .hidden-content {
+            display: none;
+        }
+        .visible {
+            display: block;
+        }
+        .checklist {
+            margin: 30px 0;
+        }
+        .checkbox-item {
+            display: flex;
+            align-items: flex-start;
+            padding: 12px;
+            margin-bottom: 10px;
+            border: 2px solid #e2e8f0;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+        .checkbox-item:hover {
+            background-color: #f7fafc;
+            border-color: #cbd5e0;
+        }
+        .checkbox-item input[type="checkbox"] {
+            margin-right: 12px;
+            margin-top: 3px;
+            cursor: pointer;
+            width: 18px;
+            height: 18px;
+        }
+        .checkbox-label {
+            flex: 1;
+            font-size: 14px;
+            color: #2d3748;
+            cursor: pointer;
+        }
+        .score-display {
+            text-align: center;
+            margin: 30px 0;
+            padding: 20px;
+            background: #f7fafc;
+            border-radius: 12px;
+        }
+        .score-number {
+            font-size: 48px;
+            font-weight: 700;
+            margin: 10px 0;
+        }
+        .verdict {
+            font-size: 16px;
+            font-weight: 600;
+            margin-top: 10px;
+            padding: 10px;
+            border-radius: 8px;
+        }
+        .verdict-invalid {
+            background-color: #fed7d7;
+            color: #c53030;
+        }
+        .verdict-poor {
+            background-color: #feebc8;
+            color: #c05621;
+        }
+        .verdict-warning {
+            background-color: #fefcbf;
+            color: #7c2d12;
+        }
+        .verdict-good {
+            background-color: #c6f6d5;
+            color: #22543d;
+        }
+        .verdict-perfect {
+            background-color: #bee3f8;
+            color: #2c5282;
+        }
+        .ngfi-cta {
+            margin-top: 30px;
+            padding: 20px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border-radius: 12px;
+            color: white;
+            text-align: center;
+        }
+        .ngfi-cta p {
+            margin-bottom: 15px;
+            font-size: 14px;
+        }
+        .btn-ngfi {
+            display: inline-block;
+            padding: 12px 30px;
+            background: white;
+            color: #667eea;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 600;
+            transition: all 0.3s;
+        }
+        .btn-ngfi:hover {
+            transform: scale(1.05);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+        .footer {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 12px;
+            color: #a0aec0;
+        }
+        .footer a {
+            color: #667eea;
+            text-decoration: none;
+        }
+        .footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <div class="header">
+            <div class="emoji">📋</div>
+            <h1>Vérificateur Conformité Facture</h1>
+            <p class="subtitle">Checklist URSSAF - 15 critères légaux</p>
+        </div>
+
+        <!-- Email Form -->
+        <form id="emailForm" class="email-form">
+            <div class="form-group">
+                <label for="email">Ton adresse email</label>
+                <input type="email" id="email" name="email" placeholder="vous@example.com" required>
+            </div>
+            <button type="submit" class="btn-submit">Accéder au vérificateur</button>
+        </form>
+
+        <!-- Tool Content (Hidden until email submitted) -->
+        <div id="toolContent" class="hidden-content">
+            <!-- Score Display -->
+            <div class="score-display">
+                <p style="color: #718096;">Votre score de conformité</p>
+                <div class="score-number" id="scoreNumber">0</div>
+                <p style="color: #718096; font-size: 14px;">/ 15 critères</p>
+                <div class="verdict" id="verdict" style="display:none;"></div>
+            </div>
+
+            <!-- Checklist -->
+            <div class="checklist">
+                <div class="checkbox-item">
+                    <input type="checkbox" id="criterion1" class="criterion">
+                    <label for="criterion1" class="checkbox-label">1. Numéro de facture unique et séquentiel</label>
+                </div>
+                <div class="checkbox-item">
+                    <input type="checkbox" id="criterion2" class="criterion">
+                    <label for="criterion2" class="checkbox-label">2. Date de facture présente</label>
+                </div>
+                <div class="checkbox-item">
+                    <input type="checkbox" id="criterion3" class="criterion">
+                    <label for="criterion3" class="checkbox-label">3. Date d'exigibilité de la facture</label>
+                </div>
+                <div class="checkbox-item">
+                    <input type="checkbox" id="criterion4" class="criterion">
+                    <label for="criterion4" class="checkbox-label">4. Identité complète du vendeur (nom, adresse)</label>
+                </div>
+                <div class="checkbox-item">
+                    <input type="checkbox" id="criterion5" class="criterion">
+                    <label for="criterion5" class="checkbox-label">5. Identité complète du client (nom, adresse)</label>
+                </div>
+                <div class="checkbox-item">
+                    <input type="checkbox" id="criterion6" class="criterion">
+                    <label for="criterion6" class="checkbox-label">6. Description détaillée des prestations/produits</label>
+                </div>
+                <div class="checkbox-item">
+                    <input type="checkbox" id="criterion7" class="criterion">
+                    <label for="criterion7" class="checkbox-label">7. Montant HT (Hors Taxe) clairement indiqué</label>
+                </div>
+                <div class="checkbox-item">
+                    <input type="checkbox" id="criterion8" class="criterion">
+                    <label for="criterion8" class="checkbox-label">8. Taux de TVA applicable précisé</label>
+                </div>
+                <div class="checkbox-item">
+                    <input type="checkbox" id="criterion9" class="criterion">
+                    <label for="criterion9" class="checkbox-label">9. Montant de TVA calculé correctement</label>
+                </div>
+                <div class="checkbox-item">
+                    <input type="checkbox" id="criterion10" class="criterion">
+                    <label for="criterion10" class="checkbox-label">10. Montant TTC (Toutes Taxes Comprises)</label>
+                </div>
+                <div class="checkbox-item">
+                    <input type="checkbox" id="criterion11" class="criterion">
+                    <label for="criterion11" class="checkbox-label">11. Conditions de paiement explicites</label>
+                </div>
+                <div class="checkbox-item">
+                    <input type="checkbox" id="criterion12" class="criterion">
+                    <label for="criterion12" class="checkbox-label">12. Modalités d'escompte si applicable</label>
+                </div>
+                <div class="checkbox-item">
+                    <input type="checkbox" id="criterion13" class="criterion">
+                    <label for="criterion13" class="checkbox-label">13. SIRET/SIREN du prestataire</label>
+                </div>
+                <div class="checkbox-item">
+                    <input type="checkbox" id="criterion14" class="criterion">
+                    <label for="criterion14" class="checkbox-label">14. Mention explicite "Facture"</label>
+                </div>
+                <div class="checkbox-item">
+                    <input type="checkbox" id="criterion15" class="criterion">
+                    <label for="criterion15" class="checkbox-label">15. Mentions légales de conformité (RGPD)</label>
+                </div>
+            </div>
+
+            <!-- NGFI CTA -->
+            <div class="ngfi-cta">
+                <p>🚀 <strong>NGFI</strong> génère et valide tout ça automatiquement</p>
+                <a href="https://ngfi.fr/demo" class="btn-ngfi">Essaie NGFI gratuitement</a>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <div class="footer">
+            <p>Outil gratuit par <a href="https://ngfi.fr">NGFI</a> — Automatisation multi-canaux</p>
+        </div>
+    </div>
+
+    <script>
+        // Email form submission
+        document.getElementById('emailForm').addEventListener('submit', async (e) => {
+            e.preventDefault();
+            const email = document.getElementById('email').value;
+
+            // Hide email form
+            document.getElementById('emailForm').style.display = 'none';
+            
+            // Show tool content
+            document.getElementById('toolContent').classList.remove('hidden-content');
+            document.getElementById('toolContent').classList.add('visible');
+
+            // Log email capture (webhook would go here)
+            console.log('Email captured:', email);
+            console.log('Tool:', 'Vérificateur Conformité Facture');
+            console.log('Timestamp:', new Date().toISOString());
+
+            // Simulate webhook to Google Sheets or Snov.io
+            try {
+                // This would be replaced with actual webhook URL
+                // await fetch('WEBHOOK_URL', {
+                //     method: 'POST',
+                //     headers: { 'Content-Type': 'application/json' },
+                //     body: JSON.stringify({
+                //         email: email,
+                //         tool: 'Vérificateur Conformité Facture',
+                //         timestamp: new Date().toISOString()
+                //     })
+                // });
+            } catch (error) {
+                console.error('Webhook error:', error);
+            }
+        });
+
+        // Checklist scoring
+        const checkboxes = document.querySelectorAll('.criterion');
+        const scoreNumber = document.getElementById('scoreNumber');
+        const verdict = document.getElementById('verdict');
+
+        function updateScore() {
+            const checked = document.querySelectorAll('.criterion:checked').length;
+            scoreNumber.textContent = checked;
+
+            // Show verdict
+            verdict.style.display = 'block';
+            if (checked <= 4) {
+                verdict.className = 'verdict verdict-invalid';
+                verdict.textContent = '🚨 Facture invalide - Risque rejet URSSAF';
+            } else if (checked <= 9) {
+                verdict.className = 'verdict verdict-poor';
+                verdict.textContent = '❌ Non-conforme - Corrections urgentes';
+            } else if (checked <= 12) {
+                verdict.className = 'verdict verdict-warning';
+                verdict.textContent = '⚠️ Risques détectés - À revoir';
+            } else if (checked === 14) {
+                verdict.className = 'verdict verdict-good';
+                verdict.textContent = '✅ Très bonne conformité - Quasi parfait';
+            } else if (checked === 15) {
+                verdict.className = 'verdict verdict-perfect';
+                verdict.textContent = '🎉 Parfaitement conforme - Excellente!';
+            }
+        }
+
+        checkboxes.forEach(checkbox => {
+            checkbox.addEventListener('change', updateScore);
+        });
+    </script>
+</body>
+</html>
