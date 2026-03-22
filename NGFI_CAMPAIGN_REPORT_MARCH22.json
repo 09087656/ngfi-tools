@@ -1,0 +1,74 @@
+{
+  "campaign_date": "2026-03-22",
+  "campaign_name": "NGFI Cold Email - Sunday March 22 (Round 2 / Follow-up)",
+  "campaign_type": "follow_up",
+  "total_emails": 5,
+  "timing": "45min spacing (9:00 AM - 12:00 PM)",
+  "templates_used": {
+    "A (Hook)": 3,
+    "B (Pain-point)": 2
+  },
+  "emails": [
+    {
+      "prospect_id": "dev_florent_p_001",
+      "prospect_name": "Florent Parcevaux",
+      "email": "florent@malt.fr",
+      "sector": "Developer WordPress / WooCommerce",
+      "template": "A",
+      "subject": "Salut Florent - Retour sur NGFI (2\u00e8me contact)",
+      "scheduled_time": "2026-03-22T09:00:00",
+      "status": "scheduled",
+      "body_preview": "Salut Florent,\n\nJe reviens vers toi - je ne suis pas certain que mon premier message t'ai parl\u00e9.\n\nL'..."
+    },
+    {
+      "prospect_id": "dev_jeremy_m_001",
+      "prospect_name": "J\u00e9r\u00e9my Mouzin",
+      "email": "jeremy@mouzin-dev.fr",
+      "sector": "JavaScript Developer",
+      "template": "B",
+      "subject": "J\u00e9r\u00e9my - Quick follow-up sur javascript developer",
+      "scheduled_time": "2026-03-22T09:45:00",
+      "status": "scheduled",
+      "body_preview": "Hey J\u00e9r\u00e9my,\n\nDernier message sur NGFI, je te promets :)\n\nSi tu penses toujours qu'avoir **10h de plu..."
+    },
+    {
+      "prospect_id": "design_guillaume_schott_001",
+      "prospect_name": "Guillaume Schott",
+      "email": "guillaume@schott-design.fr",
+      "sector": "UX/UI Designer",
+      "template": "A",
+      "subject": "Salut Guillaume - Retour sur NGFI (2\u00e8me contact)",
+      "scheduled_time": "2026-03-22T10:30:00",
+      "status": "scheduled",
+      "body_preview": "Salut Guillaume,\n\nJe reviens vers toi - je ne suis pas certain que mon premier message t'ai parl\u00e9.\n\n..."
+    },
+    {
+      "prospect_id": "writer_arnaud_m_001",
+      "prospect_name": "Arnaud Masson",
+      "email": "arnaud@masson-copywriting.fr",
+      "sector": "Concepteur-R\u00e9dacteur / Copywriter",
+      "template": "B",
+      "subject": "Arnaud - Quick follow-up sur concepteur-r\u00e9dacteur / copywriter",
+      "scheduled_time": "2026-03-22T11:15:00",
+      "status": "scheduled",
+      "body_preview": "Hey Arnaud,\n\nDernier message sur NGFI, je te promets :)\n\nSi tu penses toujours qu'avoir **10h de plu..."
+    },
+    {
+      "prospect_id": "writer_stephen_001",
+      "prospect_name": "St\u00e9phen Urani",
+      "email": "stephen@malt.fr",
+      "sector": "Copywriter / R\u00e9dacteur Web",
+      "template": "A",
+      "subject": "Salut St\u00e9phen - Retour sur NGFI (2\u00e8me contact)",
+      "scheduled_time": "2026-03-22T12:00:00",
+      "status": "scheduled",
+      "body_preview": "Salut St\u00e9phen,\n\nJe reviens vers toi - je ne suis pas certain que mon premier message t'ai parl\u00e9.\n\nL'..."
+    }
+  ],
+  "status": "READY_TO_SEND",
+  "timestamps": {
+    "generated": "2026-03-22T00:45:38.781771",
+    "first_send": "2026-03-22T09:00:00",
+    "last_send": "2026-03-22T12:00:00"
+  }
+}

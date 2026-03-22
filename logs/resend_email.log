@@ -1,0 +1,439 @@
+2026-03-14 05:42:46,283 - INFO - ✅ Resend Manager initialized
+2026-03-14 05:42:46,283 - INFO -    From: idirakriche9@gmail.com
+2026-03-14 05:42:46,283 - INFO -    API Key: re_Bo8g2f47_7KBim8rM...
+2026-03-14 05:42:46,283 - INFO - ============================================================
+2026-03-14 05:42:46,283 - INFO - Starting NGFI Email Wave (Resend)
+2026-03-14 05:42:46,283 - INFO - ============================================================
+2026-03-14 05:42:46,285 - INFO - Sending 8 emails...
+2026-03-14 05:42:46,562 - ERROR - ❌ Failed to send to contact@developpeur-freelance.io: {"statusCode":403,"message":"The gmail.com domain is not verified. Please, add and verify your domain on https://resend.com/domains","name":"validation_error"}
+2026-03-14 05:42:46,792 - ERROR - ❌ Failed to send to jb@luzy.fr: {"statusCode":403,"message":"The gmail.com domain is not verified. Please, add and verify your domain on https://resend.com/domains","name":"validation_error"}
+2026-03-14 05:42:46,998 - ERROR - ❌ Failed to send to contact@paulineosmont.com: {"statusCode":429,"name":"rate_limit_exceeded","message":"Too many requests. You can only make 2 requests per second. See rate limit response headers for more information. Or contact support to increase rate limit."}
+2026-03-14 05:42:47,224 - ERROR - ❌ Failed to send to contact@solennlegoff.fr: {"statusCode":429,"name":"rate_limit_exceeded","message":"Too many requests. You can only make 2 requests per second. See rate limit response headers for more information. Or contact support to increase rate limit."}
+2026-03-14 05:42:47,454 - ERROR - ❌ Failed to send to hello@elisebasset.com: {"statusCode":429,"name":"rate_limit_exceeded","message":"Too many requests. You can only make 2 requests per second. See rate limit response headers for more information. Or contact support to increase rate limit."}
+2026-03-14 05:42:47,719 - ERROR - ❌ Failed to send to contact@raphaeltuil.fr: {"statusCode":403,"message":"The gmail.com domain is not verified. Please, add and verify your domain on https://resend.com/domains","name":"validation_error"}
+2026-03-14 05:42:47,972 - ERROR - ❌ Failed to send to contact@eguiset-traduction.fr: {"statusCode":403,"message":"The gmail.com domain is not verified. Please, add and verify your domain on https://resend.com/domains","name":"validation_error"}
+2026-03-14 05:42:48,222 - ERROR - ❌ Failed to send to contact@clementarzuman.com: {"statusCode":429,"name":"rate_limit_exceeded","message":"Too many requests. You can only make 2 requests per second. See rate limit response headers for more information. Or contact support to increase rate limit."}
+2026-03-14 05:42:48,224 - INFO - ✅ Batch complete: 0/8 sent
+2026-03-14 05:42:48,225 - INFO - ⚠️ No emails sent this wave
+2026-03-14 05:47:24,905 - INFO - ✅ Resend Manager initialized
+2026-03-14 05:47:24,906 - INFO -    From: onboarding@resend.dev
+2026-03-14 05:47:24,906 - INFO -    API Key: re_Bo8g2f47_7KBim8rM...
+2026-03-14 05:47:24,906 - INFO - ============================================================
+2026-03-14 05:47:24,906 - INFO - 🧪 TEST MODE: NGFI Email Wave (Resend)
+2026-03-14 05:47:24,906 - INFO - ============================================================
+2026-03-14 05:47:24,906 - INFO - ⚠️ TEST MODE: Envoi vers email de test
+2026-03-14 05:47:24,906 - INFO - 🧪 TEST MODE: Sending 100 test emails to onboarding@resend.dev...
+2026-03-14 05:47:24,906 - INFO - 📧 TEST MODE: Ludovic Frank → idirakriche9@gmail.com
+2026-03-14 05:47:25,182 - INFO - ✅ Email sent to idirakriche9@gmail.com (Ludovic Frank)
+2026-03-14 05:47:25,185 - INFO - 📧 TEST MODE: Pierre Viéville → idirakriche9@gmail.com
+2026-03-14 05:47:25,398 - INFO - ✅ Email sent to idirakriche9@gmail.com (Pierre Viéville)
+2026-03-14 05:47:26,003 - INFO - 📧 TEST MODE: Mathieu Crevoulin → idirakriche9@gmail.com
+2026-03-14 05:47:26,239 - INFO - ✅ Email sent to idirakriche9@gmail.com (Mathieu Crevoulin)
+2026-03-14 05:47:26,240 - INFO - 📧 TEST MODE: Jean-Baptiste Luzy → idirakriche9@gmail.com
+2026-03-14 05:47:26,473 - INFO - ✅ Email sent to idirakriche9@gmail.com (Jean-Baptiste Luzy)
+2026-03-14 05:47:27,075 - INFO - 📧 TEST MODE: Thomas Dupont → idirakriche9@gmail.com
+2026-03-14 05:47:27,303 - INFO - ✅ Email sent to idirakriche9@gmail.com (Thomas Dupont)
+2026-03-14 05:47:27,304 - INFO - 📧 TEST MODE: Alexandre Martin → idirakriche9@gmail.com
+2026-03-14 05:47:27,525 - INFO - ✅ Email sent to idirakriche9@gmail.com (Alexandre Martin)
+2026-03-14 05:47:28,128 - INFO - 📧 TEST MODE: Julien Rousseau → idirakriche9@gmail.com
+2026-03-14 05:47:28,362 - INFO - ✅ Email sent to idirakriche9@gmail.com (Julien Rousseau)
+2026-03-14 05:47:28,362 - INFO - 📧 TEST MODE: Baptiste Leclerc → idirakriche9@gmail.com
+2026-03-14 05:47:28,817 - INFO - ✅ Email sent to idirakriche9@gmail.com (Baptiste Leclerc)
+2026-03-14 05:47:29,420 - INFO - 📧 TEST MODE: Victor Blanchard → idirakriche9@gmail.com
+2026-03-14 05:47:29,672 - INFO - ✅ Email sent to idirakriche9@gmail.com (Victor Blanchard)
+2026-03-14 05:47:29,673 - INFO - 📧 TEST MODE: Olivier Mercier → idirakriche9@gmail.com
+2026-03-14 05:47:29,887 - INFO - ✅ Email sent to idirakriche9@gmail.com (Olivier Mercier)
+2026-03-14 05:47:30,490 - INFO - 📧 TEST MODE: David Fontaine → idirakriche9@gmail.com
+2026-03-14 05:47:30,738 - INFO - ✅ Email sent to idirakriche9@gmail.com (David Fontaine)
+2026-03-14 05:47:30,739 - INFO - 📧 TEST MODE: Maxime Bernard → idirakriche9@gmail.com
+2026-03-14 05:47:30,974 - INFO - ✅ Email sent to idirakriche9@gmail.com (Maxime Bernard)
+2026-03-14 05:47:31,577 - INFO - 📧 TEST MODE: Christophe Girard → idirakriche9@gmail.com
+2026-03-14 05:47:31,787 - INFO - ✅ Email sent to idirakriche9@gmail.com (Christophe Girard)
+2026-03-14 05:47:31,790 - INFO - 📧 TEST MODE: Samuel Petit → idirakriche9@gmail.com
+2026-03-14 05:47:32,025 - INFO - ✅ Email sent to idirakriche9@gmail.com (Samuel Petit)
+2026-03-14 05:47:32,628 - INFO - 📧 TEST MODE: Franck Lefevre → idirakriche9@gmail.com
+2026-03-14 05:47:32,858 - INFO - ✅ Email sent to idirakriche9@gmail.com (Franck Lefevre)
+2026-03-14 05:47:32,859 - INFO - 📧 TEST MODE: Pauline Osmont → idirakriche9@gmail.com
+2026-03-14 05:47:33,068 - INFO - ✅ Email sent to idirakriche9@gmail.com (Pauline Osmont)
+2026-03-14 05:47:33,672 - INFO - 📧 TEST MODE: Rémi Dudragne → idirakriche9@gmail.com
+2026-03-14 05:47:33,951 - INFO - ✅ Email sent to idirakriche9@gmail.com (Rémi Dudragne)
+2026-03-14 05:47:33,954 - INFO - 📧 TEST MODE: Fanny Koch → idirakriche9@gmail.com
+2026-03-14 05:47:34,194 - INFO - ✅ Email sent to idirakriche9@gmail.com (Fanny Koch)
+2026-03-14 05:47:34,797 - INFO - 📧 TEST MODE: Julien Coudert → idirakriche9@gmail.com
+2026-03-14 05:47:35,055 - INFO - ✅ Email sent to idirakriche9@gmail.com (Julien Coudert)
+2026-03-14 05:47:35,058 - INFO - 📧 TEST MODE: Octav Design → idirakriche9@gmail.com
+2026-03-14 05:47:35,303 - INFO - ✅ Email sent to idirakriche9@gmail.com (Octav Design)
+2026-03-14 05:47:35,904 - INFO - 📧 TEST MODE: Morgane Billoud → idirakriche9@gmail.com
+2026-03-14 05:47:36,134 - INFO - ✅ Email sent to idirakriche9@gmail.com (Morgane Billoud)
+2026-03-14 05:47:36,137 - INFO - 📧 TEST MODE: Stéphanie Laroche → idirakriche9@gmail.com
+2026-03-14 05:47:36,380 - INFO - ✅ Email sent to idirakriche9@gmail.com (Stéphanie Laroche)
+2026-03-14 05:47:36,983 - INFO - 📧 TEST MODE: Laurent Michel → idirakriche9@gmail.com
+2026-03-14 05:47:37,232 - INFO - ✅ Email sent to idirakriche9@gmail.com (Laurent Michel)
+2026-03-14 05:47:37,233 - INFO - 📧 TEST MODE: Céline Dubois → idirakriche9@gmail.com
+2026-03-14 05:47:37,474 - INFO - ✅ Email sent to idirakriche9@gmail.com (Céline Dubois)
+2026-03-14 05:47:38,078 - INFO - 📧 TEST MODE: Antoine Lefebvre → idirakriche9@gmail.com
+2026-03-14 05:47:38,306 - INFO - ✅ Email sent to idirakriche9@gmail.com (Antoine Lefebvre)
+2026-03-14 05:47:38,307 - INFO - 📧 TEST MODE: Solenn Legoff → idirakriche9@gmail.com
+2026-03-14 05:47:38,526 - INFO - ✅ Email sent to idirakriche9@gmail.com (Solenn Legoff)
+2026-03-14 05:47:39,130 - INFO - 📧 TEST MODE: Élodie Guyomard → idirakriche9@gmail.com
+2026-03-14 05:47:39,350 - INFO - ✅ Email sent to idirakriche9@gmail.com (Élodie Guyomard)
+2026-03-14 05:47:39,353 - INFO - 📧 TEST MODE: Marie Leloup → idirakriche9@gmail.com
+2026-03-14 05:47:39,625 - INFO - ✅ Email sent to idirakriche9@gmail.com (Marie Leloup)
+2026-03-14 05:47:40,229 - INFO - 📧 TEST MODE: Sauce Writing → idirakriche9@gmail.com
+2026-03-14 05:47:40,473 - INFO - ✅ Email sent to idirakriche9@gmail.com (Sauce Writing)
+2026-03-14 05:47:40,474 - INFO - 📧 TEST MODE: Stéphanie Durand → idirakriche9@gmail.com
+2026-03-14 05:47:40,768 - INFO - ✅ Email sent to idirakriche9@gmail.com (Stéphanie Durand)
+2026-03-14 05:47:41,370 - INFO - 📧 TEST MODE: Christine Bernard → idirakriche9@gmail.com
+2026-03-14 05:47:41,597 - INFO - ✅ Email sent to idirakriche9@gmail.com (Christine Bernard)
+2026-03-14 05:47:41,600 - INFO - 📧 TEST MODE: Valérie Petit → idirakriche9@gmail.com
+2026-03-14 05:47:41,845 - INFO - ✅ Email sent to idirakriche9@gmail.com (Valérie Petit)
+2026-03-14 05:47:42,447 - INFO - 📧 TEST MODE: Nathalie Lepage → idirakriche9@gmail.com
+2026-03-14 05:47:42,695 - INFO - ✅ Email sent to idirakriche9@gmail.com (Nathalie Lepage)
+2026-03-14 05:47:42,698 - INFO - 📧 TEST MODE: Isabelle Renaud → idirakriche9@gmail.com
+2026-03-14 05:47:43,342 - INFO - ✅ Email sent to idirakriche9@gmail.com (Isabelle Renaud)
+2026-03-14 05:47:43,945 - INFO - 📧 TEST MODE: Florence Martin → idirakriche9@gmail.com
+2026-03-14 05:47:44,154 - INFO - ✅ Email sent to idirakriche9@gmail.com (Florence Martin)
+2026-03-14 05:47:44,157 - INFO - 📧 TEST MODE: Alexandra Fournier → idirakriche9@gmail.com
+2026-03-14 05:47:44,417 - INFO - ✅ Email sent to idirakriche9@gmail.com (Alexandra Fournier)
+2026-03-14 05:47:45,020 - INFO - 📧 TEST MODE: Yvette Michel → idirakriche9@gmail.com
+2026-03-14 05:47:45,284 - INFO - ✅ Email sent to idirakriche9@gmail.com (Yvette Michel)
+2026-03-14 05:47:45,287 - INFO - 📧 TEST MODE: Elise Basset → idirakriche9@gmail.com
+2026-03-14 05:47:45,514 - INFO - ✅ Email sent to idirakriche9@gmail.com (Elise Basset)
+2026-03-14 05:47:46,117 - INFO - 📧 TEST MODE: Julia Coudert → idirakriche9@gmail.com
+2026-03-14 05:47:46,364 - INFO - ✅ Email sent to idirakriche9@gmail.com (Julia Coudert)
+2026-03-14 05:47:46,365 - INFO - 📧 TEST MODE: Sandra Doucet → idirakriche9@gmail.com
+2026-03-14 05:47:46,630 - INFO - ✅ Email sent to idirakriche9@gmail.com (Sandra Doucet)
+2026-03-14 05:47:47,234 - INFO - 📧 TEST MODE: Inès Martin → idirakriche9@gmail.com
+2026-03-14 05:47:47,470 - INFO - ✅ Email sent to idirakriche9@gmail.com (Inès Martin)
+2026-03-14 05:47:47,473 - INFO - 📧 TEST MODE: Sylvie Arnould → idirakriche9@gmail.com
+2026-03-14 05:47:47,715 - INFO - ✅ Email sent to idirakriche9@gmail.com (Sylvie Arnould)
+2026-03-14 05:47:48,321 - INFO - 📧 TEST MODE: Fabienne Laurent → idirakriche9@gmail.com
+2026-03-14 05:47:48,573 - INFO - ✅ Email sent to idirakriche9@gmail.com (Fabienne Laurent)
+2026-03-14 05:47:48,576 - INFO - 📧 TEST MODE: Marina Rodriguez → idirakriche9@gmail.com
+2026-03-14 05:47:48,827 - INFO - ✅ Email sent to idirakriche9@gmail.com (Marina Rodriguez)
+2026-03-14 05:47:49,431 - INFO - 📧 TEST MODE: Émilie Lefevre → idirakriche9@gmail.com
+2026-03-14 05:47:49,633 - INFO - ✅ Email sent to idirakriche9@gmail.com (Émilie Lefevre)
+2026-03-14 05:47:49,634 - INFO - 📧 TEST MODE: Raphael Tuil → idirakriche9@gmail.com
+2026-03-14 05:47:49,875 - INFO - ✅ Email sent to idirakriche9@gmail.com (Raphael Tuil)
+2026-03-14 05:47:50,479 - INFO - 📧 TEST MODE: Guillaume Guersan → idirakriche9@gmail.com
+2026-03-14 05:47:50,714 - INFO - ✅ Email sent to idirakriche9@gmail.com (Guillaume Guersan)
+2026-03-14 05:47:50,718 - INFO - 📧 TEST MODE: Hugo Domeur → idirakriche9@gmail.com
+2026-03-14 05:47:50,972 - INFO - ✅ Email sent to idirakriche9@gmail.com (Hugo Domeur)
+2026-03-14 05:47:51,577 - INFO - 📧 TEST MODE: Maud Rauner → idirakriche9@gmail.com
+2026-03-14 05:47:51,841 - INFO - ✅ Email sent to idirakriche9@gmail.com (Maud Rauner)
+2026-03-14 05:47:51,844 - INFO - 📧 TEST MODE: Paul Vengeons → idirakriche9@gmail.com
+2026-03-14 05:47:52,112 - INFO - ✅ Email sent to idirakriche9@gmail.com (Paul Vengeons)
+2026-03-14 05:47:52,716 - INFO - 📧 TEST MODE: Jamey Lee → idirakriche9@gmail.com
+2026-03-14 05:47:52,945 - INFO - ✅ Email sent to idirakriche9@gmail.com (Jamey Lee)
+2026-03-14 05:47:52,950 - INFO - 📧 TEST MODE: Matthieu Texier → idirakriche9@gmail.com
+2026-03-14 05:47:53,178 - INFO - ✅ Email sent to idirakriche9@gmail.com (Matthieu Texier)
+2026-03-14 05:47:53,782 - INFO - 📧 TEST MODE: Paul Sanches → idirakriche9@gmail.com
+2026-03-14 05:47:54,026 - INFO - ✅ Email sent to idirakriche9@gmail.com (Paul Sanches)
+2026-03-14 05:47:54,029 - INFO - 📧 TEST MODE: Laurent Dupont → idirakriche9@gmail.com
+2026-03-14 05:47:54,281 - INFO - ✅ Email sent to idirakriche9@gmail.com (Laurent Dupont)
+2026-03-14 05:47:54,887 - INFO - 📧 TEST MODE: Véronique Martin → idirakriche9@gmail.com
+2026-03-14 05:47:55,101 - INFO - ✅ Email sent to idirakriche9@gmail.com (Véronique Martin)
+2026-03-14 05:47:55,104 - INFO - 📧 TEST MODE: Xavier Moreau → idirakriche9@gmail.com
+2026-03-14 05:47:55,333 - INFO - ✅ Email sent to idirakriche9@gmail.com (Xavier Moreau)
+2026-03-14 05:47:55,934 - INFO - 📧 TEST MODE: Daniela Blanc → idirakriche9@gmail.com
+2026-03-14 05:47:56,145 - INFO - ✅ Email sent to idirakriche9@gmail.com (Daniela Blanc)
+2026-03-14 05:47:56,146 - INFO - 📧 TEST MODE: Emma Guiset → idirakriche9@gmail.com
+2026-03-14 05:47:56,396 - INFO - ✅ Email sent to idirakriche9@gmail.com (Emma Guiset)
+2026-03-14 05:47:56,998 - INFO - 📧 TEST MODE: Maryline Pinton → idirakriche9@gmail.com
+2026-03-14 05:47:57,223 - INFO - ✅ Email sent to idirakriche9@gmail.com (Maryline Pinton)
+2026-03-14 05:47:57,225 - INFO - 📧 TEST MODE: Arnaud Leparni → idirakriche9@gmail.com
+2026-03-14 05:47:57,454 - INFO - ✅ Email sent to idirakriche9@gmail.com (Arnaud Leparni)
+2026-03-14 05:47:58,061 - INFO - 📧 TEST MODE: Stella Cherici → idirakriche9@gmail.com
+2026-03-14 05:47:58,286 - INFO - ✅ Email sent to idirakriche9@gmail.com (Stella Cherici)
+2026-03-14 05:47:58,287 - INFO - 📧 TEST MODE: Sophie Moreau → idirakriche9@gmail.com
+2026-03-14 05:47:58,531 - INFO - ✅ Email sent to idirakriche9@gmail.com (Sophie Moreau)
+2026-03-14 05:47:59,135 - INFO - 📧 TEST MODE: Isabelle Leclerc → idirakriche9@gmail.com
+2026-03-14 05:47:59,370 - INFO - ✅ Email sent to idirakriche9@gmail.com (Isabelle Leclerc)
+2026-03-14 05:47:59,373 - INFO - 📧 TEST MODE: Martine Bernard → idirakriche9@gmail.com
+2026-03-14 05:47:59,610 - INFO - ✅ Email sent to idirakriche9@gmail.com (Martine Bernard)
+2026-03-14 05:48:00,213 - INFO - 📧 TEST MODE: Claire Fontaine → idirakriche9@gmail.com
+2026-03-14 05:48:00,440 - INFO - ✅ Email sent to idirakriche9@gmail.com (Claire Fontaine)
+2026-03-14 05:48:00,441 - INFO - 📧 TEST MODE: Monique Gaillard → idirakriche9@gmail.com
+2026-03-14 05:48:00,664 - INFO - ✅ Email sent to idirakriche9@gmail.com (Monique Gaillard)
+2026-03-14 05:48:01,265 - INFO - 📧 TEST MODE: Claude Renault → idirakriche9@gmail.com
+2026-03-14 05:48:01,596 - INFO - ✅ Email sent to idirakriche9@gmail.com (Claude Renault)
+2026-03-14 05:48:01,599 - INFO - 📧 TEST MODE: Clément Arzuman → idirakriche9@gmail.com
+2026-03-14 05:48:01,846 - INFO - ✅ Email sent to idirakriche9@gmail.com (Clément Arzuman)
+2026-03-14 05:48:02,000 - INFO - ✅ Resend Manager initialized
+2026-03-14 05:48:02,001 - INFO -    From: onboarding@resend.dev
+2026-03-14 05:48:02,001 - INFO -    API Key: re_Bo8g2f47_7KBim8rM...
+2026-03-14 05:48:02,001 - INFO - ============================================================
+2026-03-14 05:48:02,001 - INFO - 🧪 TEST MODE: NGFI Email Wave (Resend)
+2026-03-14 05:48:02,001 - INFO - ============================================================
+2026-03-14 05:48:02,001 - INFO - ⚠️ TEST MODE: Envoi vers email de test
+2026-03-14 05:48:02,001 - INFO - 🧪 TEST MODE: Sending 100 test emails to onboarding@resend.dev...
+2026-03-14 05:48:02,001 - INFO - 📧 TEST MODE: Ludovic Frank → idirakriche9@gmail.com
+2026-03-14 05:48:02,215 - ERROR - ❌ Failed to send to idirakriche9@gmail.com: {"statusCode":429,"name":"rate_limit_exceeded","message":"Too many requests. You can only make 2 requests per second. See rate limit response headers for more information. Or contact support to increase rate limit."}
+2026-03-14 05:48:02,218 - INFO - 📧 TEST MODE: Pierre Viéville → idirakriche9@gmail.com
+2026-03-14 05:48:02,449 - INFO - 📧 TEST MODE: Quentin Fossart → idirakriche9@gmail.com
+2026-03-14 05:48:02,451 - ERROR - ❌ Failed to send to idirakriche9@gmail.com: {"statusCode":429,"name":"rate_limit_exceeded","message":"Too many requests. You can only make 2 requests per second. See rate limit response headers for more information. Or contact support to increase rate limit."}
+2026-03-14 05:48:02,667 - INFO - ✅ Email sent to idirakriche9@gmail.com (Quentin Fossart)
+2026-03-14 05:48:02,670 - INFO - 📧 TEST MODE: Valentin Herrera → idirakriche9@gmail.com
+2026-03-14 05:48:02,929 - INFO - ✅ Email sent to idirakriche9@gmail.com (Valentin Herrera)
+2026-03-14 05:48:03,053 - INFO - 📧 TEST MODE: Mathieu Crevoulin → idirakriche9@gmail.com
+2026-03-14 05:48:03,262 - ERROR - ❌ Failed to send to idirakriche9@gmail.com: {"statusCode":429,"name":"rate_limit_exceeded","message":"Too many requests. You can only make 2 requests per second. See rate limit response headers for more information. Or contact support to increase rate limit."}
+2026-03-14 05:48:03,263 - INFO - 📧 TEST MODE: Jean-Baptiste Luzy → idirakriche9@gmail.com
+2026-03-14 05:48:03,485 - ERROR - ❌ Failed to send to idirakriche9@gmail.com: {"statusCode":429,"name":"rate_limit_exceeded","message":"Too many requests. You can only make 2 requests per second. See rate limit response headers for more information. Or contact support to increase rate limit."}
+2026-03-14 05:48:03,533 - INFO - 📧 TEST MODE: Franck Beaumont → idirakriche9@gmail.com
+2026-03-14 05:48:03,773 - INFO - ✅ Email sent to idirakriche9@gmail.com (Franck Beaumont)
+2026-03-14 05:48:03,776 - INFO - 📧 TEST MODE: Maxim Smirnov → idirakriche9@gmail.com
+2026-03-14 05:48:04,001 - INFO - ✅ Email sent to idirakriche9@gmail.com (Maxim Smirnov)
+2026-03-14 05:48:04,087 - INFO - 📧 TEST MODE: Thomas Dupont → idirakriche9@gmail.com
+2026-03-14 05:48:04,286 - ERROR - ❌ Failed to send to idirakriche9@gmail.com: {"statusCode":429,"name":"rate_limit_exceeded","message":"Too many requests. You can only make 2 requests per second. See rate limit response headers for more information. Or contact support to increase rate limit."}
+2026-03-14 05:48:04,287 - INFO - 📧 TEST MODE: Alexandre Martin → idirakriche9@gmail.com
+2026-03-14 05:48:04,492 - ERROR - ❌ Failed to send to idirakriche9@gmail.com: {"statusCode":429,"name":"rate_limit_exceeded","message":"Too many requests. You can only make 2 requests per second. See rate limit response headers for more information. Or contact support to increase rate limit."}
+2026-03-14 05:48:04,603 - INFO - 📧 TEST MODE: Thomas Picard → idirakriche9@gmail.com
+2026-03-14 05:48:04,839 - INFO - ✅ Email sent to idirakriche9@gmail.com (Thomas Picard)
+2026-03-14 05:48:04,842 - INFO - 📧 TEST MODE: Jérôme Leblanc → idirakriche9@gmail.com
+2026-03-14 05:48:05,062 - INFO - ✅ Email sent to idirakriche9@gmail.com (Jérôme Leblanc)
+2026-03-14 05:48:05,093 - INFO - 📧 TEST MODE: Julien Rousseau → idirakriche9@gmail.com
+2026-03-14 05:48:05,312 - ERROR - ❌ Failed to send to idirakriche9@gmail.com: {"statusCode":429,"name":"rate_limit_exceeded","message":"Too many requests. You can only make 2 requests per second. See rate limit response headers for more information. Or contact support to increase rate limit."}
+2026-03-14 05:48:05,312 - INFO - 📧 TEST MODE: Baptiste Leclerc → idirakriche9@gmail.com
+2026-03-14 05:48:05,500 - ERROR - ❌ Failed to send to idirakriche9@gmail.com: {"statusCode":429,"name":"rate_limit_exceeded","message":"Too many requests. You can only make 2 requests per second. See rate limit response headers for more information. Or contact support to increase rate limit."}
+2026-03-14 05:48:05,666 - INFO - 📧 TEST MODE: Raphaël Fontaine → idirakriche9@gmail.com
+2026-03-14 05:48:05,898 - INFO - ✅ Email sent to idirakriche9@gmail.com (Raphaël Fontaine)
+2026-03-14 05:48:05,901 - INFO - 📧 TEST MODE: Olivier Lesueur → idirakriche9@gmail.com
+2026-03-14 05:48:06,101 - INFO - 📧 TEST MODE: Victor Blanchard → idirakriche9@gmail.com
+2026-03-14 05:48:06,121 - INFO - ✅ Email sent to idirakriche9@gmail.com (Olivier Lesueur)
+2026-03-14 05:48:06,306 - ERROR - ❌ Failed to send to idirakriche9@gmail.com: {"statusCode":429,"name":"rate_limit_exceeded","message":"Too many requests. You can only make 2 requests per second. See rate limit response headers for more information. Or contact support to increase rate limit."}
+2026-03-14 05:48:06,308 - INFO - 📧 TEST MODE: Olivier Mercier → idirakriche9@gmail.com
+2026-03-14 05:48:06,524 - ERROR - ❌ Failed to send to idirakriche9@gmail.com: {"statusCode":429,"name":"rate_limit_exceeded","message":"Too many requests. You can only make 2 requests per second. See rate limit response headers for more information. Or contact support to increase rate limit."}
+2026-03-14 05:48:06,722 - INFO - 📧 TEST MODE: Grégoire Martin → idirakriche9@gmail.com
+2026-03-14 05:48:06,966 - INFO - ✅ Email sent to idirakriche9@gmail.com (Grégoire Martin)
+2026-03-14 05:48:06,967 - INFO - 📧 TEST MODE: Mathieu Clauss → idirakriche9@gmail.com
+2026-03-14 05:48:07,125 - INFO - 📧 TEST MODE: David Fontaine → idirakriche9@gmail.com
+2026-03-14 05:48:07,209 - INFO - ✅ Email sent to idirakriche9@gmail.com (Mathieu Clauss)
+2026-03-14 05:48:07,345 - ERROR - ❌ Failed to send to idirakriche9@gmail.com: {"statusCode":429,"name":"rate_limit_exceeded","message":"Too many requests. You can only make 2 requests per second. See rate limit response headers for more information. Or contact support to increase rate limit."}
+2026-03-14 05:48:07,346 - INFO - 📧 TEST MODE: Maxime Bernard → idirakriche9@gmail.com
+2026-03-14 05:48:07,606 - ERROR - ❌ Failed to send to idirakriche9@gmail.com: {"statusCode":429,"name":"rate_limit_exceeded","message":"Too many requests. You can only make 2 requests per second. See rate limit response headers for more information. Or contact support to increase rate limit."}
+2026-03-14 05:48:07,810 - INFO - 📧 TEST MODE: Sophie Delaunay → idirakriche9@gmail.com
+2026-03-14 05:48:08,210 - INFO - 📧 TEST MODE: Christophe Girard → idirakriche9@gmail.com
+2026-03-14 05:48:08,442 - INFO - ✅ Email sent to idirakriche9@gmail.com (Christophe Girard)
+2026-03-14 05:48:08,445 - INFO - 📧 TEST MODE: Samuel Petit → idirakriche9@gmail.com
+2026-03-14 05:48:08,674 - INFO - ✅ Email sent to idirakriche9@gmail.com (Samuel Petit)
+2026-03-14 05:48:09,026 - ERROR - ❌ Failed to send to idirakriche9@gmail.com: {"statusCode":429,"name":"rate_limit_exceeded","message":"Too many requests. You can only make 2 requests per second. See rate limit response headers for more information. Or contact support to increase rate limit."}
+2026-03-14 05:48:09,029 - INFO - 📧 TEST MODE: Nathalie Caron → idirakriche9@gmail.com
+2026-03-14 05:48:09,241 - ERROR - ❌ Failed to send to idirakriche9@gmail.com: {"statusCode":429,"name":"rate_limit_exceeded","message":"Too many requests. You can only make 2 requests per second. See rate limit response headers for more information. Or contact support to increase rate limit."}
+2026-03-14 05:48:09,278 - INFO - 📧 TEST MODE: Franck Lefevre → idirakriche9@gmail.com
+2026-03-14 05:48:09,509 - INFO - ✅ Email sent to idirakriche9@gmail.com (Franck Lefevre)
+2026-03-14 05:48:09,509 - INFO - 📧 TEST MODE: Pauline Osmont → idirakriche9@gmail.com
+2026-03-14 05:48:09,736 - INFO - ✅ Email sent to idirakriche9@gmail.com (Pauline Osmont)
+2026-03-14 05:48:09,844 - INFO - 📧 TEST MODE: Martin Beaumont → idirakriche9@gmail.com
+2026-03-14 05:48:10,062 - ERROR - ❌ Failed to send to idirakriche9@gmail.com: {"statusCode":429,"name":"rate_limit_exceeded","message":"Too many requests. You can only make 2 requests per second. See rate limit response headers for more information. Or contact support to increase rate limit."}
+2026-03-14 05:48:10,065 - INFO - 📧 TEST MODE: Laurence Gérard → idirakriche9@gmail.com
+2026-03-14 05:48:10,264 - ERROR - ❌ Failed to send to idirakriche9@gmail.com: {"statusCode":429,"name":"rate_limit_exceeded","message":"Too many requests. You can only make 2 requests per second. See rate limit response headers for more information. Or contact support to increase rate limit."}
+2026-03-14 05:48:10,340 - INFO - 📧 TEST MODE: Rémi Dudragne → idirakriche9@gmail.com
+2026-03-14 05:48:10,568 - INFO - ✅ Email sent to idirakriche9@gmail.com (Rémi Dudragne)
+2026-03-14 05:48:10,571 - INFO - 📧 TEST MODE: Fanny Koch → idirakriche9@gmail.com
+2026-03-14 05:48:10,836 - INFO - ✅ Email sent to idirakriche9@gmail.com (Fanny Koch)
+2026-03-14 05:48:10,867 - INFO - 📧 TEST MODE: Adrien Petit → idirakriche9@gmail.com
+2026-03-14 05:48:11,076 - ERROR - ❌ Failed to send to idirakriche9@gmail.com: {"statusCode":429,"name":"rate_limit_exceeded","message":"Too many requests. You can only make 2 requests per second. See rate limit response headers for more information. Or contact support to increase rate limit."}
+2026-03-14 05:48:11,076 - INFO - 📧 TEST MODE: Célia Favier → idirakriche9@gmail.com
+2026-03-14 05:48:11,271 - ERROR - ❌ Failed to send to idirakriche9@gmail.com: {"statusCode":429,"name":"rate_limit_exceeded","message":"Too many requests. You can only make 2 requests per second. See rate limit response headers for more information. Or contact support to increase rate limit."}
+2026-03-14 05:48:11,439 - INFO - 📧 TEST MODE: Julien Coudert → idirakriche9@gmail.com
+2026-03-14 05:48:11,644 - INFO - ✅ Email sent to idirakriche9@gmail.com (Julien Coudert)
+2026-03-14 05:48:11,644 - INFO - 📧 TEST MODE: Octav Design → idirakriche9@gmail.com
+2026-03-14 05:48:11,874 - INFO - 📧 TEST MODE: Frédéric Deschamps → idirakriche9@gmail.com
+2026-03-14 05:48:11,885 - INFO - ✅ Email sent to idirakriche9@gmail.com (Octav Design)
+2026-03-14 05:48:12,186 - ERROR - ❌ Failed to send to idirakriche9@gmail.com: {"statusCode":429,"name":"rate_limit_exceeded","message":"Too many requests. You can only make 2 requests per second. See rate limit response headers for more information. Or contact support to increase rate limit."}
+2026-03-14 05:48:12,189 - INFO - 📧 TEST MODE: Laurie Blanchard → idirakriche9@gmail.com
+2026-03-14 05:48:12,409 - ERROR - ❌ Failed to send to idirakriche9@gmail.com: {"statusCode":429,"name":"rate_limit_exceeded","message":"Too many requests. You can only make 2 requests per second. See rate limit response headers for more information. Or contact support to increase rate limit."}
+2026-03-14 05:48:12,489 - INFO - 📧 TEST MODE: Morgane Billoud → idirakriche9@gmail.com
+2026-03-14 05:48:12,710 - INFO - ✅ Email sent to idirakriche9@gmail.com (Morgane Billoud)
+2026-03-14 05:48:12,713 - INFO - 📧 TEST MODE: Stéphanie Laroche → idirakriche9@gmail.com
+2026-03-14 05:48:12,947 - INFO - ✅ Email sent to idirakriche9@gmail.com (Stéphanie Laroche)
+2026-03-14 05:48:13,012 - INFO - 📧 TEST MODE: Mathias Rousseau → idirakriche9@gmail.com
+2026-03-14 05:48:13,207 - ERROR - ❌ Failed to send to idirakriche9@gmail.com: {"statusCode":429,"name":"rate_limit_exceeded","message":"Too many requests. You can only make 2 requests per second. See rate limit response headers for more information. Or contact support to increase rate limit."}
+2026-03-14 05:48:13,210 - INFO - 📧 TEST MODE: Véronique Michaud → idirakriche9@gmail.com
+2026-03-14 05:48:13,451 - ERROR - ❌ Failed to send to idirakriche9@gmail.com: {"statusCode":429,"name":"rate_limit_exceeded","message":"Too many requests. You can only make 2 requests per second. See rate limit response headers for more information. Or contact support to increase rate limit."}
+2026-03-14 05:48:13,551 - INFO - 📧 TEST MODE: Laurent Michel → idirakriche9@gmail.com
+2026-03-14 05:48:13,782 - INFO - ✅ Email sent to idirakriche9@gmail.com (Laurent Michel)
+2026-03-14 05:48:13,785 - INFO - 📧 TEST MODE: Céline Dubois → idirakriche9@gmail.com
+2026-03-14 05:48:14,040 - INFO - ✅ Email sent to idirakriche9@gmail.com (Céline Dubois)
+2026-03-14 05:48:14,055 - INFO - 📧 TEST MODE: Marc Pelletier → idirakriche9@gmail.com
+2026-03-14 05:48:14,261 - ERROR - ❌ Failed to send to idirakriche9@gmail.com: {"statusCode":429,"name":"rate_limit_exceeded","message":"Too many requests. You can only make 2 requests per second. See rate limit response headers for more information. Or contact support to increase rate limit."}
+2026-03-14 05:48:14,264 - INFO - 📧 TEST MODE: Érica Santos → idirakriche9@gmail.com
+2026-03-14 05:48:14,492 - ERROR - ❌ Failed to send to idirakriche9@gmail.com: {"statusCode":429,"name":"rate_limit_exceeded","message":"Too many requests. You can only make 2 requests per second. See rate limit response headers for more information. Or contact support to increase rate limit."}
+2026-03-14 05:48:14,643 - INFO - 📧 TEST MODE: Antoine Lefebvre → idirakriche9@gmail.com
+2026-03-14 05:48:14,871 - INFO - ✅ Email sent to idirakriche9@gmail.com (Antoine Lefebvre)
+2026-03-14 05:48:14,874 - INFO - 📧 TEST MODE: Solenn Legoff → idirakriche9@gmail.com
+2026-03-14 05:48:15,080 - INFO - ✅ Email sent to idirakriche9@gmail.com (Solenn Legoff)
+2026-03-14 05:48:15,095 - INFO - 📧 TEST MODE: Patrick Leclerc → idirakriche9@gmail.com
+2026-03-14 05:48:15,304 - ERROR - ❌ Failed to send to idirakriche9@gmail.com: {"statusCode":429,"name":"rate_limit_exceeded","message":"Too many requests. You can only make 2 requests per second. See rate limit response headers for more information. Or contact support to increase rate limit."}
+2026-03-14 05:48:15,307 - INFO - 📧 TEST MODE: Carole Fabre → idirakriche9@gmail.com
+2026-03-14 05:48:15,569 - ERROR - ❌ Failed to send to idirakriche9@gmail.com: {"statusCode":429,"name":"rate_limit_exceeded","message":"Too many requests. You can only make 2 requests per second. See rate limit response headers for more information. Or contact support to increase rate limit."}
+2026-03-14 05:48:15,684 - INFO - 📧 TEST MODE: Élodie Guyomard → idirakriche9@gmail.com
+2026-03-14 05:48:15,924 - INFO - ✅ Email sent to idirakriche9@gmail.com (Élodie Guyomard)
+2026-03-14 05:48:15,927 - INFO - 📧 TEST MODE: Marie Leloup → idirakriche9@gmail.com
+2026-03-14 05:48:16,142 - INFO - ✅ Email sent to idirakriche9@gmail.com (Marie Leloup)
+2026-03-14 05:48:16,174 - INFO - 📧 TEST MODE: Denis Fournier → idirakriche9@gmail.com
+2026-03-14 05:48:16,392 - ERROR - ❌ Failed to send to idirakriche9@gmail.com: {"statusCode":429,"name":"rate_limit_exceeded","message":"Too many requests. You can only make 2 requests per second. See rate limit response headers for more information. Or contact support to increase rate limit."}
+2026-03-14 05:48:16,395 - INFO - 📧 TEST MODE: Brigitte Thibault → idirakriche9@gmail.com
+2026-03-14 05:48:16,608 - ERROR - ❌ Failed to send to idirakriche9@gmail.com: {"statusCode":429,"name":"rate_limit_exceeded","message":"Too many requests. You can only make 2 requests per second. See rate limit response headers for more information. Or contact support to increase rate limit."}
+2026-03-14 05:48:16,746 - INFO - 📧 TEST MODE: Sauce Writing → idirakriche9@gmail.com
+2026-03-14 05:48:16,984 - INFO - ✅ Email sent to idirakriche9@gmail.com (Sauce Writing)
+2026-03-14 05:48:16,984 - INFO - 📧 TEST MODE: Stéphanie Durand → idirakriche9@gmail.com
+2026-03-14 05:48:17,190 - INFO - ✅ Email sent to idirakriche9@gmail.com (Stéphanie Durand)
+2026-03-14 05:48:17,214 - INFO - 📧 TEST MODE: Serge Marchand → idirakriche9@gmail.com
+2026-03-14 05:48:17,436 - ERROR - ❌ Failed to send to idirakriche9@gmail.com: {"statusCode":429,"name":"rate_limit_exceeded","message":"Too many requests. You can only make 2 requests per second. See rate limit response headers for more information. Or contact support to increase rate limit."}
+2026-03-14 05:48:17,438 - INFO - 📧 TEST MODE: Evelyne Bernard → idirakriche9@gmail.com
+2026-03-14 05:48:17,678 - ERROR - ❌ Failed to send to idirakriche9@gmail.com: {"statusCode":429,"name":"rate_limit_exceeded","message":"Too many requests. You can only make 2 requests per second. See rate limit response headers for more information. Or contact support to increase rate limit."}
+2026-03-14 05:48:17,794 - INFO - 📧 TEST MODE: Christine Bernard → idirakriche9@gmail.com
+2026-03-14 05:48:18,023 - INFO - ✅ Email sent to idirakriche9@gmail.com (Christine Bernard)
+2026-03-14 05:48:18,024 - INFO - 📧 TEST MODE: Valérie Petit → idirakriche9@gmail.com
+2026-03-14 05:48:18,238 - INFO - ✅ Email sent to idirakriche9@gmail.com (Valérie Petit)
+2026-03-14 05:48:18,281 - INFO - 📧 TEST MODE: Raphaël Michel → idirakriche9@gmail.com
+2026-03-14 05:48:18,505 - ERROR - ❌ Failed to send to idirakriche9@gmail.com: {"statusCode":429,"name":"rate_limit_exceeded","message":"Too many requests. You can only make 2 requests per second. See rate limit response headers for more information. Or contact support to increase rate limit."}
+2026-03-14 05:48:18,506 - INFO - 📧 TEST MODE: Stéphane Renaud → idirakriche9@gmail.com
+2026-03-14 05:48:18,720 - ERROR - ❌ Failed to send to idirakriche9@gmail.com: {"statusCode":429,"name":"rate_limit_exceeded","message":"Too many requests. You can only make 2 requests per second. See rate limit response headers for more information. Or contact support to increase rate limit."}
+2026-03-14 05:48:18,843 - INFO - 📧 TEST MODE: Nathalie Lepage → idirakriche9@gmail.com
+2026-03-14 05:48:19,098 - INFO - ✅ Email sent to idirakriche9@gmail.com (Nathalie Lepage)
+2026-03-14 05:48:19,099 - INFO - 📧 TEST MODE: Isabelle Renaud → idirakriche9@gmail.com
+2026-03-14 05:48:19,323 - INFO - 📧 TEST MODE: Martine Delorme → idirakriche9@gmail.com
+2026-03-14 05:48:19,367 - INFO - ✅ Email sent to idirakriche9@gmail.com (Isabelle Renaud)
+2026-03-14 05:48:19,530 - ERROR - ❌ Failed to send to idirakriche9@gmail.com: {"statusCode":429,"name":"rate_limit_exceeded","message":"Too many requests. You can only make 2 requests per second. See rate limit response headers for more information. Or contact support to increase rate limit."}
+2026-03-14 05:48:19,532 - INFO - 📧 TEST MODE: Michel Arnould → idirakriche9@gmail.com
+2026-03-14 05:48:19,763 - ERROR - ❌ Failed to send to idirakriche9@gmail.com: {"statusCode":429,"name":"rate_limit_exceeded","message":"Too many requests. You can only make 2 requests per second. See rate limit response headers for more information. Or contact support to increase rate limit."}
+2026-03-14 05:48:19,971 - INFO - 📧 TEST MODE: Florence Martin → idirakriche9@gmail.com
+2026-03-14 05:48:20,213 - INFO - ✅ Email sent to idirakriche9@gmail.com (Florence Martin)
+2026-03-14 05:48:20,216 - INFO - 📧 TEST MODE: Alexandra Fournier → idirakriche9@gmail.com
+2026-03-14 05:48:20,367 - INFO - ✅ Batch complete: 78/100 sent
+2026-03-14 05:48:20,382 - INFO - ✅ Database updated: 78 prospects marked as emailed
+2026-03-14 05:48:20,382 - INFO - ✅ Email wave complete: 78 emails sent
+2026-03-14 05:48:20,459 - INFO - ✅ Email sent to idirakriche9@gmail.com (Alexandra Fournier)
+2026-03-14 05:48:21,064 - INFO - 📧 TEST MODE: Yvette Michel → idirakriche9@gmail.com
+2026-03-14 05:48:21,317 - INFO - ✅ Email sent to idirakriche9@gmail.com (Yvette Michel)
+2026-03-14 05:48:21,320 - INFO - 📧 TEST MODE: Elise Basset → idirakriche9@gmail.com
+2026-03-14 05:48:21,564 - INFO - ✅ Email sent to idirakriche9@gmail.com (Elise Basset)
+2026-03-14 05:48:22,166 - INFO - 📧 TEST MODE: Julia Coudert → idirakriche9@gmail.com
+2026-03-14 05:48:22,390 - INFO - ✅ Email sent to idirakriche9@gmail.com (Julia Coudert)
+2026-03-14 05:48:22,391 - INFO - 📧 TEST MODE: Sandra Doucet → idirakriche9@gmail.com
+2026-03-14 05:48:22,688 - INFO - ✅ Email sent to idirakriche9@gmail.com (Sandra Doucet)
+2026-03-14 05:48:23,292 - INFO - 📧 TEST MODE: Inès Martin → idirakriche9@gmail.com
+2026-03-14 05:48:23,536 - INFO - ✅ Email sent to idirakriche9@gmail.com (Inès Martin)
+2026-03-14 05:48:23,536 - INFO - 📧 TEST MODE: Sylvie Arnould → idirakriche9@gmail.com
+2026-03-14 05:48:23,775 - INFO - ✅ Email sent to idirakriche9@gmail.com (Sylvie Arnould)
+2026-03-14 05:48:24,380 - INFO - 📧 TEST MODE: Fabienne Laurent → idirakriche9@gmail.com
+2026-03-14 05:48:24,673 - INFO - ✅ Email sent to idirakriche9@gmail.com (Fabienne Laurent)
+2026-03-14 05:48:24,674 - INFO - 📧 TEST MODE: Marina Rodriguez → idirakriche9@gmail.com
+2026-03-14 05:48:24,915 - INFO - ✅ Email sent to idirakriche9@gmail.com (Marina Rodriguez)
+2026-03-14 05:48:25,518 - INFO - 📧 TEST MODE: Émilie Lefevre → idirakriche9@gmail.com
+2026-03-14 05:48:25,754 - INFO - ✅ Email sent to idirakriche9@gmail.com (Émilie Lefevre)
+2026-03-14 05:48:25,755 - INFO - 📧 TEST MODE: Raphael Tuil → idirakriche9@gmail.com
+2026-03-14 05:48:25,984 - INFO - ✅ Email sent to idirakriche9@gmail.com (Raphael Tuil)
+2026-03-14 05:48:26,591 - INFO - 📧 TEST MODE: Guillaume Guersan → idirakriche9@gmail.com
+2026-03-14 05:48:26,820 - INFO - ✅ Email sent to idirakriche9@gmail.com (Guillaume Guersan)
+2026-03-14 05:48:26,821 - INFO - 📧 TEST MODE: Hugo Domeur → idirakriche9@gmail.com
+2026-03-14 05:48:27,043 - INFO - ✅ Email sent to idirakriche9@gmail.com (Hugo Domeur)
+2026-03-14 05:48:27,645 - INFO - 📧 TEST MODE: Maud Rauner → idirakriche9@gmail.com
+2026-03-14 05:48:27,862 - INFO - ✅ Email sent to idirakriche9@gmail.com (Maud Rauner)
+2026-03-14 05:48:27,865 - INFO - 📧 TEST MODE: Paul Vengeons → idirakriche9@gmail.com
+2026-03-14 05:48:28,112 - INFO - ✅ Email sent to idirakriche9@gmail.com (Paul Vengeons)
+2026-03-14 05:48:28,717 - INFO - 📧 TEST MODE: Jamey Lee → idirakriche9@gmail.com
+2026-03-14 05:48:28,935 - INFO - ✅ Email sent to idirakriche9@gmail.com (Jamey Lee)
+2026-03-14 05:48:28,938 - INFO - 📧 TEST MODE: Matthieu Texier → idirakriche9@gmail.com
+2026-03-14 05:48:29,190 - INFO - ✅ Email sent to idirakriche9@gmail.com (Matthieu Texier)
+2026-03-14 05:48:29,797 - INFO - 📧 TEST MODE: Paul Sanches → idirakriche9@gmail.com
+2026-03-14 05:48:30,048 - INFO - ✅ Email sent to idirakriche9@gmail.com (Paul Sanches)
+2026-03-14 05:48:30,052 - INFO - 📧 TEST MODE: Laurent Dupont → idirakriche9@gmail.com
+2026-03-14 05:48:30,340 - INFO - ✅ Email sent to idirakriche9@gmail.com (Laurent Dupont)
+2026-03-14 05:48:30,944 - INFO - 📧 TEST MODE: Véronique Martin → idirakriche9@gmail.com
+2026-03-14 05:48:31,198 - INFO - ✅ Email sent to idirakriche9@gmail.com (Véronique Martin)
+2026-03-14 05:48:31,201 - INFO - 📧 TEST MODE: Xavier Moreau → idirakriche9@gmail.com
+2026-03-14 05:48:31,438 - INFO - ✅ Email sent to idirakriche9@gmail.com (Xavier Moreau)
+2026-03-14 05:48:32,044 - INFO - 📧 TEST MODE: Daniela Blanc → idirakriche9@gmail.com
+2026-03-14 05:48:32,274 - INFO - ✅ Email sent to idirakriche9@gmail.com (Daniela Blanc)
+2026-03-14 05:48:32,275 - INFO - 📧 TEST MODE: Emma Guiset → idirakriche9@gmail.com
+2026-03-14 05:48:32,485 - INFO - ✅ Email sent to idirakriche9@gmail.com (Emma Guiset)
+2026-03-14 05:48:33,089 - INFO - 📧 TEST MODE: Maryline Pinton → idirakriche9@gmail.com
+2026-03-14 05:48:33,311 - INFO - ✅ Email sent to idirakriche9@gmail.com (Maryline Pinton)
+2026-03-14 05:48:33,314 - INFO - 📧 TEST MODE: Arnaud Leparni → idirakriche9@gmail.com
+2026-03-14 05:48:33,537 - INFO - ✅ Email sent to idirakriche9@gmail.com (Arnaud Leparni)
+2026-03-14 05:48:34,140 - INFO - 📧 TEST MODE: Stella Cherici → idirakriche9@gmail.com
+2026-03-14 05:48:34,392 - INFO - ✅ Email sent to idirakriche9@gmail.com (Stella Cherici)
+2026-03-14 05:48:34,396 - INFO - 📧 TEST MODE: Sophie Moreau → idirakriche9@gmail.com
+2026-03-14 05:48:34,602 - INFO - ✅ Email sent to idirakriche9@gmail.com (Sophie Moreau)
+2026-03-14 05:48:35,205 - INFO - 📧 TEST MODE: Isabelle Leclerc → idirakriche9@gmail.com
+2026-03-14 05:48:35,464 - INFO - ✅ Email sent to idirakriche9@gmail.com (Isabelle Leclerc)
+2026-03-14 05:48:35,465 - INFO - 📧 TEST MODE: Martine Bernard → idirakriche9@gmail.com
+2026-03-14 05:48:35,713 - INFO - ✅ Email sent to idirakriche9@gmail.com (Martine Bernard)
+2026-03-14 05:48:36,316 - INFO - 📧 TEST MODE: Claire Fontaine → idirakriche9@gmail.com
+2026-03-14 05:48:36,542 - INFO - ✅ Email sent to idirakriche9@gmail.com (Claire Fontaine)
+2026-03-14 05:48:36,543 - INFO - 📧 TEST MODE: Monique Gaillard → idirakriche9@gmail.com
+2026-03-14 05:48:36,771 - INFO - ✅ Email sent to idirakriche9@gmail.com (Monique Gaillard)
+2026-03-14 05:48:37,374 - INFO - 📧 TEST MODE: Claude Renault → idirakriche9@gmail.com
+2026-03-14 05:48:37,591 - INFO - ✅ Email sent to idirakriche9@gmail.com (Claude Renault)
+2026-03-14 05:48:37,593 - INFO - 📧 TEST MODE: Clément Arzuman → idirakriche9@gmail.com
+2026-03-14 05:48:37,841 - INFO - ✅ Email sent to idirakriche9@gmail.com (Clément Arzuman)
+2026-03-14 05:48:38,444 - INFO - 📧 TEST MODE: Quentin Fossart → idirakriche9@gmail.com
+2026-03-14 05:48:38,687 - INFO - ✅ Email sent to idirakriche9@gmail.com (Quentin Fossart)
+2026-03-14 05:48:38,690 - INFO - 📧 TEST MODE: Valentin Herrera → idirakriche9@gmail.com
+2026-03-14 05:48:38,942 - INFO - ✅ Email sent to idirakriche9@gmail.com (Valentin Herrera)
+2026-03-14 05:48:39,544 - INFO - 📧 TEST MODE: Franck Beaumont → idirakriche9@gmail.com
+2026-03-14 05:48:39,907 - INFO - ✅ Email sent to idirakriche9@gmail.com (Franck Beaumont)
+2026-03-14 05:48:39,908 - INFO - 📧 TEST MODE: Maxim Smirnov → idirakriche9@gmail.com
+2026-03-14 05:48:40,131 - INFO - ✅ Email sent to idirakriche9@gmail.com (Maxim Smirnov)
+2026-03-14 05:48:40,735 - INFO - 📧 TEST MODE: Thomas Picard → idirakriche9@gmail.com
+2026-03-14 05:48:40,968 - INFO - ✅ Email sent to idirakriche9@gmail.com (Thomas Picard)
+2026-03-14 05:48:40,972 - INFO - 📧 TEST MODE: Jérôme Leblanc → idirakriche9@gmail.com
+2026-03-14 05:48:41,217 - INFO - ✅ Email sent to idirakriche9@gmail.com (Jérôme Leblanc)
+2026-03-14 05:48:41,821 - INFO - 📧 TEST MODE: Raphaël Fontaine → idirakriche9@gmail.com
+2026-03-14 05:48:42,058 - INFO - ✅ Email sent to idirakriche9@gmail.com (Raphaël Fontaine)
+2026-03-14 05:48:42,061 - INFO - 📧 TEST MODE: Olivier Lesueur → idirakriche9@gmail.com
+2026-03-14 05:48:42,318 - INFO - ✅ Email sent to idirakriche9@gmail.com (Olivier Lesueur)
+2026-03-14 05:48:42,922 - INFO - 📧 TEST MODE: Grégoire Martin → idirakriche9@gmail.com
+2026-03-14 05:48:43,161 - INFO - ✅ Email sent to idirakriche9@gmail.com (Grégoire Martin)
+2026-03-14 05:48:43,164 - INFO - 📧 TEST MODE: Mathieu Clauss → idirakriche9@gmail.com
+2026-03-14 05:48:43,391 - INFO - ✅ Email sent to idirakriche9@gmail.com (Mathieu Clauss)
+2026-03-14 05:48:43,992 - INFO - 📧 TEST MODE: Sophie Delaunay → idirakriche9@gmail.com
+2026-03-14 05:48:44,289 - INFO - ✅ Email sent to idirakriche9@gmail.com (Sophie Delaunay)
+2026-03-14 05:48:44,290 - INFO - 📧 TEST MODE: Nathalie Caron → idirakriche9@gmail.com
+2026-03-14 05:48:44,536 - INFO - ✅ Email sent to idirakriche9@gmail.com (Nathalie Caron)
+2026-03-14 05:48:45,138 - INFO - 📧 TEST MODE: Martin Beaumont → idirakriche9@gmail.com
+2026-03-14 05:48:45,376 - INFO - ✅ Email sent to idirakriche9@gmail.com (Martin Beaumont)
+2026-03-14 05:48:45,377 - INFO - 📧 TEST MODE: Laurence Gérard → idirakriche9@gmail.com
+2026-03-14 05:48:45,587 - INFO - ✅ Email sent to idirakriche9@gmail.com (Laurence Gérard)
+2026-03-14 05:48:46,191 - INFO - 📧 TEST MODE: Adrien Petit → idirakriche9@gmail.com
+2026-03-14 05:48:46,473 - INFO - ✅ Email sent to idirakriche9@gmail.com (Adrien Petit)
+2026-03-14 05:48:46,476 - INFO - 📧 TEST MODE: Célia Favier → idirakriche9@gmail.com
+2026-03-14 05:48:46,697 - INFO - ✅ Email sent to idirakriche9@gmail.com (Célia Favier)
+2026-03-14 05:48:47,299 - INFO - 📧 TEST MODE: Frédéric Deschamps → idirakriche9@gmail.com
+2026-03-14 05:48:47,538 - INFO - ✅ Email sent to idirakriche9@gmail.com (Frédéric Deschamps)
+2026-03-14 05:48:47,540 - INFO - 📧 TEST MODE: Laurie Blanchard → idirakriche9@gmail.com
+2026-03-14 05:48:47,797 - INFO - ✅ Email sent to idirakriche9@gmail.com (Laurie Blanchard)
+2026-03-14 05:48:48,402 - INFO - 📧 TEST MODE: Mathias Rousseau → idirakriche9@gmail.com
+2026-03-14 05:48:48,618 - INFO - ✅ Email sent to idirakriche9@gmail.com (Mathias Rousseau)
+2026-03-14 05:48:48,621 - INFO - 📧 TEST MODE: Véronique Michaud → idirakriche9@gmail.com
+2026-03-14 05:48:48,845 - INFO - ✅ Email sent to idirakriche9@gmail.com (Véronique Michaud)
+2026-03-14 05:48:49,451 - INFO - 📧 TEST MODE: Marc Pelletier → idirakriche9@gmail.com
+2026-03-14 05:48:49,688 - INFO - ✅ Email sent to idirakriche9@gmail.com (Marc Pelletier)
+2026-03-14 05:48:49,689 - INFO - 📧 TEST MODE: Érica Santos → idirakriche9@gmail.com
+2026-03-14 05:48:49,908 - INFO - ✅ Email sent to idirakriche9@gmail.com (Érica Santos)
+2026-03-14 05:48:50,512 - INFO - 📧 TEST MODE: Patrick Leclerc → idirakriche9@gmail.com
+2026-03-14 05:48:52,909 - INFO - ✅ Email sent to idirakriche9@gmail.com (Patrick Leclerc)
+2026-03-14 05:48:52,911 - INFO - 📧 TEST MODE: Carole Fabre → idirakriche9@gmail.com
+2026-03-14 05:48:53,144 - INFO - ✅ Email sent to idirakriche9@gmail.com (Carole Fabre)
+2026-03-14 05:48:53,746 - INFO - 📧 TEST MODE: Denis Fournier → idirakriche9@gmail.com
+2026-03-14 05:48:53,958 - INFO - ✅ Email sent to idirakriche9@gmail.com (Denis Fournier)
+2026-03-14 05:48:53,959 - INFO - 📧 TEST MODE: Brigitte Thibault → idirakriche9@gmail.com
+2026-03-14 05:48:54,192 - INFO - ✅ Email sent to idirakriche9@gmail.com (Brigitte Thibault)
+2026-03-14 05:48:54,795 - INFO - 📧 TEST MODE: Serge Marchand → idirakriche9@gmail.com
+2026-03-14 05:48:55,008 - INFO - ✅ Email sent to idirakriche9@gmail.com (Serge Marchand)
+2026-03-14 05:48:55,009 - INFO - 📧 TEST MODE: Evelyne Bernard → idirakriche9@gmail.com
+2026-03-14 05:48:55,488 - INFO - ✅ Email sent to idirakriche9@gmail.com (Evelyne Bernard)
+2026-03-14 05:48:56,094 - INFO - 📧 TEST MODE: Raphaël Michel → idirakriche9@gmail.com
+2026-03-14 05:48:56,358 - INFO - ✅ Email sent to idirakriche9@gmail.com (Raphaël Michel)
+2026-03-14 05:48:56,358 - INFO - 📧 TEST MODE: Stéphane Renaud → idirakriche9@gmail.com
+2026-03-14 05:48:56,570 - INFO - ✅ Email sent to idirakriche9@gmail.com (Stéphane Renaud)
+2026-03-14 05:48:57,171 - INFO - 📧 TEST MODE: Martine Delorme → idirakriche9@gmail.com
+2026-03-14 05:48:57,395 - INFO - ✅ Email sent to idirakriche9@gmail.com (Martine Delorme)
+2026-03-14 05:48:57,396 - INFO - 📧 TEST MODE: Michel Arnould → idirakriche9@gmail.com
+2026-03-14 05:48:57,652 - INFO - ✅ Email sent to idirakriche9@gmail.com (Michel Arnould)
+2026-03-14 05:48:58,257 - INFO - ✅ Batch complete: 88/100 sent
+2026-03-14 05:48:58,265 - INFO - ✅ Database updated: 88 prospects marked as emailed
+2026-03-14 05:48:58,265 - INFO - ✅ Email wave complete: 88 emails sent

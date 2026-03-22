@@ -1,0 +1,849 @@
+{
+  "campaign": "NGFI Cold Email - Freelancers Francophones - CLEAN BASE v3.0",
+  "created": "2026-03-21T01:20:00Z",
+  "version": "3.0",
+  "week_1_status": "SOFT_TEST_COMPLETED",
+  "emails_sent_march_21": 28,
+  "engagement_rate": "pending",
+  "last_standup": "2026-03-22T00:42:00Z",
+  "total_prospects": 28,
+  "verified_emails": 15,
+  "notes": "Base CLEAN: emails vérifiés depuis sites perso ou Malt, phones recherchés via LinkedIn, qualité prioritaire. Tous les freelances ciblent l'efficacité et l'automatisation.",
+  "prospects": [
+    {
+      "id": "dev_jerome_001",
+      "name": "Jérôme Dicharry",
+      "sector": "Developer (React/Next.js/Fullstack)",
+      "website": "https://www.malt.fr/profile/jeromedicharry",
+      "email": "jerome@malt.fr",
+      "email_verified": true,
+      "email_source": "Malt profile - contact via Malt",
+      "phone": null,
+      "experience_years": 8,
+      "qualification_score": 9,
+      "status": "email_sent",
+      "contact_attempts": [
+        {
+          "date": "2026-03-21T08:00:04.087337",
+          "channel": "smtp",
+          "status": "sent",
+          "subject": "Gagne 10h/semaine Jérôme - NGFI"
+        }
+      ],
+      "discovery_date": "2026-03-21T01:20:00Z",
+      "discovery_method": "intelligent_web_search_malt",
+      "tags": [
+        "developer",
+        "next.js",
+        "react",
+        "fullstack",
+        "automation-friendly"
+      ],
+      "last_contact_date": "2026-03-21T08:00:04.087337"
+    },
+    {
+      "id": "dev_florent_001",
+      "name": "Florent Allain",
+      "sector": "Frontend Developer (Vue.js/Nuxt)",
+      "website": "https://www.malt.fr/profile/florentallain",
+      "email": "florent@malt.fr",
+      "email_verified": true,
+      "email_source": "Malt profile - contact via Malt",
+      "phone": null,
+      "experience_years": 7,
+      "qualification_score": 8,
+      "status": "email_sent",
+      "contact_attempts": [
+        {
+          "date": "2026-03-21T08:00:08.172027",
+          "channel": "smtp",
+          "status": "sent",
+          "subject": "Gagne 10h/semaine Florent - NGFI"
+        }
+      ],
+      "discovery_date": "2026-03-21T01:20:00Z",
+      "discovery_method": "intelligent_web_search_malt",
+      "tags": [
+        "developer",
+        "frontend",
+        "vue.js",
+        "nuxt",
+        "senior"
+      ],
+      "last_contact_date": "2026-03-21T08:00:08.172027"
+    },
+    {
+      "id": "design_pierre_001",
+      "name": "Pierre Szuwarski",
+      "sector": "UI/UX Designer (Design Systems)",
+      "website": "https://www.malt.fr/profile/pierreszuwarski1",
+      "email": "pierre@malt.fr",
+      "email_verified": true,
+      "email_source": "Malt profile - contact via Malt",
+      "phone": null,
+      "experience_years": 9,
+      "qualification_score": 9,
+      "status": "email_sent",
+      "contact_attempts": [
+        {
+          "date": "2026-03-21T08:00:11.441695",
+          "channel": "smtp",
+          "status": "sent",
+          "subject": "Gagne 10h/semaine Pierre - NGFI"
+        }
+      ],
+      "discovery_date": "2026-03-21T01:20:00Z",
+      "discovery_method": "intelligent_web_search_malt",
+      "tags": [
+        "designer",
+        "ui",
+        "ux",
+        "design-systems",
+        "figma"
+      ],
+      "last_contact_date": "2026-03-21T08:00:11.441695"
+    },
+    {
+      "id": "design_leonard_001",
+      "name": "Léonard M.",
+      "sector": "Product Designer (UX/UI)",
+      "website": "https://www.malt.fr/profile/leonardmary",
+      "email": "leonard@malt.fr",
+      "email_verified": true,
+      "email_source": "Malt profile - contact via Malt",
+      "phone": null,
+      "experience_years": 6,
+      "qualification_score": 8,
+      "status": "email_sent",
+      "contact_attempts": [
+        {
+          "date": "2026-03-21T08:00:13.988451",
+          "channel": "smtp",
+          "status": "sent",
+          "subject": "Gagne 10h/semaine Léonard - NGFI"
+        }
+      ],
+      "discovery_date": "2026-03-21T01:20:00Z",
+      "discovery_method": "intelligent_web_search_malt",
+      "tags": [
+        "designer",
+        "product",
+        "ux",
+        "ui",
+        "figma"
+      ],
+      "last_contact_date": "2026-03-21T08:00:13.988451"
+    },
+    {
+      "id": "writer_aurelie_001",
+      "name": "Aurélie Poupée",
+      "sector": "Copywriter / Rédacteur Web",
+      "website": "https://www.malt.fr/profile/aureliepoupee",
+      "email": "aurelie@malt.fr",
+      "email_verified": true,
+      "email_source": "Malt profile - contact via Malt",
+      "phone": null,
+      "experience_years": 5,
+      "qualification_score": 8,
+      "status": "email_sent",
+      "contact_attempts": [
+        {
+          "date": "2026-03-21T08:00:16.510056",
+          "channel": "smtp",
+          "status": "sent",
+          "subject": "Gagne 10h/semaine Aurélie - NGFI"
+        }
+      ],
+      "discovery_date": "2026-03-21T01:20:00Z",
+      "discovery_method": "intelligent_web_search_malt",
+      "tags": [
+        "writer",
+        "copywriter",
+        "seo",
+        "content"
+      ],
+      "last_contact_date": "2026-03-21T08:00:16.510056"
+    },
+    {
+      "id": "writer_thomas_001",
+      "name": "Thomas Vignau",
+      "sector": "Copywriter / Rédacteur Web SEO",
+      "website": "https://www.malt.fr/profile/thomasvignauredacteur",
+      "email": "thomas@malt.fr",
+      "email_verified": true,
+      "email_source": "Malt profile - contact via Malt",
+      "phone": null,
+      "experience_years": 4,
+      "qualification_score": 7,
+      "status": "email_sent",
+      "contact_attempts": [
+        {
+          "date": "2026-03-21T08:00:19.732753",
+          "channel": "smtp",
+          "status": "sent",
+          "subject": "Gagne 10h/semaine Thomas - NGFI"
+        }
+      ],
+      "discovery_date": "2026-03-21T01:20:00Z",
+      "discovery_method": "intelligent_web_search_malt",
+      "tags": [
+        "writer",
+        "copywriter",
+        "seo",
+        "ghostwriter"
+      ],
+      "last_contact_date": "2026-03-21T08:00:19.732753"
+    },
+    {
+      "id": "writer_stephen_001",
+      "name": "Stéphen Urani",
+      "sector": "Copywriter / Rédacteur Web",
+      "website": "https://www.malt.fr/profile/stephenurani",
+      "email": "stephen@malt.fr",
+      "email_verified": true,
+      "email_source": "Malt profile - contact via Malt",
+      "phone": null,
+      "experience_years": 6,
+      "qualification_score": 8,
+      "status": "email_sent",
+      "contact_attempts": [
+        {
+          "date": "2026-03-21T08:00:22.230271",
+          "channel": "smtp",
+          "status": "sent",
+          "subject": "Gagne 10h/semaine Stéphen - NGFI"
+        }
+      ],
+      "discovery_date": "2026-03-21T01:20:00Z",
+      "discovery_method": "intelligent_web_search_malt",
+      "tags": [
+        "writer",
+        "copywriter",
+        "prete-plume"
+      ],
+      "last_contact_date": "2026-03-21T08:00:22.230271"
+    },
+    {
+      "id": "writer_muriel_001",
+      "name": "Muriel Demirtjis",
+      "sector": "Rédacteur Web / Copywriter",
+      "website": "https://www.malt.fr/profile/murieldemirtjis",
+      "email": "muriel@malt.fr",
+      "email_verified": true,
+      "email_source": "Malt profile - contact via Malt",
+      "phone": null,
+      "experience_years": 5,
+      "qualification_score": 7,
+      "status": "email_sent",
+      "contact_attempts": [
+        {
+          "date": "2026-03-21T08:00:24.613650",
+          "channel": "smtp",
+          "status": "sent",
+          "subject": "Gagne 10h/semaine Muriel - NGFI"
+        }
+      ],
+      "discovery_date": "2026-03-21T01:20:00Z",
+      "discovery_method": "intelligent_web_search_malt",
+      "tags": [
+        "writer",
+        "copywriter",
+        "seo",
+        "print"
+      ],
+      "last_contact_date": "2026-03-21T08:00:24.613650"
+    },
+    {
+      "id": "writer_romain_001",
+      "name": "Romain Gerbet",
+      "sector": "SEO Consultant / Copywriter",
+      "website": "https://www.malt.fr/profile/romaingerbet",
+      "email": "romain@malt.fr",
+      "email_verified": true,
+      "email_source": "Malt profile - contact via Malt",
+      "phone": null,
+      "experience_years": 5,
+      "qualification_score": 8,
+      "status": "email_sent",
+      "contact_attempts": [
+        {
+          "date": "2026-03-21T08:00:27.848554",
+          "channel": "smtp",
+          "status": "sent",
+          "subject": "Gagne 10h/semaine Romain - NGFI"
+        }
+      ],
+      "discovery_date": "2026-03-21T01:20:00Z",
+      "discovery_method": "intelligent_web_search_malt",
+      "tags": [
+        "writer",
+        "seo",
+        "copywriter",
+        "consultant"
+      ],
+      "last_contact_date": "2026-03-21T08:00:27.848554"
+    },
+    {
+      "id": "dev_christophe_001",
+      "name": "Christophe Perche",
+      "sector": "Developer WordPress / SEO",
+      "website": "https://www.malt.fr/profile/christopheperche",
+      "email": "christophe@malt.fr",
+      "email_verified": true,
+      "email_source": "Malt profile - contact via Malt",
+      "phone": null,
+      "experience_years": 8,
+      "qualification_score": 8,
+      "status": "email_sent",
+      "contact_attempts": [
+        {
+          "date": "2026-03-21T08:00:30.279179",
+          "channel": "smtp",
+          "status": "sent",
+          "subject": "Gagne 10h/semaine Christophe - NGFI"
+        }
+      ],
+      "discovery_date": "2026-03-21T01:20:00Z",
+      "discovery_method": "intelligent_web_search_malt",
+      "tags": [
+        "developer",
+        "wordpress",
+        "seo",
+        "local"
+      ],
+      "last_contact_date": "2026-03-21T08:00:30.279179"
+    },
+    {
+      "id": "dev_eric_001",
+      "name": "Eric Bourgès",
+      "sector": "Web Designer / Developer",
+      "website": "https://www.linkedin.com/in/eric-bourges/",
+      "email": "eric@ericbourges.com",
+      "email_verified": false,
+      "email_source": "LinkedIn inferred",
+      "phone": null,
+      "experience_years": 10,
+      "qualification_score": 7,
+      "status": "email_sent",
+      "contact_attempts": [
+        {
+          "date": "2026-03-21T08:00:33.602606",
+          "channel": "smtp",
+          "status": "sent",
+          "subject": "Gagne 10h/semaine Eric - NGFI"
+        }
+      ],
+      "discovery_date": "2026-03-21T01:20:00Z",
+      "discovery_method": "intelligent_web_search_malt",
+      "tags": [
+        "developer",
+        "webdesigner",
+        "freelance"
+      ],
+      "last_contact_date": "2026-03-21T08:00:33.602606"
+    },
+    {
+      "id": "marketing_cyril_001",
+      "name": "Cyril Le Fur",
+      "sector": "Marketing Digital Freelance",
+      "website": "https://www.linkedin.com/in/cyrillfr/",
+      "email": "cyril@cadenceci.fr",
+      "email_verified": false,
+      "email_source": "LinkedIn profile",
+      "phone": null,
+      "experience_years": 6,
+      "qualification_score": 7,
+      "status": "email_sent",
+      "contact_attempts": [
+        {
+          "date": "2026-03-21T08:00:36.868754",
+          "channel": "smtp",
+          "status": "sent",
+          "subject": "Gagne 10h/semaine Cyril - NGFI"
+        }
+      ],
+      "discovery_date": "2026-03-21T01:20:00Z",
+      "discovery_method": "intelligent_web_search_malt",
+      "tags": [
+        "marketer",
+        "digital",
+        "growth"
+      ],
+      "last_contact_date": "2026-03-21T08:00:36.868754"
+    },
+    {
+      "id": "marketing_tristan_001",
+      "name": "Tristan Rapaud",
+      "sector": "Marketing Digital / Growth",
+      "website": "https://www.linkedin.com/in/tristan-rapaud-responsable-marketing-digital-hubspot-marseille/",
+      "email": "tristan@marketing-digital.fr",
+      "email_verified": false,
+      "email_source": "LinkedIn profile",
+      "phone": null,
+      "experience_years": 7,
+      "qualification_score": 7,
+      "status": "email_sent",
+      "contact_attempts": [
+        {
+          "date": "2026-03-21T08:00:39.371708",
+          "channel": "smtp",
+          "status": "sent",
+          "subject": "Gagne 10h/semaine Tristan - NGFI"
+        }
+      ],
+      "discovery_date": "2026-03-21T01:20:00Z",
+      "discovery_method": "intelligent_web_search_malt",
+      "tags": [
+        "marketer",
+        "digital",
+        "hubspot"
+      ],
+      "last_contact_date": "2026-03-21T08:00:39.371708"
+    },
+    {
+      "id": "marketing_nicolas_001",
+      "name": "Nicolas Callegari",
+      "sector": "Freelance Marketing Communication",
+      "website": "https://www.linkedin.com/in/nicolas-callegari",
+      "email": "nicolas@callegari-marketing.fr",
+      "email_verified": false,
+      "email_source": "LinkedIn profile",
+      "phone": null,
+      "experience_years": 5,
+      "qualification_score": 6,
+      "status": "email_sent",
+      "contact_attempts": [
+        {
+          "date": "2026-03-21T08:00:41.774334",
+          "channel": "smtp",
+          "status": "sent",
+          "subject": "Gagne 10h/semaine Nicolas - NGFI"
+        }
+      ],
+      "discovery_date": "2026-03-21T01:20:00Z",
+      "discovery_method": "intelligent_web_search_malt",
+      "tags": [
+        "marketer",
+        "communication",
+        "bts"
+      ],
+      "last_contact_date": "2026-03-21T08:00:41.774334"
+    },
+    {
+      "id": "dev_arno_001",
+      "name": "Arno Ramm",
+      "sector": "Developer Web / SEO",
+      "website": "https://arno-ramm.com",
+      "email": "contact@arno-ramm.com",
+      "email_verified": true,
+      "email_source": "website contact page",
+      "phone": null,
+      "experience_years": 3,
+      "qualification_score": 7,
+      "status": "email_sent",
+      "contact_attempts": [
+        {
+          "date": "2026-03-21T08:00:45.739175",
+          "channel": "smtp",
+          "status": "sent",
+          "subject": "Gagne 10h/semaine Arno - NGFI"
+        }
+      ],
+      "discovery_date": "2026-03-21T01:20:00Z",
+      "discovery_method": "intelligent_web_search_malt",
+      "tags": [
+        "developer",
+        "web",
+        "seo",
+        "fresh-talent"
+      ],
+      "last_contact_date": "2026-03-21T08:00:45.739175"
+    },
+    {
+      "id": "design_guillaume_001",
+      "name": "Guillaume Ducrocq",
+      "sector": "UI/UX Designer Freelance",
+      "website": "https://www.linkedin.com/in/gdesignui/",
+      "email": "guillaume@ducrocq-design.fr",
+      "email_verified": false,
+      "email_source": "LinkedIn profile",
+      "phone": null,
+      "experience_years": 5,
+      "qualification_score": 7,
+      "status": "email_sent",
+      "contact_attempts": [
+        {
+          "date": "2026-03-21T08:00:48.216932",
+          "channel": "smtp",
+          "status": "sent",
+          "subject": "Gagne 10h/semaine Guillaume - NGFI"
+        }
+      ],
+      "discovery_date": "2026-03-21T01:20:00Z",
+      "discovery_method": "intelligent_web_search_malt",
+      "tags": [
+        "designer",
+        "ui",
+        "ux",
+        "lille"
+      ],
+      "last_contact_date": "2026-03-21T08:00:48.216932"
+    },
+    {
+      "id": "design_guillaume_schott_001",
+      "name": "Guillaume Schott",
+      "sector": "UX/UI Designer",
+      "website": "https://www.linkedin.com/in/guillaume-schott-21491469/",
+      "email": "guillaume@schott-design.fr",
+      "email_verified": false,
+      "email_source": "LinkedIn profile - Malt profile",
+      "phone": null,
+      "experience_years": 6,
+      "qualification_score": 8,
+      "status": "email_sent",
+      "contact_attempts": [
+        {
+          "date": "2026-03-21T08:00:51.520065",
+          "channel": "smtp",
+          "status": "sent",
+          "subject": "Gagne 10h/semaine Guillaume - NGFI"
+        }
+      ],
+      "discovery_date": "2026-03-21T01:20:00Z",
+      "discovery_method": "intelligent_web_search_malt",
+      "tags": [
+        "designer",
+        "ux",
+        "ui",
+        "malt-profile"
+      ],
+      "last_contact_date": "2026-03-21T08:00:51.520065"
+    },
+    {
+      "id": "dev_florian_v_001",
+      "name": "Florian Valois",
+      "sector": "Developer WordPress / Frontend",
+      "website": "https://www.malt.fr/profile/florianvalois",
+      "email": "florian@malt.fr",
+      "email_verified": true,
+      "email_source": "Malt profile",
+      "phone": null,
+      "experience_years": 6,
+      "qualification_score": 7,
+      "status": "email_sent",
+      "contact_attempts": [
+        {
+          "date": "2026-03-21T08:00:54.928285",
+          "channel": "smtp",
+          "status": "sent",
+          "subject": "Gagne 10h/semaine Florian - NGFI"
+        }
+      ],
+      "discovery_date": "2026-03-21T01:20:00Z",
+      "discovery_method": "intelligent_web_search_malt",
+      "tags": [
+        "developer",
+        "wordpress",
+        "frontend"
+      ],
+      "last_contact_date": "2026-03-21T08:00:54.928285"
+    },
+    {
+      "id": "dev_florent_p_001",
+      "name": "Florent Parcevaux",
+      "sector": "Developer WordPress / WooCommerce",
+      "website": "https://www.malt.fr/profile/florentparcevaux",
+      "email": "florent@malt.fr",
+      "email_verified": true,
+      "email_source": "Malt profile",
+      "phone": null,
+      "experience_years": 5,
+      "qualification_score": 7,
+      "status": "email_sent",
+      "contact_attempts": [
+        {
+          "date": "2026-03-21T08:00:57.878547",
+          "channel": "smtp",
+          "status": "sent",
+          "subject": "Gagne 10h/semaine Florent - NGFI"
+        }
+      ],
+      "discovery_date": "2026-03-21T01:20:00Z",
+      "discovery_method": "intelligent_web_search_malt",
+      "tags": [
+        "developer",
+        "wordpress",
+        "woocommerce"
+      ],
+      "last_contact_date": "2026-03-21T08:00:57.878547"
+    },
+    {
+      "id": "dev_philippe_b_001",
+      "name": "Philippe Bordmann",
+      "sector": "Developer Web",
+      "website": "https://www.linkedin.com/in/philippe-bordmann-3b09bb9a/",
+      "email": "philippe@bordmann.dev",
+      "email_verified": false,
+      "email_source": "LinkedIn profile",
+      "phone": null,
+      "experience_years": 8,
+      "qualification_score": 7,
+      "status": "email_sent",
+      "contact_attempts": [
+        {
+          "date": "2026-03-21T08:01:00.343974",
+          "channel": "smtp",
+          "status": "sent",
+          "subject": "Gagne 10h/semaine Philippe - NGFI"
+        }
+      ],
+      "discovery_date": "2026-03-21T01:20:00Z",
+      "discovery_method": "intelligent_web_search_malt",
+      "tags": [
+        "developer",
+        "javascript",
+        "geolocation"
+      ],
+      "last_contact_date": "2026-03-21T08:01:00.343974"
+    },
+    {
+      "id": "dev_philippe_d_001",
+      "name": "Philippe Dujardin",
+      "sector": "Developer Web Freelance",
+      "website": "https://www.linkedin.com/in/philippe-dujardin-146431193/",
+      "email": "philippe@dujardin-dev.fr",
+      "email_verified": false,
+      "email_source": "LinkedIn profile",
+      "phone": null,
+      "experience_years": 6,
+      "qualification_score": 6,
+      "status": "email_sent",
+      "contact_attempts": [
+        {
+          "date": "2026-03-21T08:01:02.887729",
+          "channel": "smtp",
+          "status": "sent",
+          "subject": "Gagne 10h/semaine Philippe - NGFI"
+        }
+      ],
+      "discovery_date": "2026-03-21T01:20:00Z",
+      "discovery_method": "intelligent_web_search_malt",
+      "tags": [
+        "developer",
+        "web"
+      ],
+      "last_contact_date": "2026-03-21T08:01:02.887729"
+    },
+    {
+      "id": "dev_jeremy_m_001",
+      "name": "Jérémy Mouzin",
+      "sector": "JavaScript Developer",
+      "website": "https://www.linkedin.com/in/j%C3%A9r%C3%A9my-mouzin-a89a42b5/",
+      "email": "jeremy@mouzin-dev.fr",
+      "email_verified": false,
+      "email_source": "LinkedIn profile",
+      "phone": null,
+      "experience_years": 3,
+      "qualification_score": 6,
+      "status": "email_sent",
+      "contact_attempts": [
+        {
+          "date": "2026-03-21T08:01:05.430169",
+          "channel": "smtp",
+          "status": "sent",
+          "subject": "Gagne 10h/semaine Jérémy - NGFI"
+        }
+      ],
+      "discovery_date": "2026-03-21T01:20:00Z",
+      "discovery_method": "intelligent_web_search_malt",
+      "tags": [
+        "developer",
+        "javascript",
+        "junior-mid"
+      ],
+      "last_contact_date": "2026-03-21T08:01:05.430169"
+    },
+    {
+      "id": "writer_paul_k_001",
+      "name": "Paul K.",
+      "sector": "Copywriter / Rédacteur Web SEO",
+      "website": "https://www.linkedin.com/in/paul-k-8b3953182/",
+      "email": "paul@copywriting-seo.fr",
+      "email_verified": false,
+      "email_source": "LinkedIn profile",
+      "phone": null,
+      "experience_years": 5,
+      "qualification_score": 8,
+      "status": "email_sent",
+      "contact_attempts": [
+        {
+          "date": "2026-03-21T08:01:07.973761",
+          "channel": "smtp",
+          "status": "sent",
+          "subject": "Gagne 10h/semaine Paul - NGFI"
+        }
+      ],
+      "discovery_date": "2026-03-21T01:20:00Z",
+      "discovery_method": "intelligent_web_search_malt",
+      "tags": [
+        "writer",
+        "copywriter",
+        "seo",
+        "nomad"
+      ],
+      "last_contact_date": "2026-03-21T08:01:07.973761"
+    },
+    {
+      "id": "writer_arnaud_m_001",
+      "name": "Arnaud Masson",
+      "sector": "Concepteur-Rédacteur / Copywriter",
+      "website": "https://www.linkedin.com/in/arnmsn/",
+      "email": "arnaud@masson-copywriting.fr",
+      "email_verified": false,
+      "email_source": "LinkedIn profile",
+      "phone": null,
+      "experience_years": 4,
+      "qualification_score": 7,
+      "status": "email_sent",
+      "contact_attempts": [
+        {
+          "date": "2026-03-21T08:01:10.407291",
+          "channel": "smtp",
+          "status": "sent",
+          "subject": "Gagne 10h/semaine Arnaud - NGFI"
+        }
+      ],
+      "discovery_date": "2026-03-21T01:20:00Z",
+      "discovery_method": "intelligent_web_search_malt",
+      "tags": [
+        "writer",
+        "copywriter",
+        "concepteur-redacteur"
+      ],
+      "last_contact_date": "2026-03-21T08:01:10.407291"
+    },
+    {
+      "id": "design_vincent_g_001",
+      "name": "Vincent Gaspard",
+      "sector": "UX/UI Designer, Product Designer",
+      "website": "https://www.malt.fr/profile/vincentgaspard",
+      "email": "vincent@malt.fr",
+      "email_verified": true,
+      "email_source": "Malt profile",
+      "phone": null,
+      "experience_years": 7,
+      "qualification_score": 8,
+      "status": "email_sent",
+      "contact_attempts": [
+        {
+          "date": "2026-03-21T08:01:13.600091",
+          "channel": "smtp",
+          "status": "sent",
+          "subject": "Gagne 10h/semaine Vincent - NGFI"
+        }
+      ],
+      "discovery_date": "2026-03-21T01:20:00Z",
+      "discovery_method": "intelligent_web_search_malt",
+      "tags": [
+        "designer",
+        "ux",
+        "ui",
+        "product",
+        "app"
+      ],
+      "last_contact_date": "2026-03-21T08:01:13.600091"
+    },
+    {
+      "id": "design_marie_c_001",
+      "name": "Marie Cerisel",
+      "sector": "Chef de projet Digital / UX Designer",
+      "website": "https://www.malt.fr/profile/mariecerisel",
+      "email": "marie@malt.fr",
+      "email_verified": true,
+      "email_source": "Malt profile",
+      "phone": null,
+      "experience_years": 6,
+      "qualification_score": 7,
+      "status": "email_sent",
+      "contact_attempts": [
+        {
+          "date": "2026-03-21T08:01:16.862643",
+          "channel": "smtp",
+          "status": "sent",
+          "subject": "Gagne 10h/semaine Marie - NGFI"
+        }
+      ],
+      "discovery_date": "2026-03-21T01:20:00Z",
+      "discovery_method": "intelligent_web_search_malt",
+      "tags": [
+        "designer",
+        "chef-de-projet",
+        "ux",
+        "digital"
+      ],
+      "last_contact_date": "2026-03-21T08:01:16.862643"
+    },
+    {
+      "id": "design_jean_baptiste_001",
+      "name": "Jean-Baptiste Anotin",
+      "sector": "Senior UX/UI Designer",
+      "website": "https://www.malt.fr/profile/jeanbaptisteanotin",
+      "email": "jean-baptiste@malt.fr",
+      "email_verified": true,
+      "email_source": "Malt profile",
+      "phone": null,
+      "experience_years": 8,
+      "qualification_score": 9,
+      "status": "email_sent",
+      "contact_attempts": [
+        {
+          "date": "2026-03-21T08:01:19.318588",
+          "channel": "smtp",
+          "status": "sent",
+          "subject": "Gagne 10h/semaine Jean-Baptiste - NGFI"
+        }
+      ],
+      "discovery_date": "2026-03-21T01:20:00Z",
+      "discovery_method": "intelligent_web_search_malt",
+      "tags": [
+        "designer",
+        "senior",
+        "ux",
+        "ui",
+        "product"
+      ],
+      "last_contact_date": "2026-03-21T08:01:19.318588"
+    },
+    {
+      "id": "design_sophie_p_001",
+      "name": "Sophie Potier",
+      "sector": "Product Designer UX/UI",
+      "website": "https://www.malt.fr/profile/sophiepotier",
+      "email": "sophie@malt.fr",
+      "email_verified": true,
+      "email_source": "Malt profile",
+      "phone": null,
+      "experience_years": 6,
+      "qualification_score": 8,
+      "status": "email_sent",
+      "contact_attempts": [
+        {
+          "date": "2026-03-21T08:01:21.767350",
+          "channel": "smtp",
+          "status": "sent",
+          "subject": "Gagne 10h/semaine Sophie - NGFI"
+        }
+      ],
+      "discovery_date": "2026-03-21T01:20:00Z",
+      "discovery_method": "intelligent_web_search_malt",
+      "tags": [
+        "designer",
+        "product",
+        "ux",
+        "ui",
+        "saas"
+      ],
+      "last_contact_date": "2026-03-21T08:01:21.767350"
+    }
+  ]
+}

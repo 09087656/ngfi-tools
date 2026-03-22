@@ -1,0 +1,68 @@
+{
+  "waalaxy_campaign": "NGFI_OUTREACH_001",
+  "campaign_type": "connection_and_message",
+  "prospects": [
+    {
+      "name": "Ludovic Frank",
+      "linkedin_url": "https://fr.linkedin.com/in/freelance-symfony",
+      "job_title": "Développeur Web Freelance",
+      "sector": "Dev Web",
+      "location": "Nancy",
+      "connection_message": "Salut Ludovic 👋 J'ai vu ton excellent travail en Symfony et freelance depuis 2014 à Nancy. Je lance NGFI - une IA business pour freelances qui automatise la prospection et l'admin. Ça te dit une démo rapide ? 15min max.",
+      "follow_up_message": "Salut Ludovic, simple question : les freelances dev web, vous perdez combien de temps sur l'admin/prosp par semaine ? NGFI l'automatise. Intéressé ?"
+    },
+    {
+      "name": "Pierre Viéville",
+      "linkedin_url": "https://www.linkedin.com/in/pierrevieville/",
+      "job_title": "Développeur Web Senior Freelance",
+      "sector": "Dev Web",
+      "location": "Soissons",
+      "connection_message": "Salut Pierre 👋 Ton portfolio à Soissons m'a impressionné - 200+ missions, 12+ ans freelance. Je lance NGFI pour automatiser la prosp et admin. Tu gères ça seul ? On pourrait en parler 15min ?",
+      "follow_up_message": "Pierre, question rapide : comment tu gères la prospection et l'admin entre tes projets ? NGFI l'automatise complètement. Intéressé ?"
+    },
+    {
+      "name": "Mathieu Crevoulin",
+      "linkedin_url": "https://fr.linkedin.com/in/mathieu-crevoulin",
+      "job_title": "Développeur Web Full-Stack",
+      "sector": "Dev Web",
+      "location": "Provence",
+      "connection_message": "Salut Mathieu 👋 102 projets, 89 clients satisfaits - très impressionnant ! Je lance NGFI qui aide les dev freelances à gagner 10h/semaine sur l'admin. Ça t'intéresse une démo ?",
+      "follow_up_message": "Mathieu, les 102 projets c'est énorme - mais c'est combien de temps perdu en prosp et admin ? NGFI l'automatise. On en parle ?"
+    },
+    {
+      "name": "Guillaume Guersan",
+      "linkedin_url": "https://fr.linkedin.com/in/guillaume-guersan",
+      "job_title": "Consultant SEO & Marketing Digital",
+      "sector": "Marketing Digital",
+      "location": "Rouen",
+      "connection_message": "Salut Guillaume 👋 Ton expertise en SEO/Google Ads m'a plu. Je lance NGFI - IA business pour freelances/consultants. Ça automatise la prosp + admin. 15min pour une démo ?",
+      "follow_up_message": "Guillaume, tu dis sur ton site que tu prends 2 nouveaux projets/mois. Comment tu les trouves ? NGFI l'automatise. Intéressé ?"
+    },
+    {
+      "name": "Pauline Osmont",
+      "linkedin_url": "https://fr.linkedin.com/in/paulineosmont",
+      "job_title": "Senior UX/UI Designer Freelance",
+      "sector": "Design",
+      "location": "Lyon",
+      "connection_message": "Salut Pauline 👋 7+ ans d'XP en UX/UI, très impressionnant ! Je lance NGFI pour les freelances - automatise prosp + admin. Ça te dit une démo rapide ? 15min.",
+      "follow_up_message": "Pauline, question : entre tes projects de design, combien de temps tu passes à prospecter et faire de l'admin ? NGFI l'automatise. On en parle ?"
+    }
+  ],
+  "message_templates": {
+    "connection_note": "Salut [FIRST_NAME] 👋\nJ'ai vu ton travail en tant que [JOB_TITLE] - vraiment impressionnant !\n\nJe lance NGFI - une IA business pour freelances qui automatise la prospection et l'administration.\n→ 10h+ gagnées/semaine\n→ 49€/mois\n\nÇa t'intéresse une démo rapide ? (15min max)\n\nÀ+\nIdir",
+    "follow_up_1": "Hey [FIRST_NAME] 👋\nSimple question : dans ta semaine, combien de temps tu passes sur :\n- Prospection clients\n- Admin/facturation/relances\n- Autres tâches non-facturables\n\nNGFI automatise tout ça. Intéressé ?\n\nCheers\nIdir",
+    "follow_up_2": "[FIRST_NAME], je comprends tu es busy. Juste pour info : NGFI c'est l'IA qui gère ta prosp 24/7 pendant que tu bosses. 49€/mois. Worth a shot ? ☺️"
+  },
+  "daily_limits": {
+    "connections_per_day": 50,
+    "messages_per_day": 50,
+    "total_daily_capacity": 100
+  },
+  "campaign_schedule": {
+    "start_date": "2026-03-14",
+    "daily_time": "09:00",
+    "timezone": "GMT+1",
+    "duration_days": 7,
+    "expected_total_contacts": 350
+  }
+}

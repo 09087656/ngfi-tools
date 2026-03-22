@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>📋 Vérificateur Conformité Facture</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body { 
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+        }
+        .criteria-item {
+            transition: all 0.3s ease;
+        }
+        .criteria-item.checked {
+            background-color: rgba(34, 197, 94, 0.1);
+        }
+        .score-badge {
+            font-size: 2.5rem;
+            font-weight: 900;
+            background: linear-gradient(135deg, #4F46E5 0%, #7C3AED 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+    </style>
+</head>
+<body class="bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50 min-h-screen py-8 px-4">
+    <div class="max-w-2xl mx-auto">
+        <!-- Header -->
+        <div class="text-center mb-8">
+            <h1 class="text-4xl font-bold text-gray-900 mb-2">📋 Vérificateur Facture</h1>
+            <p class="text-lg text-gray-600">Vérifie les 15 critères URSSAF de conformité</p>
+            <p class="text-sm text-gray-500 mt-2">✅ Outil 100% gratuit - Pas d'inscription requise</p>
+        </div>
+
+        <!-- Main Tool Container -->
+        <div class="bg-white rounded-2xl shadow-xl overflow-hidden">
+            <!-- Checklist Section -->
+            <div class="p-8">
+                <div class="mb-6">
+                    <h2 class="text-xl font-bold text-gray-900 mb-4">🎯 15 Critères URSSAF</h2>
+                    <p class="text-sm text-gray-600 mb-6">Cochez chaque critère conforme dans votre facture</p>
+                </div>
+
+                <!-- Criteria Grid -->
+                <div class="space-y-3 mb-8" id="criteriaContainer">
+                    <!-- Populated by JS -->
+                </div>
+
+                <!-- Score Display -->
+                <div class="bg-gradient-to-r from-indigo-50 to-purple-50 rounded-xl p-8 text-center border-2 border-indigo-200">
+                    <p class="text-gray-700 mb-2 font-semibold">Votre Score de Conformité</p>
+                    <div class="flex items-center justify-center gap-4">
+                        <div>
+                            <div class="score-badge" id="scoreDisplay">0</div>
+                            <p class="text-gray-600 text-sm mt-2">/ 15</p>
+                        </div>
+                        <div class="text-left">
+                            <div id="scorePercent" class="text-3xl font-bold text-indigo-600">0%</div>
+                            <p id="scoreStatus" class="text-sm text-gray-600 mt-1">En attente...</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Result Message -->
+                <div id="resultMessage" class="mt-6 p-4 rounded-lg text-sm hidden"></div>
+            </div>
+
+            <!-- NGFI CTA Footer -->
+            <div class="bg-gradient-to-r from-indigo-600 to-purple-600 text-white px-8 py-8">
+                <div class="text-center">
+                    <p class="text-sm opacity-90 mb-2">🚀 <strong>NGFI</strong> automatise TOUT ça pour toi</p>
+                    <p class="text-xs opacity-75 mb-4">Factures conformes, leads qualifiés, suivi clients — automatiquement</p>
+                    <a href="https://ngfi.fr/demo" target="_blank" rel="noopener noreferrer" 
+                       class="inline-block bg-white text-indigo-600 px-8 py-3 rounded-lg font-bold hover:shadow-lg transform hover:scale-105 transition-all">
+                        Essaie NGFI gratuitement
+                    </a>
+                    <p class="text-xs opacity-75 mt-4">💡 Accès gratuit - Zéro engagement</p>
+                </div>
+            </div>
+
+            <!-- Footer Links -->
+            <div class="bg-gray-50 px-8 py-6 text-center border-t border-gray-200">
+                <a href="https://ngfi.fr" target="_blank" rel="noopener noreferrer" 
+                   class="text-sm text-gray-600 hover:text-indigo-600 transition-colors">
+                    ← Retour à NGFI.fr
+                </a>
+            </div>
+        </div>
+
+        <!-- Info Section -->
+        <div class="mt-8 bg-blue-50 border-l-4 border-blue-400 rounded-lg p-6">
+            <h3 class="font-bold text-blue-900 mb-3">ℹ️ À propos de ce vérificateur</h3>
+            <ul class="text-sm text-blue-800 space-y-2">
+                <li>✓ Conforme aux critères URSSAF 2024</li>
+                <li>✓ Travailleur indépendant / Auto-entrepreneur / Micro-entreprise</li>
+                <li>✓ Factures nationales et B2B</li>
+                <li>✓ Données non envoyées - 100% local</li>
+            </ul>
+        </div>
+    </div>
+
+    <script>
+        // 15 URSSAF Invoice Criteria
+        const criteria = [
+            { id: 1, name: "Numéro de facture unique et séquentiel", category: "Identification" },
+            { id: 2, name: "Date d'émission", category: "Identification" },
+            { id: 3, name: "Mention 'FACTURE'", category: "Identification" },
+            { id: 4, name: "Nom/Dénomination sociale du prestataire", category: "Identification" },
+            { id: 5, name: "Numéro SIRET ou SIREN du prestataire", category: "Identification" },
+            { id: 6, name: "Adresse complète du prestataire", category: "Identification" },
+            { id: 7, name: "Identité du client/destinataire", category: "Client" },
+            { id: 8, name: "Description détaillée de la prestation", category: "Prestation" },
+            { id: 9, name: "Montant HT et montant TTC", category: "Montants" },
+            { id: 10, name: "Taux de TVA appliqué (ou mention d'exonération)", category: "TVA" },
+            { id: 11, name: "Date ou période de prestation", category: "Prestation" },
+            { id: 12, name: "Conditions de paiement", category: "Paiement" },
+            { id: 13, name: "Coordonnées de contact (téléphone/email)", category: "Contact" },
+            { id: 14, name: "Modalités de facturation récurrente (si applicable)", category: "Divers" },
+            { id: 15, name: "Signature ou mention du responsable", category: "Divers" }
+        ];
+
+        // Initialize
+        function init() {
+            renderCriteria();
+            updateScore();
+        }
+
+        // Render criteria checkboxes
+        function renderCriteria() {
+            const container = document.getElementById('criteriaContainer');
+            container.innerHTML = criteria.map(crit => `
+                <label class="criteria-item flex items-start gap-3 p-4 border border-gray-200 rounded-lg hover:bg-gray-50 cursor-pointer">
+                    <input type="checkbox" 
+                           class="criteria-checkbox mt-1 w-5 h-5 text-indigo-600 rounded border-gray-300 focus:ring-indigo-500 cursor-pointer"
+                           data-id="${crit.id}"
+                           onchange="updateScore()">
+                    <div>
+                        <p class="font-semibold text-gray-900">${crit.name}</p>
+                        <p class="text-xs text-gray-500 mt-1">${crit.category}</p>
+                    </div>
+                </label>
+            `).join('');
+        }
+
+        // Update score
+        function updateScore() {
+            const checkboxes = document.querySelectorAll('.criteria-checkbox');
+            const checked = Array.from(checkboxes).filter(cb => cb.checked).length;
+            const total = criteria.length;
+            const percent = Math.round((checked / total) * 100);
+
+            // Update display
+            document.getElementById('scoreDisplay').textContent = checked;
+            document.getElementById('scorePercent').textContent = percent + '%';
+
+            // Update criteria items styling
+            document.querySelectorAll('.criteria-item').forEach(item => {
+                if (item.querySelector('input:checked')) {
+                    item.classList.add('checked');
+                } else {
+                    item.classList.remove('checked');
+                }
+            });
+
+            // Update status message
+            const resultMsg = document.getElementById('resultMessage');
+            if (checked === 0) {
+                resultMsg.classList.add('hidden');
+            } else if (checked < 10) {
+                resultMsg.className = 'mt-6 p-4 rounded-lg text-sm bg-yellow-50 border border-yellow-200 text-yellow-800';
+                resultMsg.innerHTML = '⚠️ <strong>Attention!</strong> Votre facture présente des lacunes. Complétez les critères manquants pour être conforme.';
+                resultMsg.classList.remove('hidden');
+            } else if (checked < 15) {
+                resultMsg.className = 'mt-6 p-4 rounded-lg text-sm bg-blue-50 border border-blue-200 text-blue-800';
+                resultMsg.innerHTML = '📋 <strong>Presque parfait!</strong> Encore ' + (15 - checked) + ' critère(s) à vérifier.';
+                resultMsg.classList.remove('hidden');
+            } else {
+                resultMsg.className = 'mt-6 p-4 rounded-lg text-sm bg-green-50 border border-green-200 text-green-800';
+                resultMsg.innerHTML = '✅ <strong>Excellent!</strong> Votre facture est conforme à tous les critères URSSAF.';
+                resultMsg.classList.remove('hidden');
+            }
+        }
+
+        // Initialize on load
+        document.addEventListener('DOMContentLoaded', init);
+    </script>
+</body>
+</html>

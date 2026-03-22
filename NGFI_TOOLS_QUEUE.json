@@ -1,0 +1,147 @@
+{
+  "campaign": "NGFI Micro-Tools Lead Magnet",
+  "created": "2026-03-22T17:07:00Z",
+  "version": "1.0",
+  "total_tools_planned": 10,
+  "tools_completed": 0,
+  "status": "LAUNCHING",
+  "queue": [
+    {
+      "day": 1,
+      "date": "2026-03-23",
+      "tool_id": "verificateur-facture",
+      "name": "Vérificateur Conformité Facture",
+      "emoji": "📋",
+      "description": "Checklist 15 critères conformité facture freelance",
+      "focus": "Légal",
+      "calculation": "Validation checklist vs critères URSSAF",
+      "status": "pending",
+      "target_date": "2026-03-23T09:00:00Z"
+    },
+    {
+      "day": 2,
+      "date": "2026-03-24",
+      "tool_id": "simulateur-charges",
+      "name": "Simulateur Charges Sociales",
+      "emoji": "💰",
+      "description": "Calcul cotisations auto-entrepreneur par CA",
+      "focus": "Charges",
+      "calculation": "Cotisations sociales = % CA selon seuil EIRL/Micro",
+      "status": "pending"
+    },
+    {
+      "day": 3,
+      "date": "2026-03-25",
+      "tool_id": "calculateur-tjm",
+      "name": "Calculateur TJM",
+      "emoji": "💵",
+      "description": "Coût horaire → TJM optimal",
+      "focus": "Tarif",
+      "calculation": "TJM = (Charges + Marge) / Jours travaillés",
+      "status": "pending"
+    },
+    {
+      "day": 4,
+      "date": "2026-03-26",
+      "tool_id": "calculateur-tva",
+      "name": "Calculateur TVA",
+      "emoji": "📊",
+      "description": "TVA intracommunautaire & déduction",
+      "focus": "Impôts",
+      "calculation": "TVA à déclarer = (CA * taux TVA) - Déductions",
+      "status": "pending"
+    },
+    {
+      "day": 5,
+      "date": "2026-03-27",
+      "tool_id": "estimateur-retraite",
+      "name": "Estimateur Retraite Freelance",
+      "emoji": "🎓",
+      "description": "Points retraite estimés par CA",
+      "focus": "Retraite",
+      "calculation": "Points retraite = CA / Points valeur (année N)",
+      "status": "pending"
+    },
+    {
+      "day": 6,
+      "date": "2026-03-28",
+      "tool_id": "calculateur-rentabilite-client",
+      "name": "Calculateur Rentabilité Client",
+      "emoji": "📈",
+      "description": "ROI par client (coût acquisition vs revenu)",
+      "focus": "Business",
+      "calculation": "ROI = (Revenu client - Coût acq) / Coût acq",
+      "status": "pending"
+    },
+    {
+      "day": 7,
+      "date": "2026-03-29",
+      "tool_id": "simulateur-penalites",
+      "name": "Simulateur Pénalités de Retard",
+      "emoji": "⚠️",
+      "description": "Calcul pénalités factures impayées",
+      "focus": "Légal",
+      "calculation": "Pénalités = Montant * (taux légal % / 360) * Jours retard",
+      "status": "pending"
+    },
+    {
+      "day": 8,
+      "date": "2026-03-30",
+      "tool_id": "calculateur-taux-horaire-reel",
+      "name": "Calculateur Taux Horaire Réel",
+      "emoji": "⏰",
+      "description": "Taux horaire réel incluant frais + marge",
+      "focus": "Tarif",
+      "calculation": "Taux réel = (TJM + Frais fixed) / Heures facturables",
+      "status": "pending"
+    },
+    {
+      "day": 9,
+      "date": "2026-03-31",
+      "tool_id": "comparateur-portage-vs-ae",
+      "name": "Comparateur Portage Salarial vs Auto-Entrepreneur",
+      "emoji": "⚖️",
+      "description": "Gains net: portage vs micro-entreprise",
+      "focus": "Structures",
+      "calculation": "Revenu net portage vs AE après charges/taxes",
+      "status": "pending"
+    },
+    {
+      "day": 10,
+      "date": "2026-04-01",
+      "tool_id": "simulateur-impact-conges",
+      "name": "Simulateur Impact Congés sur CA",
+      "emoji": "🏖️",
+      "description": "Impact vacances sur CA annuel",
+      "focus": "CA",
+      "calculation": "CA perdu = (TJM * Jours congés) / Jours travail",
+      "status": "pending"
+    }
+  ],
+  "deployment": {
+    "repo": "NGFI/main",
+    "deploy_platform": "Vercel",
+    "domain": "tools.ngfi.fr",
+    "auto_deploy": true,
+    "webhook_domain": "tools.ngfi.fr",
+    "github_path": "/tools/"
+  },
+  "email_capture": {
+    "storage": "google_sheets",
+    "sheet_name": "leads-outils",
+    "columns": ["Date", "Outil", "Email", "Source", "Timestamp"],
+    "webhook_url": "TBD",
+    "optional_snov_io": false
+  },
+  "posts": {
+    "linkedin": true,
+    "twitter_x": true,
+    "format": "hook_problem_solution_cta"
+  },
+  "daily_standup": {
+    "time": "13:00",
+    "timezone": "GMT+1",
+    "report_file": "NGFI_TOOLS_FACTORY_STANDUP.md"
+  },
+  "notes": "Lead magnet strategy: Free micro-tool/day → Email capture → NGFI funnel"
+}

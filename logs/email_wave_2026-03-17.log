@@ -1,0 +1,331 @@
+================================================
+🚀 NGFI DAILY EMAIL WAVE
+📅 2026-03-17 13:24:55 CET
+================================================
+✅ Database: OK
+✅ Script: OK
+
+📧 Starting email campaign...
+2026-03-17 13:24:56,058 - INFO - 📧 SMTP Email Manager initialized
+2026-03-17 13:24:56,058 - INFO -    From: idirakriche9@gmail.com
+2026-03-17 13:24:56,058 - INFO - ============================================================
+2026-03-17 13:24:56,058 - INFO - 📧 NGFI Email Wave - Gmail SMTP
+2026-03-17 13:24:56,058 - INFO - 📅 Time: 2026-03-17 13:24:56
+2026-03-17 13:24:56,058 - INFO - 👤 From: idirakriche9@gmail.com
+2026-03-17 13:24:56,058 - INFO - ============================================================
+2026-03-17 13:24:56,059 - INFO - No prospects to contact
+2026-03-17 13:24:56,059 - INFO - ⚠️ No emails sent this wave
+
+============================================================
+GMAIL SMTP EMAIL WAVE - RESULTS
+============================================================
+Status: SUCCESS
+Emails Sent: 0
+Method: smtp
+Timestamp: 2026-03-17T13:24:56.059524
+============================================================
+
+✅ Email wave completed successfully
+📊 Check /home/pc/.openclaw/workspace/NGFI_LEADS_DATABASE.json for updated status
+
+================================================
+End time: 2026-03-17 13:24:56 CET
+================================================
+================================================
+🚀 NGFI DAILY EMAIL WAVE
+📅 2026-03-17 13:25:10 CET
+================================================
+✅ Database: OK
+✅ Script: OK
+
+📧 Starting email campaign...
+2026-03-17 13:25:10,520 - INFO - 📧 SMTP Email Manager initialized
+2026-03-17 13:25:10,521 - INFO -    From: idirakriche9@gmail.com
+2026-03-17 13:25:10,521 - INFO - ============================================================
+2026-03-17 13:25:10,521 - INFO - 📧 NGFI Email Wave - Gmail SMTP
+2026-03-17 13:25:10,521 - INFO - 📅 Time: 2026-03-17 13:25:10
+2026-03-17 13:25:10,521 - INFO - 👤 From: idirakriche9@gmail.com
+2026-03-17 13:25:10,521 - INFO - ============================================================
+2026-03-17 13:25:10,521 - INFO - 🚀 Sending 8 emails via SMTP (Gmail)...
+2026-03-17 13:25:11,644 - INFO - ✅ Email sent to contact@developpeur-freelance.io (Ludovic Frank)
+2026-03-17 13:25:11,644 - INFO -    [1/8] Waiting 1.5s...
+2026-03-17 13:25:14,088 - INFO - ✅ Email sent to contact@francoisfalcucci.fr (François Falcucci)
+2026-03-17 13:25:14,088 - INFO -    [2/8] Waiting 1.5s...
+2026-03-17 13:25:16,468 - INFO - ✅ Email sent to pauline@paulineosmont.com (Pauline Osmont)
+2026-03-17 13:25:16,469 - INFO -    [3/8] Waiting 1.5s...
+2026-03-17 13:25:18,875 - INFO - ✅ Email sent to julien@juliencoudert.com (Julien Coudert)
+2026-03-17 13:25:18,875 - INFO -    [4/8] Waiting 1.5s...
+2026-03-17 13:25:21,131 - INFO - ✅ Email sent to remi@remidudragne.com (Rémi Dudragne)
+2026-03-17 13:25:21,131 - INFO -    [5/8] Waiting 1.5s...
+2026-03-17 13:25:23,451 - INFO - ✅ Email sent to tiffany@tiffany-brillard.fr (Tiffany Brillard)
+2026-03-17 13:25:23,451 - INFO -    [6/8] Waiting 1.5s...
+2026-03-17 13:25:25,808 - INFO - ✅ Email sent to eliot@eliotbesson.com (Eliot Besson)
+2026-03-17 13:25:25,808 - INFO -    [7/8] Waiting 1.5s...
+2026-03-17 13:25:28,207 - INFO - ✅ Email sent to mathieu@mathieuloubiere.com (Mathieu Loubière)
+2026-03-17 13:25:28,207 - INFO - ✅ Batch complete: 8/8 sent
+2026-03-17 13:25:28,209 - INFO - ✅ Database updated: 8 prospects marked as emailed
+2026-03-17 13:25:28,209 - INFO - ✅ Email wave complete: 8 emails sent
+
+============================================================
+GMAIL SMTP EMAIL WAVE - RESULTS
+============================================================
+Status: SUCCESS
+Emails Sent: 8
+Method: smtp
+Timestamp: 2026-03-17T13:25:28.209355
+============================================================
+
+✅ Email wave completed successfully
+📊 Check /home/pc/.openclaw/workspace/NGFI_LEADS_DATABASE.json for updated status
+
+================================================
+End time: 2026-03-17 13:25:28 CET
+================================================
+================================================
+🚀 NGFI DAILY EMAIL WAVE
+📅 2026-03-17 13:30:45 CET
+================================================
+✅ Database: OK
+✅ Script: OK
+
+📧 Starting email campaign...
+2026-03-17 13:30:45,674 - INFO - 📧 SMTP Email Manager initialized
+2026-03-17 13:30:45,674 - INFO -    From: idirakriche9@gmail.com
+2026-03-17 13:30:45,674 - INFO - ============================================================
+2026-03-17 13:30:45,674 - INFO - 📧 NGFI Email Wave - Gmail SMTP
+2026-03-17 13:30:45,674 - INFO - 📅 Time: 2026-03-17 13:30:45
+2026-03-17 13:30:45,674 - INFO - 👤 From: idirakriche9@gmail.com
+2026-03-17 13:30:45,674 - INFO - ============================================================
+2026-03-17 13:30:45,674 - INFO - 🚀 Sending 36 emails via SMTP (Gmail)...
+2026-03-17 13:30:46,609 - INFO - ✅ Email sent to antoine@guillou.dev (Antoine Guillou)
+2026-03-17 13:30:46,609 - INFO -    [1/36] Waiting 1.5s...
+2026-03-17 13:30:48,925 - INFO - ✅ Email sent to sophie.martin@freelance-dev.fr (Sophie Martin)
+2026-03-17 13:30:48,925 - INFO -    [2/36] Waiting 1.5s...
+2026-03-17 13:30:51,356 - INFO - ✅ Email sent to thomas@dubois-dev.com (Thomas Dubois)
+2026-03-17 13:30:51,356 - INFO -    [3/36] Waiting 1.5s...
+2026-03-17 13:30:53,686 - INFO - ✅ Email sent to marie.leclerc@designstudio.fr (Marie Leclerc)
+2026-03-17 13:30:53,686 - INFO -    [4/36] Waiting 1.5s...
+2026-03-17 13:30:56,023 - INFO - ✅ Email sent to nicolas@petit-design.fr (Nicolas Petit)
+2026-03-17 13:30:56,023 - INFO -    [5/36] Waiting 1.5s...
+2026-03-17 13:30:59,143 - INFO - ✅ Email sent to isabelle.durand@webdesign.fr (Isabelle Durand)
+2026-03-17 13:30:59,143 - INFO -    [6/36] Waiting 1.5s...
+2026-03-17 13:31:01,558 - INFO - ✅ Email sent to alain@marketing-growth.fr (Alain Moreau)
+2026-03-17 13:31:01,558 - INFO -    [7/36] Waiting 1.5s...
+2026-03-17 13:31:03,883 - INFO - ✅ Email sent to caroline.renault@digital-agency.fr (Caroline Renault)
+2026-03-17 13:31:03,883 - INFO -    [8/36] Waiting 1.5s...
+2026-03-17 13:31:06,387 - INFO - ✅ Email sent to david@content-pro.fr (David Fontaine)
+2026-03-17 13:31:06,387 - INFO -    [9/36] Waiting 1.5s...
+2026-03-17 13:31:08,795 - INFO - ✅ Email sent to emilie.rousseau@copywriting.fr (Émilie Rousseau)
+2026-03-17 13:31:08,795 - INFO -    [10/36] Waiting 1.5s...
+2026-03-17 13:31:11,171 - INFO - ✅ Email sent to pierre@writingpro.fr (Pierre Lefevre)
+2026-03-17 13:31:11,171 - INFO -    [11/36] Waiting 1.5s...
+2026-03-17 13:31:13,537 - INFO - ✅ Email sent to lucie.bernard@socialmanager.fr (Lucie Bernard)
+2026-03-17 13:31:13,538 - INFO -    [12/36] Waiting 1.5s...
+2026-03-17 13:31:15,978 - INFO - ✅ Email sent to marc@community-expert.fr (Marc Guillot)
+2026-03-17 13:31:15,979 - INFO -    [13/36] Waiting 1.5s...
+2026-03-17 13:31:18,346 - INFO - ✅ Email sent to francois.gauthier@translation.fr (François Gauthier)
+2026-03-17 13:31:18,346 - INFO -    [14/36] Waiting 1.5s...
+2026-03-17 13:31:20,812 - INFO - ✅ Email sent to veronique@multilingual.fr (Véronique Blanchard)
+2026-03-17 13:31:20,813 - INFO -    [15/36] Waiting 1.5s...
+2026-03-17 13:31:23,327 - INFO - ✅ Email sent to stephane.arnaud@seo-expert.fr (Stéphane Arnaud)
+2026-03-17 13:31:23,327 - INFO -    [16/36] Waiting 1.5s...
+2026-03-17 13:31:25,737 - INFO - ✅ Email sent to nathalie@seostrategy.fr (Nathalie Collet)
+2026-03-17 13:31:25,737 - INFO -    [17/36] Waiting 1.5s...
+2026-03-17 13:31:28,992 - INFO - ✅ Email sent to bruno.mercier@dev-solutions.fr (Bruno Mercier)
+2026-03-17 13:31:28,992 - INFO -    [18/36] Waiting 1.5s...
+2026-03-17 13:31:32,226 - INFO - ✅ Email sent to sylvain@backend-dev.fr (Sylvain Leroy)
+2026-03-17 13:31:32,226 - INFO -    [19/36] Waiting 1.5s...
+2026-03-17 13:31:34,592 - INFO - ✅ Email sent to claudette.martin@fullstack.fr (Claudette Martin)
+2026-03-17 13:31:34,593 - INFO -    [20/36] Waiting 1.5s...
+2026-03-17 13:31:36,974 - INFO - ✅ Email sent to gregoire@ux-design.fr (Grégoire Merchand)
+2026-03-17 13:31:36,974 - INFO -    [21/36] Waiting 1.5s...
+2026-03-17 13:31:39,369 - INFO - ✅ Email sent to helene.garnier@design-studio.fr (Hélène Garnier)
+2026-03-17 13:31:39,370 - INFO -    [22/36] Waiting 1.5s...
+2026-03-17 13:31:41,703 - INFO - ✅ Email sent to jerome@web-design-pro.fr (Jérôme Fabre)
+2026-03-17 13:31:41,703 - INFO -    [23/36] Waiting 1.5s...
+2026-03-17 13:31:44,889 - INFO - ✅ Email sent to beatrice.roussel@marketing-pro.fr (Béatrice Roussel)
+2026-03-17 13:31:44,889 - INFO -    [24/36] Waiting 1.5s...
+2026-03-17 13:31:47,220 - INFO - ✅ Email sent to raphael@digital-strategy.fr (Raphaël Dufour)
+2026-03-17 13:31:47,220 - INFO -    [25/36] Waiting 1.5s...
+2026-03-17 13:31:49,703 - INFO - ✅ Email sent to valerie@content-agency.fr (Valérie Blanchard)
+2026-03-17 13:31:49,703 - INFO -    [26/36] Waiting 1.5s...
+2026-03-17 13:31:52,041 - INFO - ✅ Email sent to xavier.pichot@copy-pro.fr (Xavier Pichot)
+2026-03-17 13:31:52,041 - INFO -    [27/36] Waiting 1.5s...
+2026-03-17 13:31:54,351 - INFO - ✅ Email sent to annick@content-writing.fr (Annick Leblanc)
+2026-03-17 13:31:54,352 - INFO -    [28/36] Waiting 1.5s...
+2026-03-17 13:31:56,728 - INFO - ✅ Email sent to olivier.fontaine@social-media.fr (Olivier Fontaine)
+2026-03-17 13:31:56,728 - INFO -    [29/36] Waiting 1.5s...
+2026-03-17 13:31:59,094 - INFO - ✅ Email sent to paulette@community-pro.fr (Paulette Morvan)
+2026-03-17 13:31:59,095 - INFO -    [30/36] Waiting 1.5s...
+2026-03-17 13:32:01,434 - INFO - ✅ Email sent to laurent.giroux@translation-pro.fr (Laurent Giroux)
+2026-03-17 13:32:01,435 - INFO -    [31/36] Waiting 1.5s...
+2026-03-17 13:32:03,816 - INFO - ✅ Email sent to simone@italian-french.fr (Simone Russo)
+2026-03-17 13:32:03,816 - INFO -    [32/36] Waiting 1.5s...
+2026-03-17 13:32:07,026 - INFO - ✅ Email sent to thibault.renard@seo-pro.fr (Thibault Renard)
+2026-03-17 13:32:07,026 - INFO -    [33/36] Waiting 1.5s...
+2026-03-17 13:32:09,368 - INFO - ✅ Email sent to ursule@search-expert.fr (Ursule Martin)
+2026-03-17 13:32:09,369 - INFO -    [34/36] Waiting 1.5s...
+2026-03-17 13:32:11,835 - INFO - ✅ Email sent to vincent.hubert@code-solutions.fr (Vincent Hubert)
+2026-03-17 13:32:11,835 - INFO -    [35/36] Waiting 1.5s...
+2026-03-17 13:32:14,191 - INFO - ✅ Email sent to wanda.legrand@design-vision.fr (Wanda Legrand)
+2026-03-17 13:32:14,191 - INFO - ✅ Batch complete: 36/36 sent
+2026-03-17 13:32:14,199 - INFO - ✅ Database updated: 36 prospects marked as emailed
+2026-03-17 13:32:14,199 - INFO - ✅ Email wave complete: 36 emails sent
+
+============================================================
+GMAIL SMTP EMAIL WAVE - RESULTS
+============================================================
+Status: SUCCESS
+Emails Sent: 36
+Method: smtp
+Timestamp: 2026-03-17T13:32:14.200230
+============================================================
+
+✅ Email wave completed successfully
+📊 Check /home/pc/.openclaw/workspace/NGFI_LEADS_DATABASE.json for updated status
+
+================================================
+End time: 2026-03-17 13:32:14 CET
+================================================
+================================================
+🚀 NGFI DAILY EMAIL WAVE
+📅 2026-03-17 13:46:00 CET
+================================================
+✅ Database: OK
+✅ Script: OK
+
+📧 Starting email campaign...
+2026-03-17 13:46:00,744 - INFO - 📧 SMTP Email Manager initialized
+2026-03-17 13:46:00,744 - INFO -    From: idirakriche9@gmail.com
+2026-03-17 13:46:00,744 - INFO - ============================================================
+2026-03-17 13:46:00,744 - INFO - 📧 NGFI Email Wave - Gmail SMTP
+2026-03-17 13:46:00,744 - INFO - 📅 Time: 2026-03-17 13:46:00
+2026-03-17 13:46:00,744 - INFO - 👤 From: idirakriche9@gmail.com
+2026-03-17 13:46:00,744 - INFO - ============================================================
+2026-03-17 13:46:00,745 - INFO - 🚀 Sending 27 emails via SMTP (Gmail)...
+2026-03-17 13:46:01,779 - INFO - ✅ Email sent to antoine@developpeur-freelance.io (Antoine Martin)
+2026-03-17 13:46:01,780 - INFO -    [1/27] Waiting 1.5s...
+2026-03-17 13:46:04,141 - INFO - ✅ Email sent to sophie@freelance-dev.fr (Sophie Dubois)
+2026-03-17 13:46:04,141 - INFO -    [2/27] Waiting 1.5s...
+2026-03-17 13:46:06,727 - INFO - ✅ Email sent to thomas@dev-solutions.fr (Thomas Lefevre)
+2026-03-17 13:46:06,727 - INFO -    [3/27] Waiting 1.5s...
+2026-03-17 13:46:09,235 - INFO - ✅ Email sent to bruno@backend-dev.fr (Bruno Mercier)
+2026-03-17 13:46:09,235 - INFO -    [4/27] Waiting 1.5s...
+2026-03-17 13:46:11,780 - INFO - ✅ Email sent to sylvain@fullstack.fr (Sylvain Renault)
+2026-03-17 13:46:11,780 - INFO -    [5/27] Waiting 1.5s...
+2026-03-17 13:46:14,172 - INFO - ✅ Email sent to claude@code-solutions.fr (Claude Pichon)
+2026-03-17 13:46:14,173 - INFO -    [6/27] Waiting 1.5s...
+2026-03-17 13:46:17,529 - INFO - ✅ Email sent to vincent@react-dev.fr (Vincent Laurent)
+2026-03-17 13:46:17,529 - INFO -    [7/27] Waiting 1.5s...
+2026-03-17 13:46:20,046 - INFO - ✅ Email sent to pierre@nodejs-expert.fr (Pierre Gauthier)
+2026-03-17 13:46:20,046 - INFO -    [8/27] Waiting 1.5s...
+2026-03-17 13:46:22,727 - INFO - ✅ Email sent to marie@ux-design.fr (Marie Leclerc)
+2026-03-17 13:46:22,728 - INFO -    [9/27] Waiting 1.5s...
+2026-03-17 13:46:25,111 - INFO - ✅ Email sent to nicolas@design-studio.fr (Nicolas Petit)
+2026-03-17 13:46:25,112 - INFO -    [10/27] Waiting 1.5s...
+2026-03-17 13:46:27,616 - INFO - ✅ Email sent to isabelle@web-design-pro.fr (Isabelle Renard)
+2026-03-17 13:46:27,616 - INFO -    [11/27] Waiting 1.5s...
+2026-03-17 13:46:29,473 - ERROR - ❌ Failed to send to grégory@design-vision.fr: 'utf8' is an invalid keyword argument for Compat32
+2026-03-17 13:46:29,474 - INFO -    [12/27] Waiting 1.5s...
+2026-03-17 13:46:31,274 - ERROR - ❌ Failed to send to hélène@petit-design.fr: 'utf8' is an invalid keyword argument for Compat32
+2026-03-17 13:46:31,274 - INFO -    [13/27] Waiting 1.5s...
+2026-03-17 13:46:33,069 - ERROR - ❌ Failed to send to jérôme@graphique-design.fr: 'utf8' is an invalid keyword argument for Compat32
+2026-03-17 13:46:33,069 - INFO -    [14/27] Waiting 1.5s...
+2026-03-17 13:46:35,429 - INFO - ✅ Email sent to caroline@digital-agency.fr (Caroline Rousseau)
+2026-03-17 13:46:35,429 - INFO -    [15/27] Waiting 1.5s...
+2026-03-17 13:46:37,207 - ERROR - ❌ Failed to send to raphaël@digital-strategy.fr: 'utf8' is an invalid keyword argument for Compat32
+2026-03-17 13:46:37,208 - INFO -    [16/27] Waiting 1.5s...
+2026-03-17 13:46:39,007 - ERROR - ❌ Failed to send to béatrice@marketing-pro.fr: 'utf8' is an invalid keyword argument for Compat32
+2026-03-17 13:46:39,007 - INFO -    [17/27] Waiting 1.5s...
+2026-03-17 13:46:40,789 - ERROR - ❌ Failed to send to valérie@content-agency.fr: 'utf8' is an invalid keyword argument for Compat32
+2026-03-17 13:46:40,790 - INFO -    [18/27] Waiting 1.5s...
+2026-03-17 13:46:42,588 - ERROR - ❌ Failed to send to émilie@copywriting.fr: 'utf8' is an invalid keyword argument for Compat32
+2026-03-17 13:46:42,588 - INFO -    [19/27] Waiting 1.5s...
+2026-03-17 13:46:45,260 - INFO - ✅ Email sent to xavier@copy-pro.fr (Xavier Pichot)
+2026-03-17 13:46:45,260 - INFO -    [20/27] Waiting 1.5s...
+2026-03-17 13:46:47,636 - INFO - ✅ Email sent to lucie@socialmanager.fr (Lucie Durand)
+2026-03-17 13:46:47,637 - INFO -    [21/27] Waiting 1.5s...
+2026-03-17 13:46:50,149 - INFO - ✅ Email sent to olivier@social-media.fr (Olivier Leroy)
+2026-03-17 13:46:50,149 - INFO -    [22/27] Waiting 1.5s...
+2026-03-17 13:46:51,976 - ERROR - ❌ Failed to send to françois@translation.fr: 'utf8' is an invalid keyword argument for Compat32
+2026-03-17 13:46:51,976 - INFO -    [23/27] Waiting 1.5s...
+2026-03-17 13:46:53,753 - ERROR - ❌ Failed to send to véronique@multilingual.fr: 'utf8' is an invalid keyword argument for Compat32
+2026-03-17 13:46:53,753 - INFO -    [24/27] Waiting 1.5s...
+2026-03-17 13:46:56,287 - INFO - ✅ Email sent to laurent@translation-pro.fr (Laurent Maillard)
+2026-03-17 13:46:56,287 - INFO -    [25/27] Waiting 1.5s...
+2026-03-17 13:46:58,073 - ERROR - ❌ Failed to send to stéphane@seo-expert.fr: 'utf8' is an invalid keyword argument for Compat32
+2026-03-17 13:46:58,074 - INFO -    [26/27] Waiting 1.5s...
+2026-03-17 13:47:00,437 - INFO - ✅ Email sent to thibault@seo-pro.fr (Thibault Bernard)
+2026-03-17 13:47:00,437 - INFO - ✅ Batch complete: 17/27 sent
+2026-03-17 13:47:00,445 - INFO - ✅ Database updated: 17 prospects marked as emailed
+2026-03-17 13:47:00,446 - INFO - ✅ Email wave complete: 17 emails sent
+
+============================================================
+GMAIL SMTP EMAIL WAVE - RESULTS
+============================================================
+Status: SUCCESS
+Emails Sent: 17
+Method: smtp
+Timestamp: 2026-03-17T13:47:00.446162
+============================================================
+
+✅ Email wave completed successfully
+📊 Check /home/pc/.openclaw/workspace/NGFI_LEADS_DATABASE.json for updated status
+
+================================================
+End time: 2026-03-17 13:47:00 CET
+================================================
+================================================
+🚀 NGFI DAILY EMAIL WAVE
+📅 2026-03-17 13:47:10 CET
+================================================
+✅ Database: OK
+✅ Script: OK
+
+📧 Starting email campaign...
+2026-03-17 13:47:10,418 - INFO - 📧 SMTP Email Manager initialized
+2026-03-17 13:47:10,418 - INFO -    From: idirakriche9@gmail.com
+2026-03-17 13:47:10,419 - INFO - ============================================================
+2026-03-17 13:47:10,419 - INFO - 📧 NGFI Email Wave - Gmail SMTP
+2026-03-17 13:47:10,419 - INFO - 📅 Time: 2026-03-17 13:47:10
+2026-03-17 13:47:10,419 - INFO - 👤 From: idirakriche9@gmail.com
+2026-03-17 13:47:10,419 - INFO - ============================================================
+2026-03-17 13:47:10,419 - INFO - 🚀 Sending 10 emails via SMTP (Gmail)...
+2026-03-17 13:47:11,304 - INFO - ✅ Email sent to gregory@design-vision.fr (Grégory Fontaine)
+2026-03-17 13:47:11,304 - INFO -    [1/10] Waiting 1.5s...
+2026-03-17 13:47:13,668 - INFO - ✅ Email sent to helene@petit-design.fr (Hélène Arnaud)
+2026-03-17 13:47:13,668 - INFO -    [2/10] Waiting 1.5s...
+2026-03-17 13:47:15,973 - INFO - ✅ Email sent to jerome@graphique-design.fr (Jérôme Blanchard)
+2026-03-17 13:47:15,973 - INFO -    [3/10] Waiting 1.5s...
+2026-03-17 13:47:18,323 - INFO - ✅ Email sent to raphael@digital-strategy.fr (Raphaël Giroux)
+2026-03-17 13:47:18,323 - INFO -    [4/10] Waiting 1.5s...
+2026-03-17 13:47:20,807 - INFO - ✅ Email sent to beatrice@marketing-pro.fr (Béatrice Legrand)
+2026-03-17 13:47:20,807 - INFO -    [5/10] Waiting 1.5s...
+2026-03-17 13:47:23,149 - INFO - ✅ Email sent to valerie@content-agency.fr (Valérie Collet)
+2026-03-17 13:47:23,150 - INFO -    [6/10] Waiting 1.5s...
+2026-03-17 13:47:25,486 - INFO - ✅ Email sent to emilie@copywriting.fr (Émilie Roussel)
+2026-03-17 13:47:25,486 - INFO -    [7/10] Waiting 1.5s...
+2026-03-17 13:47:27,782 - INFO - ✅ Email sent to francois@translation.fr (François Gauthier)
+2026-03-17 13:47:27,782 - INFO -    [8/10] Waiting 1.5s...
+2026-03-17 13:47:30,161 - INFO - ✅ Email sent to veronique@multilingual.fr (Véronique Blanc)
+2026-03-17 13:47:30,161 - INFO -    [9/10] Waiting 1.5s...
+2026-03-17 13:47:33,395 - INFO - ✅ Email sent to stephane@seo-expert.fr (Stéphane Arnaud)
+2026-03-17 13:47:33,395 - INFO - ✅ Batch complete: 10/10 sent
+2026-03-17 13:47:33,398 - INFO - ✅ Database updated: 10 prospects marked as emailed
+2026-03-17 13:47:33,398 - INFO - ✅ Email wave complete: 10 emails sent
+
+============================================================
+GMAIL SMTP EMAIL WAVE - RESULTS
+============================================================
+Status: SUCCESS
+Emails Sent: 10
+Method: smtp
+Timestamp: 2026-03-17T13:47:33.398581
+============================================================
+
+✅ Email wave completed successfully
+📊 Check /home/pc/.openclaw/workspace/NGFI_LEADS_DATABASE.json for updated status
+
+================================================
+End time: 2026-03-17 13:47:33 CET
+================================================
