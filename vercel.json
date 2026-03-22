@@ -1,5 +1,6 @@
 {
   "name": "ngfi-tools",
   "version": 2,
-  "buildCommand": "echo 'No build needed'"
+  "buildCommand": "mkdir -p public && cp -r tools/* public/ 2>/dev/null || cp *.html public/ 2>/dev/null || true",
+  "outputDirectory": "public"
 }
