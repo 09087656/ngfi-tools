@@ -1,0 +1,24 @@
+{
+  "name": "ngfi-tools",
+  "version": 2,
+  "builds": [
+    {
+      "src": "tools/**/*.html",
+      "use": "@vercel/static"
+    }
+  ],
+  "rewrites": [
+    {
+      "source": "/tools/:path*",
+      "destination": "/tools/:path*"
+    }
+  ],
+  "env": {
+    "VERCEL_URL": "tools.ngfi.fr"
+  },
+  "domains": ["tools.ngfi.fr"],
+  "github": {
+    "enabled": true,
+    "autoAlias": false
+  }
+}
