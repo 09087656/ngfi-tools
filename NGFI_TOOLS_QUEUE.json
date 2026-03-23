@@ -3,8 +3,8 @@
   "created": "2026-03-22T17:07:00Z",
   "version": "1.0",
   "total_tools_planned": 10,
-  "tools_completed": 0,
-  "status": "LAUNCHING",
+  "tools_completed": 1,
+  "status": "IN_PROGRESS",
   "queue": [
     {
       "day": 1,
@@ -15,8 +15,10 @@
       "description": "Checklist 15 critères conformité facture freelance",
       "focus": "Légal",
       "calculation": "Validation checklist vs critères URSSAF",
-      "status": "pending",
-      "target_date": "2026-03-23T09:00:00Z"
+      "status": "deployed",
+      "target_date": "2026-03-23T09:00:00Z",
+      "deployed_at": "2026-03-23T14:37:00Z",
+      "url": "https://tools.ngfi.fr/invoice-checker"
     },
     {
       "day": 2,
