@@ -39,7 +39,7 @@ class NGFIEmailSender:
                         self.from_email = line.split('"')[1]
         
         self.api_key = os.getenv('RESEND_API_KEY', self.api_key if hasattr(self, 'api_key') else '')
-        self.from_email = os.getenv('RESEND_FROM_EMAIL', self.from_email if hasattr(self, 'from_email') else 'idirakriche9@gmail.com')
+        self.from_email = os.getenv('RESEND_FROM_EMAIL', self.from_email if hasattr(self, 'from_email') else 'idirakriche@getngfi.com')
         self.api_url = 'https://api.resend.com/emails'
         self.db_path = Path('/home/pc/.openclaw/workspace/NGFI_LEADS_DATABASE.json')
         

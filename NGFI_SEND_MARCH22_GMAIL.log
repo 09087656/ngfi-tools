@@ -1,0 +1,70 @@
+2026-03-23 14:53:27,170 - INFO - ======================================================================
+2026-03-23 14:53:27,170 - INFO - 🚀 NGFI March 22 Follow-up Campaign - Gmail SMTP
+2026-03-23 14:53:27,170 - INFO - Start Time: 2026-03-23 14:53:27.170327
+2026-03-23 14:53:27,170 - INFO - Total Emails: 5
+2026-03-23 14:53:27,170 - INFO - ======================================================================
+2026-03-23 14:53:27,170 - INFO - 
+📧 Email 1/5: Florent Parcevaux
+2026-03-23 14:53:27,170 - INFO -    To: florent@malt.fr
+2026-03-23 14:53:27,170 - INFO -    Subject: Salut Florent - Retour sur NGFI (2ème contact)
+2026-03-23 14:53:27,797 - ERROR - ❌ Failed to send to florent@malt.fr: (535, b'5.7.8 Username and Password not accepted. For more information, go to\n5.7.8  https://support.google.com/mail/?p=BadCredentials ffacd0b85a97d-43b644ae37dsm29836399f8f.2 - gsmtp')
+2026-03-23 14:53:28,798 - INFO - 
+📧 Email 2/5: Jérémy Mouzin
+2026-03-23 14:53:28,798 - INFO -    To: jeremy@mouzin-dev.fr
+2026-03-23 14:53:28,799 - INFO -    Subject: Jérémy - Quick follow-up sur javascript developer
+2026-03-23 14:53:29,432 - ERROR - ❌ Failed to send to jeremy@mouzin-dev.fr: (535, b'5.7.8 Username and Password not accepted. For more information, go to\n5.7.8  https://support.google.com/mail/?p=BadCredentials 5b1f17b1804b1-486ff1d6fbdsm77587375e9.33 - gsmtp')
+2026-03-23 14:53:30,432 - INFO - 
+📧 Email 3/5: Guillaume Schott
+2026-03-23 14:53:30,432 - INFO -    To: guillaume@schott-design.fr
+2026-03-23 14:53:30,432 - INFO -    Subject: Salut Guillaume - Retour sur NGFI (2ème contact)
+2026-03-23 14:53:30,985 - ERROR - ❌ Failed to send to guillaume@schott-design.fr: (535, b'5.7.8 Username and Password not accepted. For more information, go to\n5.7.8  https://support.google.com/mail/?p=BadCredentials ffacd0b85a97d-43b6470393fsm31089051f8f.17 - gsmtp')
+2026-03-23 14:53:31,985 - INFO - 
+📧 Email 4/5: Sophie Leclerc
+2026-03-23 14:53:31,985 - INFO -    To: sophie@leclerc-marketing.fr
+2026-03-23 14:53:31,985 - INFO -    Subject: Sophie - NGFI peut libérer 15h/semaine pour toi
+2026-03-23 14:53:32,564 - ERROR - ❌ Failed to send to sophie@leclerc-marketing.fr: (535, b'5.7.8 Username and Password not accepted. For more information, go to\n5.7.8  https://support.google.com/mail/?p=BadCredentials 5b1f17b1804b1-487017210dcsm232828385e9.10 - gsmtp')
+2026-03-23 14:53:33,564 - INFO - 
+📧 Email 5/5: Thomas Bernard
+2026-03-23 14:53:33,564 - INFO -    To: thomas@bernard-consulting.fr
+2026-03-23 14:53:33,564 - INFO -    Subject: Thomas - Automation pour consultants
+2026-03-23 14:53:34,125 - ERROR - ❌ Failed to send to thomas@bernard-consulting.fr: (535, b'5.7.8 Username and Password not accepted. For more information, go to\n5.7.8  https://support.google.com/mail/?p=BadCredentials ffacd0b85a97d-43b644ae37dsm29837070f8f.2 - gsmtp')
+2026-03-23 14:53:35,125 - INFO - 
+======================================================================
+2026-03-23 14:53:35,125 - INFO - ✅ Campaign Complete: 0/5 emails sent
+2026-03-23 14:53:35,125 - INFO - End Time: 2026-03-23 14:53:35.125893
+2026-03-23 14:53:35,125 - INFO - ======================================================================
+2026-03-23 14:56:30,258 - INFO - ======================================================================
+2026-03-23 14:56:30,258 - INFO - 🚀 NGFI March 22 Follow-up Campaign - Gmail SMTP
+2026-03-23 14:56:30,258 - INFO - Start Time: 2026-03-23 14:56:30.258562
+2026-03-23 14:56:30,258 - INFO - Total Emails: 5
+2026-03-23 14:56:30,258 - INFO - ======================================================================
+2026-03-23 14:56:30,258 - INFO - 
+📧 Email 1/5: Florent Parcevaux
+2026-03-23 14:56:30,258 - INFO -    To: florent@malt.fr
+2026-03-23 14:56:30,258 - INFO -    Subject: Salut Florent - Retour sur NGFI (2ème contact)
+2026-03-23 14:56:30,859 - ERROR - ❌ Failed to send to florent@malt.fr: (535, b'5.7.8 Username and Password not accepted. For more information, go to\n5.7.8  https://support.google.com/mail/?p=BadCredentials ffacd0b85a97d-43b6470380asm29211446f8f.24 - gsmtp')
+2026-03-23 14:56:31,859 - INFO - 
+📧 Email 2/5: Jérémy Mouzin
+2026-03-23 14:56:31,860 - INFO -    To: jeremy@mouzin-dev.fr
+2026-03-23 14:56:31,860 - INFO -    Subject: Jérémy - Quick follow-up sur javascript developer
+2026-03-23 14:56:32,457 - ERROR - ❌ Failed to send to jeremy@mouzin-dev.fr: (535, b'5.7.8 Username and Password not accepted. For more information, go to\n5.7.8  https://support.google.com/mail/?p=BadCredentials ffacd0b85a97d-43b64714e2esm31962132f8f.32 - gsmtp')
+2026-03-23 14:56:33,458 - INFO - 
+📧 Email 3/5: Guillaume Schott
+2026-03-23 14:56:33,458 - INFO -    To: guillaume@schott-design.fr
+2026-03-23 14:56:33,458 - INFO -    Subject: Salut Guillaume - Retour sur NGFI (2ème contact)
+2026-03-23 14:56:34,004 - ERROR - ❌ Failed to send to guillaume@schott-design.fr: (535, b'5.7.8 Username and Password not accepted. For more information, go to\n5.7.8  https://support.google.com/mail/?p=BadCredentials 5b1f17b1804b1-486f8b322d9sm347005805e9.8 - gsmtp')
+2026-03-23 14:56:35,005 - INFO - 
+📧 Email 4/5: Sophie Leclerc
+2026-03-23 14:56:35,005 - INFO -    To: sophie@leclerc-marketing.fr
+2026-03-23 14:56:35,005 - INFO -    Subject: Sophie - NGFI peut libérer 15h/semaine pour toi
+2026-03-23 14:56:35,576 - ERROR - ❌ Failed to send to sophie@leclerc-marketing.fr: (535, b'5.7.8 Username and Password not accepted. For more information, go to\n5.7.8  https://support.google.com/mail/?p=BadCredentials 5b1f17b1804b1-486f8b322d9sm347007215e9.8 - gsmtp')
+2026-03-23 14:56:36,588 - INFO - 
+📧 Email 5/5: Thomas Bernard
+2026-03-23 14:56:36,588 - INFO -    To: thomas@bernard-consulting.fr
+2026-03-23 14:56:36,588 - INFO -    Subject: Thomas - Automation pour consultants
+2026-03-23 14:56:37,158 - ERROR - ❌ Failed to send to thomas@bernard-consulting.fr: (535, b'5.7.8 Username and Password not accepted. For more information, go to\n5.7.8  https://support.google.com/mail/?p=BadCredentials 5b1f17b1804b1-486fe6d923fsm458814295e9.1 - gsmtp')
+2026-03-23 14:56:38,159 - INFO - 
+======================================================================
+2026-03-23 14:56:38,159 - INFO - ✅ Campaign Complete: 0/5 emails sent
+2026-03-23 14:56:38,159 - INFO - End Time: 2026-03-23 14:56:38.159494
+2026-03-23 14:56:38,159 - INFO - ======================================================================
