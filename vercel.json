@@ -1,5 +1,10 @@
 {
-  "name": "ngfi-tools",
-  "version": 2,
-  "outputDirectory": "public"
+  "buildCommand": "echo 'Static deployment'",
+  "outputDirectory": ".",
+  "rewrites": [
+    {
+      "source": "/tools/:path*",
+      "destination": "/tools/:path*"
+    }
+  ]
 }

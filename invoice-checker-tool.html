@@ -1,0 +1,637 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vérificateur Conformité Facture - NGFI</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary: #2563eb;
+            --success: #10b981;
+            --danger: #ef4444;
+            --warning: #f59e0b;
+            --bg: #f9fafb;
+            --surface: #ffffff;
+            --text: #1f2937;
+            --text-light: #6b7280;
+            --border: #e5e7eb;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+            padding: 16px;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 32px;
+            padding: 24px 0;
+        }
+
+        header h1 {
+            font-size: 28px;
+            margin-bottom: 8px;
+            color: var(--primary);
+        }
+
+        header p {
+            color: var(--text-light);
+            font-size: 14px;
+        }
+
+        .form-group {
+            margin-bottom: 24px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+            font-size: 14px;
+            color: var(--text);
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="number"],
+        input[type="date"],
+        textarea,
+        select {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid var(--border);
+            border-radius: 6px;
+            font-size: 14px;
+            font-family: inherit;
+            transition: border-color 0.2s;
+        }
+
+        input:focus,
+        textarea:focus,
+        select:focus {
+            outline: none;
+            border-color: var(--primary);
+            box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+        }
+
+        textarea {
+            resize: vertical;
+            min-height: 80px;
+        }
+
+        .checkbox-group {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 12px;
+            background: var(--bg);
+            border-radius: 6px;
+            margin-bottom: 8px;
+            cursor: pointer;
+            border: 1px solid var(--border);
+            transition: all 0.2s;
+        }
+
+        .checkbox-group:hover {
+            background: #f3f4f6;
+        }
+
+        .checkbox-group input[type="checkbox"] {
+            width: 20px;
+            height: 20px;
+            cursor: pointer;
+            accent-color: var(--primary);
+        }
+
+        .checkbox-group label {
+            margin: 0;
+            cursor: pointer;
+            font-weight: 500;
+            flex: 1;
+        }
+
+        button {
+            width: 100%;
+            padding: 12px;
+            background: var(--primary);
+            color: white;
+            border: none;
+            border-radius: 6px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background 0.2s;
+            margin-bottom: 12px;
+        }
+
+        button:hover:not(:disabled) {
+            background: #1d4ed8;
+        }
+
+        button:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+        }
+
+        .results {
+            display: none;
+            margin-top: 32px;
+        }
+
+        .results.active {
+            display: block;
+            animation: slideUp 0.3s ease;
+        }
+
+        @keyframes slideUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .score-card {
+            background: var(--surface);
+            border-radius: 8px;
+            padding: 24px;
+            margin-bottom: 24px;
+            border-left: 4px solid var(--primary);
+        }
+
+        .score-card.success {
+            border-left-color: var(--success);
+        }
+
+        .score-card.warning {
+            border-left-color: var(--warning);
+        }
+
+        .score-card.danger {
+            border-left-color: var(--danger);
+        }
+
+        .score-display {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 16px;
+        }
+
+        .score-number {
+            font-size: 48px;
+            font-weight: 700;
+            color: var(--primary);
+        }
+
+        .score-card.warning .score-number {
+            color: var(--warning);
+        }
+
+        .score-card.danger .score-number {
+            color: var(--danger);
+        }
+
+        .score-card.success .score-number {
+            color: var(--success);
+        }
+
+        .score-label {
+            font-size: 12px;
+            color: var(--text-light);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .criteria-list {
+            margin-top: 20px;
+        }
+
+        .criteria-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            margin-bottom: 12px;
+            padding: 12px;
+            background: var(--bg);
+            border-radius: 6px;
+        }
+
+        .criteria-icon {
+            font-size: 20px;
+            flex-shrink: 0;
+            margin-top: 2px;
+        }
+
+        .criteria-text {
+            flex: 1;
+        }
+
+        .criteria-text h4 {
+            font-size: 14px;
+            margin-bottom: 4px;
+        }
+
+        .criteria-text p {
+            font-size: 13px;
+            color: var(--text-light);
+        }
+
+        .recommendations {
+            background: #eff6ff;
+            border-left: 4px solid var(--primary);
+            padding: 16px;
+            border-radius: 6px;
+            margin-top: 24px;
+        }
+
+        .recommendations h3 {
+            font-size: 14px;
+            margin-bottom: 12px;
+            color: var(--primary);
+        }
+
+        .recommendations ul {
+            margin-left: 20px;
+            font-size: 14px;
+            color: var(--text);
+        }
+
+        .recommendations li {
+            margin-bottom: 8px;
+        }
+
+        .cta-footer {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 24px;
+            border-radius: 8px;
+            margin-top: 32px;
+            text-align: center;
+        }
+
+        .cta-footer h3 {
+            font-size: 18px;
+            margin-bottom: 8px;
+        }
+
+        .cta-footer p {
+            font-size: 14px;
+            margin-bottom: 16px;
+            opacity: 0.95;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: white;
+            color: #667eea;
+            padding: 12px 24px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 14px;
+            transition: transform 0.2s;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-2px);
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        @media (max-width: 600px) {
+            body {
+                padding: 12px;
+            }
+
+            header h1 {
+                font-size: 24px;
+            }
+
+            .score-display {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .score-number {
+                font-size: 36px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>📋 Vérificateur Conformité Facture</h1>
+            <p>Vérifiez que votre facture respecte les 15 critères légaux URSSAF</p>
+        </header>
+
+        <form id="invoiceForm">
+            <div class="form-group">
+                <label>Numéro de facture</label>
+                <input type="text" id="invoiceNumber" placeholder="EX: FAC-2026-001" required>
+            </div>
+
+            <div class="form-group">
+                <label>Date de facture</label>
+                <input type="date" id="invoiceDate" required>
+            </div>
+
+            <div class="form-group">
+                <label>Montant HT (€)</label>
+                <input type="number" id="amount" placeholder="1000" min="0" step="0.01" required>
+            </div>
+
+            <div class="form-group">
+                <label>Taux TVA (%)</label>
+                <select id="vatRate" required>
+                    <option value="">-- Sélectionner --</option>
+                    <option value="0">0% (Exonéré)</option>
+                    <option value="5.5">5.5% (Réduit)</option>
+                    <option value="10">10% (Intermédiaire)</option>
+                    <option value="20">20% (Normal)</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label>Vos informations d'identité</label>
+                <textarea id="sellerInfo" placeholder="Nom, Prénom ou Raison sociale&#10;Adresse complète&#10;N° SIRET ou statut" required></textarea>
+            </div>
+
+            <div class="form-group">
+                <label>Informations client</label>
+                <textarea id="buyerInfo" placeholder="Nom/Entreprise&#10;Adresse&#10;(optionnel: N° SIRET)" required></textarea>
+            </div>
+
+            <div class="form-group">
+                <label style="margin-bottom: 12px; display: block;">Critères de conformité (cochez ceux respectés)</label>
+                
+                <div class="checkbox-group">
+                    <input type="checkbox" id="crit1" checked>
+                    <label for="crit1">Numéro de facture unique & séquentiel</label>
+                </div>
+
+                <div class="checkbox-group">
+                    <input type="checkbox" id="crit2" checked>
+                    <label for="crit2">Date de facture indiquée</label>
+                </div>
+
+                <div class="checkbox-group">
+                    <input type="checkbox" id="crit3" checked>
+                    <label for="crit3">Vos identifiants (nom/SIRET)</label>
+                </div>
+
+                <div class="checkbox-group">
+                    <input type="checkbox" id="crit4" checked>
+                    <label for="crit4">Adresse du client</label>
+                </div>
+
+                <div class="checkbox-group">
+                    <input type="checkbox" id="crit5" checked>
+                    <label for="crit5">Montant HT indiqué</label>
+                </div>
+
+                <div class="checkbox-group">
+                    <input type="checkbox" id="crit6" checked>
+                    <label for="crit6">Taux TVA applicable</label>
+                </div>
+
+                <div class="checkbox-group">
+                    <input type="checkbox" id="crit7" checked>
+                    <label for="crit7">Montant TVA indiqué</label>
+                </div>
+
+                <div class="checkbox-group">
+                    <input type="checkbox" id="crit8" checked>
+                    <label for="crit8">Total TTC indiqué</label>
+                </div>
+
+                <div class="checkbox-group">
+                    <input type="checkbox" id="crit9" checked>
+                    <label for="crit9">Conditions de paiement précisées</label>
+                </div>
+
+                <div class="checkbox-group">
+                    <input type="checkbox" id="crit10" checked>
+                    <label for="crit10">Délai de paiement spécifié (jours)</label>
+                </div>
+
+                <div class="checkbox-group">
+                    <input type="checkbox" id="crit11" checked>
+                    <label for="crit11">Date limite de paiement indiquée</label>
+                </div>
+
+                <div class="checkbox-group">
+                    <input type="checkbox" id="crit12" checked>
+                    <label for="crit12">Description des prestations détaillée</label>
+                </div>
+
+                <div class="checkbox-group">
+                    <input type="checkbox" id="crit13" checked>
+                    <label for="crit13">Coordonnées bancaires ou moyen paiement</label>
+                </div>
+
+                <div class="checkbox-group">
+                    <input type="checkbox" id="crit14" checked>
+                    <label for="crit14">Statut légal indiqué (AE, EIRL, SARL...)</label>
+                </div>
+
+                <div class="checkbox-group">
+                    <input type="checkbox" id="crit15" checked>
+                    <label for="crit15">Pas de mention discriminatoire ou illégale</label>
+                </div>
+            </div>
+
+            <button type="submit">✓ Vérifier la conformité</button>
+            <button type="reset" style="background: var(--text-light);">↻ Réinitialiser</button>
+        </form>
+
+        <div class="results" id="results">
+            <div class="score-card" id="scoreCard">
+                <div class="score-display">
+                    <div>
+                        <div class="score-number" id="scoreNumber">0</div>
+                        <div class="score-label">Conformité</div>
+                    </div>
+                    <div id="scoreStatus" style="text-align: right;">
+                        <div style="font-size: 24px; margin-bottom: 8px;">🟡</div>
+                        <div style="font-size: 14px; color: var(--text-light);">À vérifier</div>
+                    </div>
+                </div>
+                <div style="border-top: 1px solid var(--border); padding-top: 16px;">
+                    <p style="font-size: 13px; color: var(--text-light); margin-bottom: 8px;">Facture: <strong id="resultInvoiceNumber"></strong> du <strong id="resultInvoiceDate"></strong></p>
+                    <p style="font-size: 13px; color: var(--text-light);">Total TTC: <strong id="resultTotal"></strong> €</p>
+                </div>
+            </div>
+
+            <div class="criteria-list" id="criteriaList"></div>
+
+            <div class="recommendations" id="recommendations" style="display: none;"></div>
+
+            <div class="cta-footer">
+                <h3>Automatisez votre facturation</h3>
+                <p>Génération, conformité, suivi... tout en 1 plateforme</p>
+                <a href="https://ngfi.fr?utm_source=tools&utm_medium=invoice-checker&utm_campaign=lead" class="cta-button" target="_blank">Essaie NGFI gratuitement</a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const form = document.getElementById('invoiceForm');
+        const resultsDiv = document.getElementById('results');
+        const scoreCard = document.getElementById('scoreCard');
+        const scoreNumber = document.getElementById('scoreNumber');
+        const scoreStatus = document.getElementById('scoreStatus');
+        const criteriaList = document.getElementById('criteriaList');
+        const recommendations = document.getElementById('recommendations');
+
+        const criteriaDescriptions = [
+            { name: "Numéro séquentiel unique", severity: "critical" },
+            { name: "Date de facture", severity: "critical" },
+            { name: "Identité du vendeur", severity: "critical" },
+            { name: "Adresse du client", severity: "critical" },
+            { name: "Montant HT", severity: "critical" },
+            { name: "Taux TVA", severity: "critical" },
+            { name: "Montant TVA", severity: "critical" },
+            { name: "Total TTC", severity: "critical" },
+            { name: "Conditions de paiement", severity: "major" },
+            { name: "Délai de paiement", severity: "major" },
+            { name: "Date limite de paiement", severity: "major" },
+            { name: "Description prestations", severity: "major" },
+            { name: "Moyen de paiement", severity: "major" },
+            { name: "Statut légal", severity: "major" },
+            { name: "Contenu légal", severity: "critical" }
+        ];
+
+        form.addEventListener('submit', (e) => {
+            e.preventDefault();
+            checkCompliance();
+        });
+
+        function checkCompliance() {
+            const checkedCount = document.querySelectorAll('input[type="checkbox"]:checked').length;
+            const totalCriteria = 15;
+            const score = Math.round((checkedCount / totalCriteria) * 100);
+
+            // Update score display
+            scoreNumber.textContent = score;
+            updateScoreCard(score);
+
+            // Update form info
+            document.getElementById('resultInvoiceNumber').textContent = 
+                document.getElementById('invoiceNumber').value;
+            document.getElementById('resultInvoiceDate').textContent = 
+                document.getElementById('invoiceDate').value;
+            
+            const amount = parseFloat(document.getElementById('amount').value);
+            const vatRate = parseFloat(document.getElementById('vatRate').value);
+            const vatAmount = (amount * vatRate / 100).toFixed(2);
+            const total = (amount + parseFloat(vatAmount)).toFixed(2);
+            document.getElementById('resultTotal').textContent = total;
+
+            // Generate criteria list
+            generateCriteriaList(checkedCount);
+
+            // Generate recommendations
+            generateRecommendations(score);
+
+            // Show results
+            resultsDiv.classList.add('active');
+            window.scrollTo({ top: resultsDiv.offsetTop - 100, behavior: 'smooth' });
+        }
+
+        function updateScoreCard(score) {
+            scoreCard.classList.remove('success', 'warning', 'danger');
+            
+            if (score >= 80) {
+                scoreCard.classList.add('success');
+                scoreStatus.innerHTML = '<div style="font-size: 24px; margin-bottom: 8px;">✅</div><div style="font-size: 14px; color: var(--success);">Conforme</div>';
+            } else if (score >= 60) {
+                scoreCard.classList.add('warning');
+                scoreStatus.innerHTML = '<div style="font-size: 24px; margin-bottom: 8px;">⚠️</div><div style="font-size: 14px; color: var(--warning);">À corriger</div>';
+            } else {
+                scoreCard.classList.add('danger');
+                scoreStatus.innerHTML = '<div style="font-size: 24px; margin-bottom: 8px;">❌</div><div style="font-size: 14px; color: var(--danger);">Non conforme</div>';
+            }
+        }
+
+        function generateCriteriaList(checkedCount) {
+            criteriaList.innerHTML = '';
+            
+            for (let i = 0; i < 15; i++) {
+                const checkbox = document.getElementById(`crit${i + 1}`);
+                const isChecked = checkbox.checked;
+                const criteria = criteriaDescriptions[i];
+                
+                const item = document.createElement('div');
+                item.className = 'criteria-item';
+                item.innerHTML = `
+                    <div class="criteria-icon">${isChecked ? '✅' : '❌'}</div>
+                    <div class="criteria-text">
+                        <h4>${criteria.name}</h4>
+                        <p>${criteria.severity === 'critical' ? '🔴 Critique' : '🟡 Important'}</p>
+                    </div>
+                `;
+                criteriaList.appendChild(item);
+            }
+        }
+
+        function generateRecommendations(score) {
+            const recs = [];
+
+            if (score < 100) {
+                const unchecked = [];
+                for (let i = 0; i < 15; i++) {
+                    if (!document.getElementById(`crit${i + 1}`).checked) {
+                        unchecked.push(criteriaDescriptions[i].name);
+                    }
+                }
+
+                if (unchecked.length > 0) {
+                    recommendations.style.display = 'block';
+                    recommendations.innerHTML = `
+                        <h3>🔧 À corriger avant envoi:</h3>
+                        <ul>
+                            ${unchecked.map(item => `<li>${item}</li>`).join('')}
+                        </ul>
+                    `;
+                } else {
+                    recommendations.style.display = 'none';
+                }
+            } else {
+                recommendations.innerHTML = `
+                    <h3>✅ Facture conforme</h3>
+                    <ul>
+                        <li>Tous les critères URSSAF sont respectés</li>
+                        <li>Votre facture peut être envoyée en confiance</li>
+                        <li>Bonne traçabilité légale pour votre comptabilité</li>
+                    </ul>
+                `;
+                recommendations.style.display = 'block';
+            }
+        }
+
+        // Set today's date by default
+        document.getElementById('invoiceDate').valueAsDate = new Date();
+    </script>
+</body>
+</html>

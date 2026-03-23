@@ -1,0 +1,17 @@
+2026-03-23 14:43:15,413 - INFO - Initialized with API key: re_Bo8g2f4...
+2026-03-23 14:43:15,414 - INFO - From email: idirakriche9@gmail.com
+2026-03-23 14:43:15,414 - INFO - ======================================================================
+2026-03-23 14:43:15,414 - INFO - 🚀 NGFI March 22 Follow-up Campaign - EXECUTION START
+2026-03-23 14:43:15,414 - INFO - Campaign Date: 2026-03-23 14:43:15
+2026-03-23 14:43:15,414 - INFO - Total Emails: 5
+2026-03-23 14:43:15,414 - INFO - Spacing: 45 minutes
+2026-03-23 14:43:15,414 - INFO - DRY RUN: False
+2026-03-23 14:43:15,414 - INFO - ======================================================================
+2026-03-23 14:43:15,415 - INFO - 
+📧 Email 1/5: Florent Parcevaux
+2026-03-23 14:43:15,415 - INFO -    To: florent@malt.fr
+2026-03-23 14:43:15,415 - INFO -    Subject: Salut Florent - Retour sur NGFI (2ème contact)
+2026-03-23 14:43:15,694 - ERROR - ❌ Failed to send to florent@malt.fr | Status: 403 | {"statusCode":403,"message":"The gmail.com domain is not verified. Please, add and verify your domain on https://resend.com/domains","name":"validation_error"}
+2026-03-23 14:43:15,695 - INFO - 
+⏳ Email 2/5 scheduled for 15:28:15
+2026-03-23 14:43:15,696 - INFO -    Waiting 2700 seconds...

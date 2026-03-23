@@ -1,0 +1,78 @@
+2026-03-23 14:39:53,820 - INFO - Initialized with API key: re_Bo8g2f4...
+2026-03-23 14:39:53,821 - INFO - From email: idirakriche9@gmail.com
+2026-03-23 14:39:53,821 - INFO - ======================================================================
+2026-03-23 14:39:53,821 - INFO - 🚀 NGFI March 22 Follow-up Campaign - EXECUTION START
+2026-03-23 14:39:53,821 - INFO - Campaign Date: 2026-03-23 14:39:53
+2026-03-23 14:39:53,821 - INFO - Total Emails: 5
+2026-03-23 14:39:53,821 - INFO - Spacing: 45 minutes
+2026-03-23 14:39:53,821 - INFO - DRY RUN: True
+2026-03-23 14:39:53,821 - INFO - ======================================================================
+2026-03-23 14:39:53,821 - INFO - 
+📧 Email 1/5: Florent Parcevaux
+2026-03-23 14:39:53,821 - INFO -    To: florent@malt.fr
+2026-03-23 14:39:53,821 - INFO -    Subject: Salut Florent - Retour sur NGFI (2ème contact)
+2026-03-23 14:39:53,821 - INFO -    [DRY RUN - Not actually sent]
+2026-03-23 14:39:53,822 - INFO - 
+⏳ Email 2/5 scheduled for 15:24:53
+2026-03-23 14:39:53,822 - INFO -    Waiting 2700 seconds...
+2026-03-23 14:39:53,822 - INFO - 
+📧 Email 2/5: Jérémy Mouzin
+2026-03-23 14:39:53,822 - INFO -    To: jeremy@mouzin-dev.fr
+2026-03-23 14:39:53,822 - INFO -    Subject: Jérémy - Quick follow-up sur javascript developer
+2026-03-23 14:39:53,822 - INFO -    [DRY RUN - Not actually sent]
+2026-03-23 14:39:53,822 - INFO - 
+⏳ Email 3/5 scheduled for 16:09:53
+2026-03-23 14:39:53,822 - INFO -    Waiting 5400 seconds...
+2026-03-23 14:39:53,822 - INFO - 
+📧 Email 3/5: Guillaume Schott
+2026-03-23 14:39:53,822 - INFO -    To: guillaume@schott-design.fr
+2026-03-23 14:39:53,822 - INFO -    Subject: Salut Guillaume - Retour sur NGFI (2ème contact)
+2026-03-23 14:39:53,822 - INFO -    [DRY RUN - Not actually sent]
+2026-03-23 14:39:53,822 - INFO - 
+⏳ Email 4/5 scheduled for 16:54:53
+2026-03-23 14:39:53,823 - INFO -    Waiting 8100 seconds...
+2026-03-23 14:39:53,823 - INFO - 
+📧 Email 4/5: Arnaud Masson
+2026-03-23 14:39:53,823 - INFO -    To: arnaud@masson-copywriting.fr
+2026-03-23 14:39:53,823 - INFO -    Subject: Arnaud - Quick follow-up sur concepteur-rédacteur / copywriter
+2026-03-23 14:39:53,823 - INFO -    [DRY RUN - Not actually sent]
+2026-03-23 14:39:53,823 - INFO - 
+⏳ Email 5/5 scheduled for 17:39:53
+2026-03-23 14:39:53,823 - INFO -    Waiting 10800 seconds...
+2026-03-23 14:39:53,823 - INFO - 
+📧 Email 5/5: Stéphen Urani
+2026-03-23 14:39:53,823 - INFO -    To: stephen@malt.fr
+2026-03-23 14:39:53,823 - INFO -    Subject: Salut Stéphen - Retour sur NGFI (2ème contact)
+2026-03-23 14:39:53,823 - INFO -    [DRY RUN - Not actually sent]
+2026-03-23 14:39:53,823 - INFO - 
+======================================================================
+2026-03-23 14:39:53,823 - INFO - 📊 CAMPAIGN SUMMARY
+2026-03-23 14:39:53,823 - INFO - ======================================================================
+2026-03-23 14:39:53,824 - INFO - ✅ Sent: 0
+2026-03-23 14:39:53,824 - INFO - ❌ Failed: 0
+2026-03-23 14:39:53,824 - INFO - ⏱️  Duration: 0.0 seconds
+2026-03-23 14:39:53,825 - INFO - ✅ Updated database for Florent Parcevaux
+2026-03-23 14:39:53,825 - INFO - ✅ Updated database for Jérémy Mouzin
+2026-03-23 14:39:53,825 - INFO - ✅ Updated database for Guillaume Schott
+2026-03-23 14:39:53,825 - INFO - ✅ Updated database for Arnaud Masson
+2026-03-23 14:39:53,825 - INFO - ✅ Updated database for Stéphen Urani
+2026-03-23 14:39:53,827 - INFO - ✅ Database updated: /home/pc/.openclaw/workspace/NGFI_LEADS_DATABASE.json
+2026-03-23 14:39:53,827 - INFO - 
+✨ Campaign execution completed successfully
+2026-03-23 14:43:15,413 - INFO - Initialized with API key: re_Bo8g2f4...
+2026-03-23 14:43:15,414 - INFO - From email: idirakriche9@gmail.com
+2026-03-23 14:43:15,414 - INFO - ======================================================================
+2026-03-23 14:43:15,414 - INFO - 🚀 NGFI March 22 Follow-up Campaign - EXECUTION START
+2026-03-23 14:43:15,414 - INFO - Campaign Date: 2026-03-23 14:43:15
+2026-03-23 14:43:15,414 - INFO - Total Emails: 5
+2026-03-23 14:43:15,414 - INFO - Spacing: 45 minutes
+2026-03-23 14:43:15,414 - INFO - DRY RUN: False
+2026-03-23 14:43:15,414 - INFO - ======================================================================
+2026-03-23 14:43:15,415 - INFO - 
+📧 Email 1/5: Florent Parcevaux
+2026-03-23 14:43:15,415 - INFO -    To: florent@malt.fr
+2026-03-23 14:43:15,415 - INFO -    Subject: Salut Florent - Retour sur NGFI (2ème contact)
+2026-03-23 14:43:15,694 - ERROR - ❌ Failed to send to florent@malt.fr | Status: 403 | {"statusCode":403,"message":"The gmail.com domain is not verified. Please, add and verify your domain on https://resend.com/domains","name":"validation_error"}
+2026-03-23 14:43:15,695 - INFO - 
+⏳ Email 2/5 scheduled for 15:28:15
+2026-03-23 14:43:15,696 - INFO -    Waiting 2700 seconds...
