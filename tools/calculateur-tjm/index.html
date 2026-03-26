@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Calculateur TJM - Calcule votre tarif journalier idéal pour freelances">
+    <meta name="theme-color" content="#6366F1">
+    <title>Calculateur TJM | NGFI</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+                'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+            background: linear-gradient(135deg, #6366F1 0%, #8B5CF6 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 16px;
+        }
+
+        .container {
+            background: white;
+            border-radius: 16px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            max-width: 500px;
+            width: 100%;
+            padding: 32px 24px;
+            animation: slideUp 0.4s ease-out;
+        }
+
+        @keyframes slideUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 32px;
+        }
+
+        .header h1 {
+            color: #1F2937;
+            font-size: 28px;
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+
+        .header p {
+            color: #6B7280;
+            font-size: 14px;
+            line-height: 1.5;
+        }
+
+        .form-group {
+            margin-bottom: 24px;
+        }
+
+        .form-group label {
+            display: block;
+            color: #374151;
+            font-weight: 600;
+            font-size: 14px;
+            margin-bottom: 8px;
+        }
+
+        .input-wrapper {
+            position: relative;
+            display: flex;
+            align-items: center;
+        }
+
+        .input-wrapper input {
+            width: 100%;
+            padding: 12px 16px;
+            border: 2px solid #E5E7EB;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            color: #1F2937;
+        }
+
+        .input-wrapper input:focus {
+            outline: none;
+            border-color: #6366F1;
+            background-color: #F3F4F6;
+            box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.1);
+        }
+
+        .input-wrapper input::placeholder {
+            color: #9CA3AF;
+        }
+
+        .currency {
+            position: absolute;
+            right: 16px;
+            color: #6B7280;
+            font-weight: 600;
+            font-size: 14px;
+            pointer-events: none;
+        }
+
+        .hint {
+            color: #9CA3AF;
+            font-size: 13px;
+            margin-top: 6px;
+            font-style: italic;
+        }
+
+        .slider-group {
+            margin-bottom: 20px;
+        }
+
+        .slider-container {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        input[type="range"] {
+            flex: 1;
+            height: 6px;
+            border-radius: 3px;
+            background: #E5E7EB;
+            outline: none;
+            -webkit-appearance: none;
+            appearance: none;
+        }
+
+        input[type="range"]::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            appearance: none;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background: #6366F1;
+            cursor: pointer;
+            box-shadow: 0 2px 8px rgba(99, 102, 241, 0.3);
+            transition: all 0.2s ease;
+        }
+
+        input[type="range"]::-webkit-slider-thumb:active {
+            transform: scale(1.2);
+            box-shadow: 0 4px 12px rgba(99, 102, 241, 0.5);
+        }
+
+        input[type="range"]::-moz-range-thumb {
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background: #6366F1;
+            cursor: pointer;
+            border: none;
+            box-shadow: 0 2px 8px rgba(99, 102, 241, 0.3);
+            transition: all 0.2s ease;
+        }
+
+        input[type="range"]::-moz-range-thumb:active {
+            transform: scale(1.2);
+            box-shadow: 0 4px 12px rgba(99, 102, 241, 0.5);
+        }
+
+        .slider-value {
+            font-weight: 700;
+            color: #6366F1;
+            font-size: 16px;
+            min-width: 50px;
+            text-align: right;
+        }
+
+        .results {
+            background: linear-gradient(135deg, #F0F9FF 0%, #F3E8FF 100%);
+            border-left: 4px solid #6366F1;
+            border-radius: 12px;
+            padding: 20px;
+            margin: 32px 0;
+        }
+
+        .result-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 14px;
+            padding-bottom: 14px;
+            border-bottom: 1px solid rgba(99, 102, 241, 0.1);
+        }
+
+        .result-item:last-child {
+            margin-bottom: 0;
+            padding-bottom: 0;
+            border-bottom: none;
+        }
+
+        .result-label {
+            color: #4B5563;
+            font-size: 14px;
+            font-weight: 500;
+        }
+
+        .result-value {
+            color: #6366F1;
+            font-size: 18px;
+            font-weight: 700;
+        }
+
+        .result-value.highlight {
+            font-size: 24px;
+            color: #1F2937;
+        }
+
+        .button-group {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+            margin-top: 24px;
+        }
+
+        button {
+            padding: 12px 20px;
+            border: none;
+            border-radius: 8px;
+            font-size: 14px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, #6366F1 0%, #8B5CF6 100%);
+            color: white;
+            box-shadow: 0 4px 12px rgba(99, 102, 241, 0.3);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 16px rgba(99, 102, 241, 0.4);
+        }
+
+        .btn-primary:active {
+            transform: translateY(0);
+        }
+
+        .btn-secondary {
+            background: #F3F4F6;
+            color: #374151;
+            border: 2px solid #E5E7EB;
+        }
+
+        .btn-secondary:hover {
+            background: #E5E7EB;
+        }
+
+        .footer {
+            text-align: center;
+            color: #9CA3AF;
+            font-size: 12px;
+            margin-top: 24px;
+            padding-top: 16px;
+            border-top: 1px solid #E5E7EB;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: linear-gradient(135deg, #EC4899 0%, #F43F5E 100%);
+            color: white;
+            padding: 12px 24px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            margin-top: 16px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 12px rgba(236, 72, 153, 0.3);
+        }
+
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 16px rgba(236, 72, 153, 0.4);
+        }
+
+        .tabs {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 8px;
+            margin-bottom: 24px;
+        }
+
+        .tab-btn {
+            padding: 10px;
+            border: 2px solid #E5E7EB;
+            background: white;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 13px;
+            font-weight: 600;
+            color: #6B7280;
+            transition: all 0.3s ease;
+        }
+
+        .tab-btn.active {
+            background: #6366F1;
+            color: white;
+            border-color: #6366F1;
+        }
+
+        .tab-content {
+            display: none;
+        }
+
+        .tab-content.active {
+            display: block;
+        }
+
+        @media (max-width: 480px) {
+            .container {
+                padding: 24px 16px;
+            }
+
+            .header h1 {
+                font-size: 24px;
+            }
+
+            .button-group {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>📊 Calculateur TJM</h1>
+            <p>Découvrez votre tarif journalier idéal en fonction de votre profil</p>
+        </div>
+
+        <div class="tabs">
+            <button class="tab-btn active" onclick="switchTab('freelancer')">Freelance</button>
+            <button class="tab-btn" onclick="switchTab('portage')">Portage</button>
+        </div>
+
+        <div id="freelancer" class="tab-content active">
+            <div class="form-group">
+                <label for="salaire">Salaire brut annuel souhaité</label>
+                <div class="input-wrapper">
+                    <input type="number" id="salaire" placeholder="45000" min="0" step="1000">
+                    <span class="currency">€</span>
+                </div>
+                <div class="hint">Votre salaire cible annuel net/brut</div>
+            </div>
+
+            <div class="form-group">
+                <label for="joursAnnee">Jours facturables/an</label>
+                <div class="slider-container">
+                    <input type="range" id="joursAnnee" min="180" max="250" value="200" step="5">
+                    <span class="slider-value" id="joursAnneeValue">200</span>
+                </div>
+                <div class="hint">Moyenne: 200 jours (vacances, absences, prospection)</div>
+            </div>
+
+            <div class="form-group">
+                <label for="tauxCharges">Taux de charges (%)</label>
+                <div class="slider-container">
+                    <input type="range" id="tauxCharges" min="5" max="50" value="25" step="1">
+                    <span class="slider-value" id="tauxChargesValue">25%</span>
+                </div>
+                <div class="hint">Assurances, cotisations, outils, impôts estimés</div>
+            </div>
+
+            <div class="results">
+                <div class="result-item">
+                    <span class="result-label">Salaire net /an</span>
+                    <span class="result-value" id="salaireNet">0 €</span>
+                </div>
+                <div class="result-item">
+                    <span class="result-label">TJM minimum</span>
+                    <span class="result-value" id="tjmMin">0 €</span>
+                </div>
+                <div class="result-item">
+                    <span class="result-label">TJM recommandé</span>
+                    <span class="result-value highlight" id="tjmReco">0 €</span>
+                </div>
+                <div class="result-item">
+                    <span class="result-label">Taux/heure (8h)</span>
+                    <span class="result-value" id="tauxHeure">0 €</span>
+                </div>
+            </div>
+        </div>
+
+        <div id="portage" class="tab-content">
+            <div class="form-group">
+                <label for="tjmPortage">TJM (avant frais de portage)</label>
+                <div class="input-wrapper">
+                    <input type="number" id="tjmPortage" placeholder="500" min="0" step="50">
+                    <span class="currency">€</span>
+                </div>
+                <div class="hint">Votre TJM brut avant commission</div>
+            </div>
+
+            <div class="form-group">
+                <label for="fraisPortage">Frais de portage (%)</label>
+                <div class="slider-container">
+                    <input type="range" id="fraisPortage" min="5" max="15" value="8" step="0.5">
+                    <span class="slider-value" id="fraisPortageValue">8%</span>
+                </div>
+                <div class="hint">Commission portage (moyenne: 8%)</div>
+            </div>
+
+            <div class="form-group">
+                <label for="cotisationsPortage">Cotisations estimées (%)</label>
+                <div class="slider-container">
+                    <input type="range" id="cotisationsPortage" min="8" max="15" value="12" step="1">
+                    <span class="slider-value" id="cotisationsPortageValue">12%</span>
+                </div>
+                <div class="hint">Social, retraite, chômage (environ 12%)</div>
+            </div>
+
+            <div class="results">
+                <div class="result-item">
+                    <span class="result-label">Frais portage</span>
+                    <span class="result-value" id="fraisPortageAmount">0 €</span>
+                </div>
+                <div class="result-item">
+                    <span class="result-label">Cotisations</span>
+                    <span class="result-value" id="cotisationsAmount">0 €</span>
+                </div>
+                <div class="result-item">
+                    <span class="result-label">Salaire net /jour</span>
+                    <span class="result-value highlight" id="salaireNetJour">0 €</span>
+                </div>
+                <div class="result-item">
+                    <span class="result-label">Année (200 jours)</span>
+                    <span class="result-value" id="salaireNetAnnuel">0 €</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="button-group">
+            <button class="btn-primary" onclick="reset()">↻ Réinitialiser</button>
+            <button class="btn-secondary" onclick="shareResults()">📤 Partager</button>
+        </div>
+
+        <div style="text-align: center; margin-top: 24px;">
+            <a href="https://ngfi.io" class="cta-button">Essaie NGFI gratuitement</a>
+        </div>
+
+        <div class="footer">
+            <p>💡 Cet outil est fourni à titre informatif. Consultez un expert-comptable pour les calculs exacts.</p>
+        </div>
+    </div>
+
+    <script>
+        // Freelance Tab
+        const salaire = document.getElementById('salaire');
+        const joursAnnee = document.getElementById('joursAnnee');
+        const tauxCharges = document.getElementById('tauxCharges');
+        
+        // Portage Tab
+        const tjmPortage = document.getElementById('tjmPortage');
+        const fraisPortage = document.getElementById('fraisPortage');
+        const cotisationsPortage = document.getElementById('cotisationsPortage');
+
+        // Update sliders display
+        document.getElementById('joursAnnee').addEventListener('input', (e) => {
+            document.getElementById('joursAnneeValue').textContent = e.target.value;
+            calculateFreelance();
+        });
+
+        document.getElementById('tauxCharges').addEventListener('input', (e) => {
+            document.getElementById('tauxChargesValue').textContent = e.target.value + '%';
+            calculateFreelance();
+        });
+
+        document.getElementById('fraisPortage').addEventListener('input', (e) => {
+            document.getElementById('fraisPortageValue').textContent = e.target.value + '%';
+            calculatePortage();
+        });
+
+        document.getElementById('cotisationsPortage').addEventListener('input', (e) => {
+            document.getElementById('cotisationsPortageValue').textContent = e.target.value + '%';
+            calculatePortage();
+        });
+
+        salaire.addEventListener('input', calculateFreelance);
+        tjmPortage.addEventListener('input', calculatePortage);
+
+        function calculateFreelance() {
+            const s = parseFloat(salaire.value) || 0;
+            const j = parseInt(joursAnnee.value) || 200;
+            const t = parseFloat(tauxCharges.value) || 25;
+
+            const charges = s * (t / 100);
+            const salaireTotal = s + charges;
+            const tjm = Math.ceil(salaireTotal / j);
+            const tjmReco = Math.ceil(tjm * 1.15);
+            const tauxHeure = Math.ceil((tjmReco / 8) * 100) / 100;
+
+            document.getElementById('salaireNet').textContent = formatMoney(s);
+            document.getElementById('tjmMin').textContent = formatMoney(tjm);
+            document.getElementById('tjmReco').textContent = formatMoney(tjmReco);
+            document.getElementById('tauxHeure').textContent = formatMoney(tauxHeure);
+        }
+
+        function calculatePortage() {
+            const tjm = parseFloat(tjmPortage.value) || 0;
+            const frais = parseFloat(fraisPortage.value) || 8;
+            const cotisations = parseFloat(cotisationsPortage.value) || 12;
+
+            const fraisAmount = tjm * (frais / 100);
+            const cotisationsAmount = (tjm - fraisAmount) * (cotisations / 100);
+            const netJour = tjm - fraisAmount - cotisationsAmount;
+            const netAnnuel = netJour * 200;
+
+            document.getElementById('fraisPortageAmount').textContent = formatMoney(fraisAmount);
+            document.getElementById('cotisationsAmount').textContent = formatMoney(cotisationsAmount);
+            document.getElementById('salaireNetJour').textContent = formatMoney(netJour);
+            document.getElementById('salaireNetAnnuel').textContent = formatMoney(netAnnuel);
+        }
+
+        function formatMoney(num) {
+            return new Intl.NumberFormat('fr-FR', {
+                style: 'currency',
+                currency: 'EUR',
+                minimumFractionDigits: 0,
+                maximumFractionDigits: 0
+            }).format(num);
+        }
+
+        function switchTab(tab) {
+            document.querySelectorAll('.tab-content').forEach(el => el.classList.remove('active'));
+            document.querySelectorAll('.tab-btn').forEach(el => el.classList.remove('active'));
+            
+            document.getElementById(tab).classList.add('active');
+            event.target.classList.add('active');
+
+            if (tab === 'freelancer') calculateFreelance();
+            else calculatePortage();
+        }
+
+        function reset() {
+            salaire.value = '';
+            joursAnnee.value = '200';
+            tauxCharges.value = '25';
+            document.getElementById('joursAnneeValue').textContent = '200';
+            document.getElementById('tauxChargesValue').textContent = '25%';
+            calculateFreelance();
+        }
+
+        function shareResults() {
+            const tab = document.querySelector('.tab-content.active').id;
+            let text = '';
+            
+            if (tab === 'freelancer') {
+                text = `J'ai calculé mon TJM avec l'outil NGFI:\n` +
+                       `TJM recommandé: ${document.getElementById('tjmReco').textContent}\n` +
+                       `Taux/heure: ${document.getElementById('tauxHeure').textContent}\n` +
+                       `Essaie l'outil: https://ngfi.io`;
+            } else {
+                text = `Calculatrice de portage NGFI:\n` +
+                       `Salaire net/jour: ${document.getElementById('salaireNetJour').textContent}\n` +
+                       `Salaire net/an: ${document.getElementById('salaireNetAnnuel').textContent}\n` +
+                       `Essaie l'outil: https://ngfi.io`;
+            }
+
+            if (navigator.share) {
+                navigator.share({
+                    title: 'Calculateur TJM NGFI',
+                    text: text
+                });
+            } else {
+                alert('Partage:\n\n' + text);
+            }
+        }
+
+        // Initial calculation
+        calculateFreelance();
+    </script>
+</body>
+</html>
