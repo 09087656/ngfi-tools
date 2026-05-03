@@ -3,178 +3,121 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Calculateur TJM - NGFI</title>
+    <title>💵 Calculateur TJM - NGFI</title>
+    <script src="https://cdn.tailwindcss.com"></script>
     <style>
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-            line-height: 1.6;
-            color: #333;
-            background-color: #f5f5f5;
-            padding: 1rem;
-        }
-        .container {
-            max-width: 600px;
-            margin: 0 auto;
-            background: white;
-            border-radius: 12px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-            overflow: hidden;
-        }
-        header {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            padding: 2rem;
-            text-align: center;
-        }
-        header h1 {
-            margin-bottom: 0.5rem;
-            font-size: 1.8rem;
-        }
-        header p {
-            opacity: 0.9;
-            font-size: 1.1rem;
-        }
-        .form-content {
-            padding: 2rem;
-        }
-        .form-group {
-            margin-bottom: 1.5rem;
-        }
-        .form-group label {
-            display: block;
-            margin-bottom: 0.5rem;
-            font-weight: 600;
-            color: #555;
-        }
-        .form-group input {
-            width: 100%;
-            padding: 0.75rem;
-            border: 2px solid #ddd;
-            border-radius: 8px;
-            font-size: 1rem;
-            transition: border-color 0.3s;
-        }
-        .form-group input:focus {
-            outline: none;
-            border-color: #667eea;
-        }
-        .btn {
-            display: block;
-            width: 100%;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            border: none;
-            padding: 1rem;
-            font-size: 1.1rem;
-            font-weight: 600;
-            border-radius: 8px;
-            cursor: pointer;
-            transition: transform 0.2s;
-        }
-        .btn:hover {
-            transform: translateY(-2px);
-        }
-        .btn:active {
-            transform: translateY(0);
-        }
-        .result {
-            margin-top: 2rem;
-            padding: 1.5rem;
-            background: #f8f9ff;
-            border-radius: 8px;
-            border-left: 4px solid #667eea;
-            display: none;
-        }
-        .result h2 {
-            margin-top: 0;
-            color: #667eea;
-        }
-        .result-value {
-            font-size: 2.2rem;
-            font-weight: bold;
-            color: #333;
-            margin: 1rem 0;
-        }
-        .formula {
-            font-size: 0.9rem;
-            color: #666;
-            margin-top: 1rem;
-            padding-top: 1rem;
-            border-top: 1px solid #eee;
-        }
-        footer {
-            text-align: center;
-            padding: 2rem;
-            color: #666;
-            font-size: 0.9rem;
-        }
-        footer a {
-            color: #667eea;
-            text-decoration: none;
-        }
-        footer a:hover {
-            text-decoration: underline;
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto; }
+        .tj-badge {
+            font-size: 2.5rem;
+            font-weight: 900;
+            background: linear-gradient(135deg, #4F46E5 0%, #7C3AED 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
         }
     </style>
 </head>
-<body>
-    <div class="container">
-        <header>
-            <h1>💵 Calculateur TJM</h1>
-            <p>Calculez votre Taux Journalier Moyen optimal</p>
-        </header>
-        <div class="form-content">
-            <form id="tjmmForm">
-                <div class="form-group">
-                    <label for="annualCharges">Charges annuelles (€)</label>
-                    <input type="number" id="annualCharges" placeholder="Ex: 12000" min="0" required>
-                </div>
-                <div class="form-group">
-                    <label for="annualMargin">Marge souhaitée annuelle (€)</label>
-                    <input type="number" id="annualMargin" placeholder="Ex: 24000" min="0" required>
-                </div>
-                <div class="form-group">
-                    <label for="workingDays">Jours travaillés par an</label>
-                    <input type="number" id="workingDays" placeholder="Ex: 220" min="1" max="365" required>
-                </div>
-                <button type="submit" class="btn">Calculer mon TJM</button>
-            </form>
-            <div id="result" class="result">
-                <h2>Votre TJM optimal</h2>
-                <div class="result-value" id="tjmmValue">0 €/jour</div>
-                <p class="formula">
-                    Formule utilisée : TJM = (Charges annuelles + Marge annuelle) / Jours travaillés
-                </p>
+<body class="bg-gradient-to-br from-blue-50 to-indigo-100 min-h-screen flex items-center justify-center p-4">
+    <div class="bg-white rounded-lg shadow-lg max-w-md w-full p-8">
+        <!-- Header -->
+        <div class="text-center mb-8">
+            <h1 class="text-3xl font-bold text-gray-900 mb-2">💵 Calculateur TJM</h1>
+            <p class="text-gray-600">Calcule ton TJM optimal en fonction de tes charges</p>
+        </div>
+
+        <!-- Email Capture Form (Before Tool) -->
+        <form id="emailForm" class="mb-8">
+            <input type="email" id="userEmail" placeholder="ton@email.com" class="w-full px-4 py-2 border border-gray-300 rounded-lg mb-3" required>
+            <button type="submit" class="w-full bg-indigo-600 text-white py-2 rounded-lg font-semibold hover:bg-indigo-700">
+                Accéder à l'outil
+            </button>
+        </form>
+
+        <!-- Tool Content (Hidden until email) -->
+        <div id="toolContent" class="hidden space-y-6">
+            <div>
+                <label class="block text-sm font-medium text-gray-700 mb-2">Charges mensuelles (€)</label>
+                <input type="number" id="chargesInput" placeholder="Ex: 1500" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500" min="0" step="10">
+            </div>
+            
+            <div>
+                <label class="block text-sm font-medium text-gray-700 mb-2">Marge souhaitée (%)</label>
+                <input type="number" id="marginInput" placeholder="Ex: 30" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500" min="0" max="100" step="1">
+            </div>
+            
+            <div>
+                <label class="block text-sm font-medium text-gray-700 mb-2">Jours travaillés par mois</label>
+                <input type="number" id="daysInput" placeholder="Ex: 20" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500" min="1" max="31" step="1">
+            </div>
+            
+            <button id="calculateBtn" class="w-full bg-indigo-600 text-white py-2 rounded-lg font-semibold hover:bg-indigo-700 transition-colors">
+                Calculer mon TJM
+            </button>
+            
+            <div id="result" class="hidden bg-indigo-50 p-6 rounded-lg text-center">
+                <h2 class="text-xl font-bold text-indigo-800 mb-4">Résultat</h2>
+                <div class="tj-badge" id="tjDisplay">0 €</div>
+                <p class="text-sm text-gray-600 mt-2" id="details">TJM basé sur 0€ charges + 0% marge sur 0 jours</p>
             </div>
         </div>
-        <footer>
-            <p>Outil créé par <a href="https://ngfi.fr" target="_blank">NGFI</a> - Automatisez votre prospection freelance</p>
-            <p>Essayez NGFI gratuitement pour gérer votre activité de freelance</p>
-        </footer>
+
+        <!-- Footer NGFI CTA -->
+        <div class="mt-8 pt-6 border-t border-gray-200 text-center">
+            <p class="text-sm text-gray-600 mb-3">
+                <strong>NGFI</strong> fait ça automatiquement pour toi
+            </p>
+            <a href="https://ngfi.fr/demo" class="inline-block bg-gradient-to-r from-indigo-600 to-purple-600 text-white px-6 py-2 rounded-lg font-semibold hover:shadow-lg">
+                Essaie gratuitement
+            </a>
+        </div>
+
+        <!-- Logo NGFI -->
+        <div class="mt-6 text-center">
+            <a href="https://ngfi.fr" class="text-xs text-gray-500 hover:text-gray-700">
+                Powered by NGFI
+            </a>
+        </div>
     </div>
 
     <script>
-        document.getElementById('tjmmForm').addEventListener('submit', function(e) {
+        // Email capture
+        document.getElementById('emailForm').addEventListener('submit', async (e) => {
             e.preventDefault();
+            const email = document.getElementById('userEmail').value;
             
-            const charges = parseFloat(document.getElementById('annualCharges').value) || 0;
-            const margin = parseFloat(document.getElementById('annualMargin').value) || 0;
-            const days = parseFloat(document.getElementById('workingDays').value) || 0;
+            // POST to Google Sheets or Snov.io (placeholder webhook)
+            await fetch('https://hooks.zapier.com/hooks/catch/123456/abcdef/', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({
+                    email: email,
+                    tool: 'calculateur-tjm',
+                    timestamp: new Date().toISOString()
+                })
+            }).catch(() => {/* Silent fail for demo */});
+
+            // Show tool
+            document.getElementById('emailForm').classList.add('hidden');
+            document.getElementById('toolContent').classList.remove('hidden');
+        });
+
+        // Calculate TJM
+        document.getElementById('calculateBtn').addEventListener('click', () => {
+            const charges = parseFloat(document.getElementById('chargesInput').value) || 0;
+            const margin = parseFloat(document.getElementById('marginInput').value) || 0;
+            const days = parseFloat(document.getElementById('daysInput').value) || 0;
             
-            if (days <= 0) {
-                alert('Veuillez entrer un nombre de jours travaillés valide');
+            if (charges <= 0 || days <= 0) {
+                alert('Veuillez entrer des valeurs valides pour les charges et les jours travaillés');
                 return;
             }
             
-            const tjmm = (charges + margin) / days;
+            // Calculate TJM: (Charges * (1 + margin/100)) / days
+            const tjm = (charges * (1 + margin/100)) / days;
             
-            document.getElementById('tjmmValue').textContent = tjmm.toFixed(2) + ' €/jour';
-            document.getElementById('result').style.display = 'block';
+            document.getElementById('tjDisplay').textContent = new Intl.NumberFormat('fr-FR', { style: 'currency', currency: 'EUR' }).format(tjm);
+            document.getElementById('details').textContent = `TJM basé sur ${new Intl.NumberFormat('fr-FR', { style: 'currency', currency: 'EUR' }).format(charges)} charges + ${margin}% marge sur ${days} jours`;
+            document.getElementById('result').classList.remove('hidden');
         });
     </script>
 </body>
