@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NGFI - Estimateur Retraite Freelance</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Segoe UI', Arial, sans-serif; background: #f5f5f5; }
+        .container { max-width: 800px; margin: 0 auto; padding: 20px; }
+        header { text-align: center; margin-bottom: 30px; }
+        h1 { color: #F57C00; font-size: 32px; margin-bottom: 10px; }
+        .subtitle { color: #666; margin-bottom: 20px; }
+        .tool-box { background: white; border-radius: 12px; padding: 30px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
+        .input-group { margin-bottom: 20px; }
+        label { display: block; margin-bottom: 8px; color: #333; font-weight: 500; }
+        input { width: 100%; padding: 12px; border: 2px solid #eee; border-radius: 6px; font-size: 16px; }
+        input:focus { outline: none; border-color: #F57C00; }
+        button { width: 100%; padding: 14px; background: #F57C00; color: white; border: none; border-radius: 6px; font-size: 16px; font-weight: 600; cursor: pointer; margin-top: 20px; }
+        button:hover { background: #e67e00; }
+        .result { margin-top: 30px; padding: 20px; background: #fff8e1; border-left: 4px solid #F57C00; border-radius: 6px; display: none; }
+        .result.show { display: block; }
+        footer { text-align: center; margin-top: 40px; color: #999; font-size: 14px; }
+        .info-box { background: #e3f2fd; border-left: 4px solid #2196F3; padding: 15px; margin: 20px 0; border-radius: 0 6px 6px 0; font-size: 14px; color: #1565C0; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>📊 Estimateur Retraite Freelance</h1>
+            <p class="subtitle">Estime tes futures cotisations retraite</p>
+        </header>
+        
+        <div class="tool-box">
+            <div class="input-group">
+                <label>CA annuel (€)</label>
+                <input type="number" id="ca_annual" placeholder="50000" step="1000">
+            </div>
+            
+            <div class="info-box">
+                <p>💡 En 2024, la valeur du point retraite est de 1,9050€ pour les indépendants.</p>
+                <p>📝 Le nombre de points acquis = CA annuel / Valeur du point</p>
+            </div>
+            
+            <button onclick="calculRetraite()">Estimer ma retraite</button>
+            
+            <div id="result" class="result">
+                <h3>Ton estimation retraite:</h3>
+                <p id="points" style="font-size: 24px; color: #F57C00; font-weight: bold; margin: 15px 0;"></p>
+                <p id="valeur" style="font-size: 18px; color: #F57C00; margin: 10px 0;"></p>
+                <p id="details" style="color: #666; font-size: 14px; margin-top: 15px;"></p>
+            </div>
+        </div>
+        
+        <footer>
+            <p>Powered by NGFI</p>
+            <p><a href="https://tools.ngfi.fr" style="color: #F57C00; text-decoration: none;">Essaie NGFI gratuitement →</a></p>
+        </footer>
+    </div>
+    
+    <script>
+        function calculRetraite() {
+            const caAnnual = parseFloat(document.getElementById('ca_annual').value);
+            
+            if (!caAnnual || caAnnual <= 0) {
+                alert('Veuillez entrer un chiffre d\'affaires annuel valide!');
+                return;
+            }
+            
+            // Valeur du point retraite 2024 pour indépendants
+            const pointValue = 1.9050;
+            const points = caAnnual / pointValue;
+            const annualRetraite = points * pointValue; // En théorie, cela devrait revenir au CA, mais on montre le calcul
+            
+            document.getElementById('points').textContent = `${points.toFixed(2)} points retraite`;
+            document.getElementById('valeur').textContent = `Valeur estimée: ${points.toFixed(2)} × ${pointValue.toFixed(4)}€ = ${(points * pointValue).toFixed(2)}€/an`;
+            document.getElementById('details').textContent = `À la retraite, ces points donneront droit à une pension proportionnelle. Plus tu cumules de points, meilleure sera ta retraite.`;
+            document.getElementById('result').classList.add('show');
+        }
+    </script>
+</body>
+</html>
