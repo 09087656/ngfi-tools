@@ -1,0 +1,511 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Diagnostic gratuit en ligne — High Tech Clinic Auxerre</title>
+<meta name="description" content="Testez votre téléphone en 2 minutes depuis votre navigateur : écran tactile, pixels, haut-parleur, micro, appareils photo, capteurs, charge. Gratuit, sans application.">
+<meta name="theme-color" content="#07090C">
+<link rel="icon" href="logo-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@500;600;700&amp;family=Manrope:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
+<style>
+:root{--a:#4F8CFF;--ok:#3DDC97;--ko:#FF6B5E;--skip:#8C96A3}
+*{box-sizing:border-box}
+html,body{margin:0;background:#07090C;color:#E8ECF1;font-family:'Manrope',system-ui,sans-serif;font-size:16px;line-height:1.55;-webkit-tap-highlight-color:transparent}
+a{color:#E8ECF1}
+[hidden]{display:none!important}
+.disp{font-family:'Chakra Petch',sans-serif}
+.wrap{max-width:720px;margin:0 auto;padding:0 20px}
+header{border-bottom:1px solid #161B22}
+header .wrap{display:flex;align-items:center;justify-content:space-between;gap:12px;padding-top:14px;padding-bottom:14px}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;color:#fff;font-family:'Chakra Petch',sans-serif;font-weight:700;letter-spacing:.06em}
+.brand img{height:34px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:54px;padding:0 26px;border-radius:14px;background:var(--a);color:#05101F;font:inherit;font-weight:800;font-size:16px;text-decoration:none;border:0;cursor:pointer;transition:transform .2s,box-shadow .2s}
+.btn:hover{transform:translateY(-2px);box-shadow:0 10px 30px -8px var(--a)}
+.btn:disabled{opacity:.35;cursor:not-allowed;transform:none;box-shadow:none}
+.ghost{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:54px;padding:0 22px;border-radius:14px;background:transparent;color:#fff;border:1px solid #343D48;font:inherit;font-weight:700;font-size:16px;text-decoration:none;cursor:pointer}
+.yes{background:rgba(61,220,151,.12);border-color:rgba(61,220,151,.5);color:#C9F7E3}
+.no{background:rgba(255,107,94,.1);border-color:rgba(255,107,94,.5);color:#FFD3CE}
+.row{display:flex;flex-wrap:wrap;gap:12px}
+.row>*{flex:1 1 180px}
+.card{background:#0E1217;border:1px solid #222932;border-radius:24px;padding:clamp(20px,5vw,28px);display:flex;flex-direction:column;gap:20px;box-shadow:0 40px 80px -30px rgba(0,0,0,.7)}
+.kicker{font-family:'Chakra Petch',sans-serif;font-size:13px;font-weight:600;letter-spacing:.16em;color:var(--a)}
+h1,h2{margin:0;font-family:'Chakra Petch',sans-serif;color:#fff;line-height:1.05}
+h1{font-size:clamp(36px,8vw,56px)}
+h2{font-size:26px}
+p{margin:0}
+.muted{color:#9AA4B1}
+.small{font-size:14px}
+.progress{display:flex;gap:6px}
+.progress i{flex:1;height:5px;border-radius:5px;background:#222A33}
+.progress i.on{background:var(--a)}
+.ico{width:64px;height:64px;border-radius:18px;border:1px solid var(--a);display:flex;align-items:center;justify-content:center}
+.ico svg{width:32px;height:32px;stroke:var(--a);fill:none;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
+.list{display:flex;flex-direction:column;gap:10px;margin:0;padding:0;list-style:none}
+.list li{display:flex;align-items:center;gap:14px;background:#11161C;border:1px solid #222932;border-radius:14px;padding:14px 16px}
+.badge{margin-left:auto;font-size:13px;font-weight:800;padding:5px 10px;border-radius:999px;white-space:nowrap}
+.b-ok{background:rgba(61,220,151,.14);color:var(--ok)}
+.b-ko{background:rgba(255,107,94,.14);color:var(--ko)}
+.b-skip{background:#1A2028;color:var(--skip)}
+video{width:100%;max-height:52vh;border-radius:18px;background:#000;object-fit:cover}
+.meter{height:16px;border-radius:10px;background:#1A2028;overflow:hidden}
+.meter i{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--a),var(--ok));transition:width .08s}
+.bubble{width:96px;height:96px;border-radius:50%;border:2px solid var(--a);margin:10px auto;transition:transform .1s;box-shadow:0 0 30px -6px var(--a)}
+.big{font-family:'Chakra Petch',sans-serif;font-size:48px;font-weight:700;color:#fff;text-align:center}
+.note{background:#11161C;border:1px solid #222932;border-radius:14px;padding:14px 16px;font-size:14px;color:#B9C2CD}
+/* Plein écran : grille tactile et pixels */
+#full{position:fixed;inset:0;z-index:50;background:#000;touch-action:none;user-select:none;-webkit-user-select:none}
+#grid{position:absolute;inset:0;display:grid}
+#grid div{border:1px solid rgba(255,255,255,.12);background:#11161C}
+#grid div.hit{background:var(--a);border-color:var(--a)}
+#fullbar{position:absolute;left:0;right:0;bottom:0;padding:14px 16px calc(14px + env(safe-area-inset-bottom));display:flex;gap:10px;justify-content:center;pointer-events:none}
+#fullbar>*{pointer-events:auto}
+.pill{background:rgba(7,9,12,.85);border:1px solid #343D48;color:#fff;border-radius:999px;padding:10px 16px;font:700 14px 'Manrope',sans-serif;backdrop-filter:blur(6px)}
+button.pill{cursor:pointer}
+#fulltip{pointer-events:none;position:absolute;top:calc(16px + env(safe-area-inset-top));left:50%;transform:translateX(-50%);text-align:center;max-width:90%}
+@media (prefers-reduced-motion: reduce){.btn,.bubble{transition:none}}
+</style>
+</head>
+<body>
+<header><div class="wrap">
+<a class="brand" href="index.html"><img src="logo-icon.png" alt="">HIGH TECH CLINIC</a>
+<a href="index.html" class="small muted" style="text-decoration:none">← Retour au site</a>
+</div></header>
+
+<main class="wrap" style="padding-top:36px;padding-bottom:64px;display:flex;flex-direction:column;gap:24px">
+
+<!-- Accueil -->
+<section id="v-intro" class="card">
+<span class="kicker">DIAGNOSTIC GRATUIT</span>
+<h1>Votre téléphone,<br><span style="color:var(--a)">testé en 2 minutes.</span></h1>
+<p class="muted">Faites ce test <b style="color:#fff">directement sur le téléphone à vérifier</b>, depuis ce site. Aucune application à installer, rien n’est envoyé : tout reste sur votre appareil.</p>
+<ul class="list" id="intro-list"></ul>
+<p class="note">Votre navigateur va vous demander l’accès à la caméra et au micro pendant les tests : acceptez pour qu’on puisse les vérifier. Vous pouvez passer n’importe quel test.</p>
+<button class="btn" id="start">Lancer le diagnostic</button>
+</section>
+
+<!-- Test en cours -->
+<section id="v-test" class="card" hidden>
+<div style="display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap">
+<span class="small" style="font-weight:800;color:#fff">Test <span id="t-num">1</span> sur <span id="t-total">8</span></span>
+<button class="pill" id="skip" type="button" style="background:transparent">Passer ce test</button>
+</div>
+<div class="progress" id="progress"></div>
+<div class="ico" id="t-ico"></div>
+<div style="display:flex;flex-direction:column;gap:8px">
+<h2 id="t-title"></h2>
+<p class="muted" id="t-desc"></p>
+</div>
+<div id="t-body" style="display:flex;flex-direction:column;gap:16px"></div>
+</section>
+
+<!-- Résultat -->
+<section id="v-result" class="card" hidden>
+<span class="kicker">RÉSULTAT DU DIAGNOSTIC</span>
+<h2 id="r-title" style="font-size:32px"></h2>
+<p class="muted" id="r-sub"></p>
+<ul class="list" id="r-list"></ul>
+<div id="r-reco" class="note" hidden></div>
+<p class="note small">Ce test en ligne ne remplace pas un diagnostic en atelier : certains éléments (santé réelle de la batterie, Face ID, boutons, réseau) se vérifient en boutique, gratuitement.</p>
+<div class="row">
+<a class="btn" id="r-book" href="index.html#rdv">Prendre rendez-vous</a>
+<button class="ghost" id="r-again" type="button">Refaire le test</button>
+</div>
+</section>
+
+</main>
+
+<!-- Plein écran -->
+<div id="full" hidden>
+<div id="grid"></div>
+<div id="fulltip" class="pill"></div>
+<div id="fullbar"></div>
+</div>
+
+<script>
+(function () {
+var $ = function (q) { return document.querySelector(q); };
+var UA = navigator.userAgent;
+var isIOS = /iPad|iPhone|iPod/.test(UA) || (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
+var isTouch = ('ontouchstart' in window) || navigator.maxTouchPoints > 0;
+
+var ICONS = {
+  touch: '<svg viewBox="0 0 24 24"><path d="M9 11V5.5a1.5 1.5 0 0 1 3 0V11"></path><path d="M12 10.5V9a1.5 1.5 0 0 1 3 0v2"></path><path d="M15 10.5a1.5 1.5 0 0 1 3 0V15a6 6 0 0 1-6 6h-1a6 6 0 0 1-5-2.7L4 15.6a1.6 1.6 0 0 1 2.6-1.8L9 16"></path></svg>',
+  pixels: '<svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="3"></rect><rect x="7" y="7" width="4" height="4"></rect><rect x="13" y="13" width="4" height="4"></rect></svg>',
+  speaker: '<svg viewBox="0 0 24 24"><path d="M11 5 6 9H3v6h3l5 4z"></path><path d="M15.5 8.5a5 5 0 0 1 0 7"></path><path d="M18.5 5.5a9 9 0 0 1 0 13"></path></svg>',
+  mic: '<svg viewBox="0 0 24 24"><rect x="9" y="3" width="6" height="11" rx="3"></rect><path d="M5 11a7 7 0 0 0 14 0"></path><path d="M12 18v3"></path></svg>',
+  cam: '<svg viewBox="0 0 24 24"><path d="M4 8h3l2-3h6l2 3h3v11H4z"></path><circle cx="12" cy="13" r="3.5"></circle></svg>',
+  vib: '<svg viewBox="0 0 24 24"><rect x="7" y="3" width="10" height="18" rx="2"></rect><path d="M3 8v8M21 8v8"></path></svg>',
+  sensor: '<svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="8"></circle><path d="M12 4v3M12 17v3M4 12h3M17 12h3"></path><circle cx="12" cy="12" r="2"></circle></svg>',
+  charge: '<svg viewBox="0 0 24 24"><rect x="2" y="7" width="18" height="10" rx="2"></rect><path d="M22 10v4"></path><path d="M11 9l-2 3h4l-2 3"></path></svg>'
+};
+
+/* ---------- Définition des tests ---------- */
+var TESTS = [
+  { id: 'touch', name: 'Écran tactile', ico: 'touch', repair: 'Écran (tactile)',
+    title: 'Écran tactile', desc: 'Passez le doigt sur toute la grille jusqu’à ce que toutes les cases deviennent bleues. Une zone qui ne réagit pas signale un tactile abîmé.', run: runTouch },
+  { id: 'pixels', name: 'Affichage', ico: 'pixels', repair: 'Écran (affichage)',
+    title: 'Affichage et pixels', desc: 'L’écran va afficher plusieurs couleurs unies. Touchez l’écran pour passer à la suivante, et cherchez des points, lignes ou taches.', run: runPixels },
+  { id: 'speaker', name: 'Haut-parleur', ico: 'speaker', repair: 'Haut-parleur',
+    title: 'Haut-parleur', desc: 'Montez le volume et désactivez le mode silencieux, puis lancez le son.', run: runSpeaker },
+  { id: 'mic', name: 'Micro', ico: 'mic', repair: 'Micro',
+    title: 'Micro', desc: 'Autorisez le micro, puis parlez normalement : la jauge doit bouger.', run: runMic },
+  { id: 'camback', name: 'Appareil photo arrière', ico: 'cam', repair: 'Appareil photo arrière',
+    title: 'Appareil photo arrière', desc: 'Vérifiez que l’image est nette, sans tache, fissure ni flou permanent.', run: function (d) { runCam(d, 'environment'); } },
+  { id: 'camfront', name: 'Caméra avant', ico: 'cam', repair: 'Caméra avant',
+    title: 'Caméra avant (selfie)', desc: 'Même chose avec la caméra de face.', run: function (d) { runCam(d, 'user'); } },
+  { id: 'sensors', name: 'Capteurs de mouvement', ico: 'sensor', repair: 'Capteurs',
+    title: 'Capteurs de mouvement', desc: 'Inclinez doucement le téléphone dans tous les sens : la bulle doit suivre vos mouvements.', run: runSensors },
+  { id: 'vib', name: 'Vibreur', ico: 'vib', repair: 'Vibreur',
+    title: 'Vibreur', desc: 'Le téléphone va vibrer quelques secondes.', run: runVib, only: function () { return !!navigator.vibrate && !isIOS; } },
+  { id: 'charge', name: 'Batterie et port de charge', ico: 'charge', repair: 'Connecteur de charge',
+    title: 'Batterie et port de charge', desc: 'Branchez votre chargeur : on vérifie que le téléphone détecte bien la charge.', run: runCharge, only: function () { return !!navigator.getBattery; } }
+];
+
+var active = [], idx = 0, results = {}, cleanup = null;
+
+function buildIntro() {
+  active = TESTS.filter(function (t) { return !t.only || t.only(); });
+  var ul = $('#intro-list'); ul.innerHTML = '';
+  active.forEach(function (t) {
+    var li = document.createElement('li');
+    li.innerHTML = '<span class="ico" style="width:40px;height:40px;border-radius:12px">' + ICONS[t.ico] + '</span><span style="font-weight:700">' + t.name + '</span>';
+    ul.appendChild(li);
+  });
+  if (isIOS) {
+    var li = document.createElement('li');
+    li.innerHTML = '<span class="small muted">Sur iPhone, le vibreur et la charge ne peuvent pas être testés depuis un site : on les vérifie en boutique.</span>';
+    ul.appendChild(li);
+  }
+}
+
+function show(v) { ['intro', 'test', 'result'].forEach(function (k) { $('#v-' + k).hidden = k !== v; }); window.scrollTo(0, 0); }
+
+function start() { idx = 0; results = {}; show('test'); runCurrent(); }
+
+function runCurrent() {
+  if (cleanup) { try { cleanup(); } catch (e) {} cleanup = null; }
+  if (idx >= active.length) return showResult();
+  var t = active[idx];
+  $('#t-num').textContent = idx + 1; $('#t-total').textContent = active.length;
+  var p = $('#progress'); p.innerHTML = '';
+  active.forEach(function (_, i) { var b = document.createElement('i'); if (i <= idx) b.className = 'on'; p.appendChild(b); });
+  $('#t-ico').innerHTML = ICONS[t.ico];
+  $('#t-title').textContent = t.title; $('#t-desc').textContent = t.desc;
+  var body = $('#t-body'); body.innerHTML = '';
+  t.run(body);
+  window.scrollTo(0, 0);
+}
+
+function done(status, detail) {
+  var t = active[idx];
+  results[t.id] = { status: status, detail: detail || '' };
+  if (cleanup) { try { cleanup(); } catch (e) {} cleanup = null; }
+  closeFull();
+  idx++; runCurrent();
+}
+
+/* ---------- Éléments réutilisables ---------- */
+function el(html) { var d = document.createElement('div'); d.innerHTML = html.trim(); return d.firstChild; }
+function askYesNo(body, question, yesLabel, noLabel, failDetail) {
+  var q = el('<div style="display:flex;flex-direction:column;gap:12px"><p style="font-weight:800;color:#fff">' + question + '</p><div class="row"><button class="ghost yes" type="button">' + (yesLabel || 'Oui, ça marche') + '</button><button class="ghost no" type="button">' + (noLabel || 'Non, il y a un problème') + '</button></div></div>');
+  q.querySelector('.yes').onclick = function () { done('ok'); };
+  q.querySelector('.no').onclick = function () { done('ko', failDetail || ''); };
+  body.appendChild(q);
+  return q;
+}
+function errorBox(body, msg) {
+  body.appendChild(el('<p class="note">' + msg + '</p>'));
+  var r = el('<div class="row"><button class="ghost" type="button">Passer ce test</button></div>');
+  r.querySelector('button').onclick = function () { done('skip'); };
+  body.appendChild(r);
+}
+
+/* ---------- Plein écran ---------- */
+function openFull() {
+  var f = $('#full'); f.hidden = false;
+  if (f.requestFullscreen) { f.requestFullscreen().catch(function () {}); }
+}
+function closeFull() {
+  var f = $('#full'); f.hidden = true; f.style.background = '#000';
+  $('#grid').innerHTML = ''; $('#fullbar').innerHTML = ''; $('#fulltip').textContent = '';
+  if (document.fullscreenElement && document.exitFullscreen) document.exitFullscreen().catch(function () {});
+}
+
+/* ---------- 1. Écran tactile ---------- */
+function runTouch(body) {
+  if (!isTouch) body.appendChild(el('<p class="note">Cet appareil n’a pas d’écran tactile détecté : faites ce test sur le téléphone à vérifier (vous pouvez aussi utiliser la souris pour voir le principe).</p>'));
+  var b = el('<button class="btn" type="button">Commencer le test tactile</button>');
+  b.onclick = function () {
+    openFull();
+    var grid = $('#grid'); grid.innerHTML = '';
+    var W = window.innerWidth, H = window.innerHeight;
+    var cols = Math.max(5, Math.round(W / 70)), rows = Math.max(8, Math.round(H / 70));
+    grid.style.gridTemplateColumns = 'repeat(' + cols + ',1fr)';
+    grid.style.gridTemplateRows = 'repeat(' + rows + ',1fr)';
+    var total = cols * rows, hit = 0;
+    for (var i = 0; i < total; i++) grid.appendChild(document.createElement('div'));
+    var tip = $('#fulltip'); tip.textContent = 'Coloriez toutes les cases · 0 %';
+    var cells = grid.children;
+    function mark(x, y) {
+      var cx = Math.floor(x / window.innerWidth * cols), cy = Math.floor(y / window.innerHeight * rows);
+      if (cx < 0 || cy < 0 || cx >= cols || cy >= rows) return;
+      var c = cells[cy * cols + cx];
+      if (c && !c.classList.contains('hit')) {
+        c.classList.add('hit'); hit++;
+        var pct = Math.round(hit * 100 / total);
+        tip.textContent = 'Coloriez toutes les cases · ' + pct + ' %';
+        if (hit === total) { tip.textContent = 'Parfait, tout l’écran répond !'; setTimeout(function () { done('ok'); }, 700); }
+      }
+    }
+    var down = false;
+    var full = $('#full');
+    function onTouch(e) { if (!(e.target.closest && e.target.closest('button'))) e.preventDefault(); for (var i = 0; i < e.touches.length; i++) mark(e.touches[i].clientX, e.touches[i].clientY); }
+    function onDown(e) { down = true; mark(e.clientX, e.clientY); }
+    function onMove(e) { if (down) mark(e.clientX, e.clientY); }
+    function onUp() { down = false; }
+    full.addEventListener('touchstart', onTouch, { passive: false });
+    full.addEventListener('touchmove', onTouch, { passive: false });
+    full.addEventListener('mousedown', onDown); window.addEventListener('mousemove', onMove); window.addEventListener('mouseup', onUp);
+    var bar = $('#fullbar'); bar.innerHTML = '';
+    var stuck = el('<button class="pill" type="button" hidden>Certaines cases ne se colorient pas</button>');
+    stuck.onclick = function () {
+      bar.innerHTML = '';
+      var y = el('<button class="pill" type="button" style="border-color:rgba(255,107,94,.6)">Oui, terminer le test</button>');
+      var n = el('<button class="pill" type="button">Continuer à colorier</button>');
+      y.onclick = function () { done('ko', 'Zones tactiles sans réaction (' + Math.round(hit * 100 / total) + ' % de l’écran OK)'); };
+      n.onclick = function () { bar.innerHTML = ''; bar.appendChild(stuck); stuck.hidden = true; idle(); };
+      bar.appendChild(y); bar.appendChild(n);
+    };
+    bar.appendChild(stuck);
+    var idleT = 0;
+    function idle() { clearTimeout(idleT); idleT = setTimeout(function () { if (hit < total) stuck.hidden = false; }, 6000); }
+    idle();
+    var _mark = mark; mark = function (x, y) { var before = hit; _mark(x, y); if (hit !== before) { stuck.hidden = true; idle(); } };
+    cleanup = function () { clearTimeout(idleT); window.removeEventListener('mousemove', onMove); window.removeEventListener('mouseup', onUp); full.removeEventListener('touchstart', onTouch); full.removeEventListener('touchmove', onTouch); full.removeEventListener('mousedown', onDown); };
+  };
+  body.appendChild(b);
+}
+
+/* ---------- 2. Pixels ---------- */
+function runPixels(body) {
+  var b = el('<button class="btn" type="button">Afficher les couleurs</button>');
+  b.onclick = function () {
+    var colors = ['#FF0000', '#00FF00', '#0000FF', '#FFFFFF', '#000000'], k = 0;
+    openFull();
+    var f = $('#full'); f.style.background = colors[0];
+    var tip = $('#fulltip'); tip.textContent = 'Touchez l’écran pour la couleur suivante (1/' + colors.length + ')';
+    function next() {
+      k++;
+      if (k >= colors.length) {
+        closeFull(); f.removeEventListener('click', next);
+        b.remove();
+        askYesNo(body, 'Avez-vous vu des points, des lignes ou des taches ?', 'Non, l’écran est parfait', 'Oui, j’ai vu un défaut', 'Défaut d’affichage signalé (pixels, lignes ou taches)');
+        return;
+      }
+      f.style.background = colors[k];
+      tip.textContent = 'Touchez l’écran pour la couleur suivante (' + (k + 1) + '/' + colors.length + ')';
+    }
+    setTimeout(function () { f.addEventListener('click', next); }, 300);
+    cleanup = function () { f.removeEventListener('click', next); };
+  };
+  body.appendChild(b);
+}
+
+/* ---------- 3. Haut-parleur ---------- */
+function runSpeaker(body) {
+  var ctx = null;
+  var b = el('<button class="btn" type="button">Jouer le son</button>');
+  b.onclick = function () {
+    try {
+      ctx = ctx || new (window.AudioContext || window.webkitAudioContext)();
+      ctx.resume && ctx.resume();
+      var notes = [523.25, 659.25, 783.99, 1046.5], t0 = ctx.currentTime;
+      notes.forEach(function (f, i) {
+        var o = ctx.createOscillator(), g = ctx.createGain();
+        o.type = 'sine'; o.frequency.value = f;
+        g.gain.setValueAtTime(0.0001, t0 + i * 0.35);
+        g.gain.exponentialRampToValueAtTime(0.6, t0 + i * 0.35 + 0.03);
+        g.gain.exponentialRampToValueAtTime(0.0001, t0 + i * 0.35 + 0.32);
+        o.connect(g).connect(ctx.destination); o.start(t0 + i * 0.35); o.stop(t0 + i * 0.35 + 0.34);
+      });
+      b.textContent = 'Rejouer le son';
+      if (!body.querySelector('.yes')) askYesNo(body, 'Avez-vous entendu 4 notes, clairement et sans grésillement ?', 'Oui, son clair', 'Non / son faible ou qui grésille', 'Son absent, faible ou qui grésille');
+    } catch (e) { errorBox(body, 'Votre navigateur ne permet pas de jouer le son de test.'); }
+  };
+  body.appendChild(b);
+  cleanup = function () { if (ctx && ctx.close) ctx.close(); };
+}
+
+/* ---------- 4. Micro ---------- */
+function runMic(body) {
+  var stream = null, ctx = null, raf = 0;
+  var b = el('<button class="btn" type="button">Autoriser le micro</button>');
+  b.onclick = function () {
+    if (!navigator.mediaDevices || !navigator.mediaDevices.getUserMedia) return errorBox(body, 'Votre navigateur ne permet pas d’accéder au micro.');
+    navigator.mediaDevices.getUserMedia({ audio: true }).then(function (s) {
+      stream = s; b.remove();
+      ctx = new (window.AudioContext || window.webkitAudioContext)();
+      var an = ctx.createAnalyser(); an.fftSize = 512;
+      ctx.createMediaStreamSource(s).connect(an);
+      var data = new Uint8Array(an.fftSize), peakTicks = 0;
+      var m = el('<div style="display:flex;flex-direction:column;gap:10px"><div class="meter"><i></i></div><p class="small muted" id="mic-st">Parlez maintenant…</p></div>');
+      body.appendChild(m);
+      var bar = m.querySelector('i'), st = m.querySelector('#mic-st');
+      (function loop() {
+        an.getByteTimeDomainData(data);
+        var sum = 0; for (var i = 0; i < data.length; i++) { var v = (data[i] - 128) / 128; sum += v * v; }
+        var rms = Math.sqrt(sum / data.length), lvl = Math.min(100, Math.round(rms * 400));
+        bar.style.width = lvl + '%';
+        if (lvl > 18) peakTicks++;
+        if (peakTicks > 25) { st.textContent = 'Le micro capte bien votre voix ✓'; cancelAnimationFrame(raf); setTimeout(function () { done('ok'); }, 900); return; }
+        raf = requestAnimationFrame(loop);
+      })();
+      var r = el('<div class="row"><button class="ghost no" type="button">La jauge ne bouge pas</button></div>');
+      r.querySelector('button').onclick = function () { done('ko', 'Le micro ne capte pas ou très faiblement'); };
+      body.appendChild(r);
+    }).catch(function () { errorBox(body, 'Accès au micro refusé. Autorisez-le dans les réglages du navigateur, ou passez ce test.'); });
+  };
+  body.appendChild(b);
+  cleanup = function () { cancelAnimationFrame(raf); if (stream) stream.getTracks().forEach(function (t) { t.stop(); }); if (ctx && ctx.close) ctx.close(); };
+}
+
+/* ---------- 5/6. Caméras ---------- */
+function runCam(body, facing) {
+  var stream = null;
+  var b = el('<button class="btn" type="button">Ouvrir ' + (facing === 'user' ? 'la caméra avant' : 'l’appareil photo arrière') + '</button>');
+  b.onclick = function () {
+    if (!navigator.mediaDevices || !navigator.mediaDevices.getUserMedia) return errorBox(body, 'Votre navigateur ne permet pas d’accéder à la caméra.');
+    navigator.mediaDevices.getUserMedia({ video: { facingMode: { ideal: facing } }, audio: false }).then(function (s) {
+      stream = s; b.remove();
+      var v = document.createElement('video'); v.setAttribute('playsinline', ''); v.muted = true; v.autoplay = true; v.srcObject = s;
+      if (facing === 'user') v.style.transform = 'scaleX(-1)';
+      body.appendChild(v); v.play && v.play().catch(function () {});
+      var settings = s.getVideoTracks()[0].getSettings ? s.getVideoTracks()[0].getSettings() : {};
+      if (settings.facingMode && settings.facingMode !== facing) body.appendChild(el('<p class="note small">Votre appareil n’a peut-être qu’une seule caméra, ou le navigateur a ouvert l’autre.</p>'));
+      askYesNo(body, 'L’image est-elle nette et sans défaut ?', 'Oui, image nette', 'Non : floue, tachée ou noire', facing === 'user' ? 'Caméra avant défectueuse' : 'Appareil photo arrière défectueux');
+    }).catch(function (e) {
+      if (e && (e.name === 'NotFoundError' || e.name === 'OverconstrainedError')) return errorBox(body, 'Aucune caméra de ce type n’a été trouvée sur cet appareil.');
+      errorBox(body, 'Accès à la caméra refusé. Autorisez-le dans les réglages du navigateur, ou passez ce test.');
+    });
+  };
+  body.appendChild(b);
+  cleanup = function () { if (stream) stream.getTracks().forEach(function (t) { t.stop(); }); };
+}
+
+/* ---------- 7. Capteurs ---------- */
+function runSensors(body) {
+  var handler = null, moved = 0, last = null;
+  function begin() {
+    var bub = el('<div class="bubble"></div>'); body.appendChild(bub);
+    var st = el('<p class="small muted" style="text-align:center">Inclinez le téléphone…</p>'); body.appendChild(st);
+    handler = function (e) {
+      var g = e.accelerationIncludingGravity; if (!g || g.x == null) return;
+      var x = Math.max(-1, Math.min(1, g.x / 9.8)), y = Math.max(-1, Math.min(1, g.y / 9.8));
+      bub.style.transform = 'translate(' + (-x * 90) + 'px,' + (y * 60) + 'px)';
+      if (last) moved += Math.abs(g.x - last.x) + Math.abs(g.y - last.y);
+      last = { x: g.x, y: g.y };
+      if (moved > 60) { st.textContent = 'Les capteurs réagissent bien ✓'; window.removeEventListener('devicemotion', handler); setTimeout(function () { done('ok'); }, 800); }
+    };
+    window.addEventListener('devicemotion', handler);
+    setTimeout(function () {
+      if (moved === 0 && handler) {
+        st.textContent = 'Aucun mouvement détecté.';
+        var r = el('<div class="row"><button class="ghost no" type="button">La bulle ne bouge pas</button><button class="ghost" type="button">Passer</button></div>');
+        r.children[0].onclick = function () { done('ko', 'Capteurs de mouvement sans réaction'); };
+        r.children[1].onclick = function () { done('skip'); };
+        body.appendChild(r);
+      }
+    }, 6000);
+  }
+  if (!('DeviceMotionEvent' in window)) return errorBox(body, 'Cet appareil ou ce navigateur n’a pas de capteur de mouvement accessible.');
+  var b = el('<button class="btn" type="button">Démarrer</button>');
+  b.onclick = function () {
+    b.remove();
+    if (typeof DeviceMotionEvent.requestPermission === 'function') {
+      DeviceMotionEvent.requestPermission().then(function (p) { p === 'granted' ? begin() : errorBox(body, 'Accès aux capteurs refusé.'); }).catch(function () { errorBox(body, 'Accès aux capteurs refusé.'); });
+    } else begin();
+  };
+  body.appendChild(b);
+  cleanup = function () { if (handler) window.removeEventListener('devicemotion', handler); };
+}
+
+/* ---------- 8. Vibreur ---------- */
+function runVib(body) {
+  var b = el('<button class="btn" type="button">Faire vibrer</button>');
+  b.onclick = function () {
+    navigator.vibrate([400, 150, 400, 150, 600]);
+    b.textContent = 'Refaire vibrer';
+    if (!body.querySelector('.yes')) askYesNo(body, 'Le téléphone a-t-il vibré ?', 'Oui, il a vibré', 'Non, rien', 'Le vibreur ne fonctionne pas');
+  };
+  body.appendChild(b);
+  cleanup = function () { navigator.vibrate && navigator.vibrate(0); };
+}
+
+/* ---------- 9. Batterie et charge ---------- */
+function runCharge(body) {
+  var batt = null, onChg = null, timer = 0;
+  navigator.getBattery().then(function (bt) {
+    batt = bt;
+    var box = el('<div style="display:flex;flex-direction:column;gap:8px;align-items:center"><div class="big" id="bt-l"></div><p class="muted" id="bt-s"></p></div>');
+    body.appendChild(box);
+    function paint() {
+      box.querySelector('#bt-l').textContent = Math.round(bt.level * 100) + ' %';
+      box.querySelector('#bt-s').textContent = bt.charging ? 'En charge ⚡' : 'Pas en charge : branchez le chargeur';
+    }
+    paint();
+    if (bt.charging) {
+      box.querySelector('#bt-s').textContent = 'En charge ⚡ : le port de charge fonctionne';
+      setTimeout(function () { done('ok', 'Batterie à ' + Math.round(bt.level * 100) + ' %'); }, 1200);
+      return;
+    }
+    onChg = function () { paint(); if (bt.charging) { box.querySelector('#bt-s').textContent = 'Charge détectée ⚡ : le port fonctionne'; setTimeout(function () { done('ok', 'Batterie à ' + Math.round(bt.level * 100) + ' %'); }, 1000); } };
+    bt.addEventListener('chargingchange', onChg);
+    timer = setTimeout(function () {
+      var r = el('<div class="row"><button class="ghost no" type="button">J’ai branché, rien ne se passe</button><button class="ghost" type="button">Je n’ai pas de chargeur</button></div>');
+      r.children[0].onclick = function () { done('ko', 'Charge non détectée : port de charge ou câble à vérifier'); };
+      r.children[1].onclick = function () { done('skip'); };
+      body.appendChild(r);
+    }, 8000);
+  }).catch(function () { errorBox(body, 'Votre navigateur ne donne pas accès à la batterie.'); });
+  cleanup = function () { clearTimeout(timer); if (batt && onChg) batt.removeEventListener('chargingchange', onChg); };
+}
+
+/* ---------- Résultat ---------- */
+function showResult() {
+  show('result');
+  var ul = $('#r-list'); ul.innerHTML = '';
+  var ko = [], ok = 0, skip = 0;
+  active.forEach(function (t) {
+    var r = results[t.id] || { status: 'skip' };
+    if (r.status === 'ok') ok++; else if (r.status === 'ko') ko.push(t); else skip++;
+    var label = r.status === 'ok' ? 'OK' : r.status === 'ko' ? 'Problème' : 'Non testé';
+    var cls = r.status === 'ok' ? 'b-ok' : r.status === 'ko' ? 'b-ko' : 'b-skip';
+    var li = document.createElement('li');
+    li.innerHTML = '<span class="ico" style="width:40px;height:40px;border-radius:12px">' + ICONS[t.ico] + '</span><span style="display:flex;flex-direction:column"><b style="color:#fff">' + t.name + '</b>' + (r.detail ? '<span class="small muted">' + r.detail + '</span>' : '') + '</span><span class="badge ' + cls + '">' + label + '</span>';
+    ul.appendChild(li);
+  });
+  var reco = $('#r-reco');
+  if (ko.length) {
+    $('#r-title').textContent = ko.length === 1 ? '1 problème détecté' : ko.length + ' problèmes détectés';
+    $('#r-sub').textContent = 'Bonne nouvelle : c’est réparable chez nous, en 1h à 48h, avec 3 mois de garantie.';
+    reco.hidden = false;
+    reco.innerHTML = '<b style="color:#fff">Réparation conseillée :</b> ' + ko.map(function (t) { return t.repair; }).join(', ') + '.';
+  } else {
+    $('#r-title').textContent = ok ? 'Tout semble en ordre ✓' : 'Aucun test réalisé';
+    $('#r-sub').textContent = ok ? 'Les éléments testés fonctionnent. Un doute ? Passez en boutique pour un diagnostic complet gratuit.' : 'Relancez le diagnostic pour tester votre téléphone.';
+    reco.hidden = true;
+  }
+  var summary = ko.length ? 'Diagnostic en ligne : ' + ko.map(function (t) { return t.repair; }).join(', ') : 'Diagnostic en ligne : aucun problème détecté';
+  $('#r-book').href = 'index.html?diag=' + encodeURIComponent(summary) + '#rdv';
+}
+
+$('#start').onclick = start;
+$('#skip').onclick = function () { done('skip'); };
+$('#r-again').onclick = function () { buildIntro(); show('intro'); };
+buildIntro();
+})();
+</script>
+</body>
+</html>

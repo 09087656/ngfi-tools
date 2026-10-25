@@ -69,6 +69,7 @@ a{color:#E8ECF1}a:hover{color:#FFFFFF}
 <span class="disp" style="font-weight: 700; font-size: 19px; letter-spacing: 0.06em">HIGH TECH CLINIC</span>
 </a>
 <nav aria-label="Navigation principale" style="display: flex; flex-wrap: wrap; align-items: center; gap: 26px; font-size: 15px; font-weight: 700">
+<a href="diagnostic.html" class="navlink" style="text-decoration: none; color: #B9C2CD">Diagnostic gratuit</a>
 <a href="#reparations" class="navlink" style="text-decoration: none; color: #B9C2CD">Réparations</a>
 <a href="#boutique" class="navlink" style="text-decoration: none; color: #B9C2CD">Boutique</a>
 <a href="#services" class="navlink" style="text-decoration: none; color: #B9C2CD">Services</a>
@@ -90,6 +91,7 @@ Atelier de réparation · Auxerre
 <a href="#rdv" class="btn">Prendre rendez-vous</a>
 <a href="tel:0954867029" class="ghost">09 54 86 70 29</a>
 </div>
+<a href="diagnostic.html" style="align-self: flex-start; display: inline-flex; align-items: center; gap: 10px; font-weight: 700; color: #B9C2CD; text-decoration: none"><span style="width: 8px; height: 8px; border-radius: 50%; background: var(--a); box-shadow: 0 0 10px var(--a)"></span>Pas sûr de la panne ? <span style="color: #FFFFFF; text-decoration: underline; text-underline-offset: 4px">Testez votre téléphone gratuitement en 2 min</span> →</a>
 </div>
 <div class="stage" style="flex: 1 1 420px; min-width: 0; height: 600px; position: relative; display: flex; align-items: center; justify-content: center">
 <div class="floor" aria-hidden="true" style="position: absolute; left: -20%; right: -20%; bottom: -120px; height: 520px"></div>
@@ -209,6 +211,13 @@ Atelier de réparation · Auxerre
 <span class="disp" style="font-size: 14px; font-weight: 600; letter-spacing: 0.16em; color: var(--a)">RÉPARATIONS</span>
 <h2 class="disp" style="margin: 0; font-size: clamp(32px, 4.4vw, 50px); line-height: 1.05; color: #FFFFFF">De l'écran cassé à la carte mère noyée.</h2>
 </div>
+<a href="diagnostic.html" class="diag-band" style="display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 20px; text-decoration: none; background: linear-gradient(120deg, #10203A, #11161C 60%); border: 1px solid #2A3B57; border-radius: 22px; padding: 24px 28px">
+<span style="display: flex; align-items: center; gap: 18px; flex: 1 1 380px; min-width: 0">
+<span style="flex-shrink: 0; width: 52px; height: 52px; border-radius: 14px; border: 1px solid var(--a); display: flex; align-items: center; justify-content: center"><svg viewBox="0 0 24 24" aria-hidden="true" width="26" height="26" fill="none" style="stroke: var(--a)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="2" width="12" height="20" rx="2.5"></rect><path d="M8.5 12h1.5l1-2 2 4 1-2h1.5"></path></svg></span>
+<span style="display: flex; flex-direction: column; gap: 4px"><span class="disp" style="font-size: 21px; font-weight: 700; color: #FFFFFF">Diagnostic gratuit en ligne</span><span style="color: #A7B0BC; font-size: 15px">Écran, son, micro, caméras, capteurs, charge : testez votre téléphone en 2 minutes, sans application.</span></span>
+</span>
+<span class="btn">Lancer le test</span>
+</a>
 <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 18px">
 <div class="tilt" style="background: #11161C; border: 1px solid #222932; border-radius: 22px; padding: 30px; display: flex; flex-direction: column; gap: 14px">
 <span class="disp" style="font-size: 14px; color: #8C96A3; font-weight: 600">01</span>
@@ -489,6 +498,12 @@ render();
   f.loading = 'lazy'; f.referrerPolicy = 'no-referrer-when-downgrade';
   f.style.cssText = 'position:absolute;inset:0;width:100%;height:100%;border:0;filter:invert(.9) hue-rotate(180deg) saturate(.6)';
   box.appendChild(f);
+})();
+(function () {
+  var d = new URLSearchParams(location.search).get('diag');
+  if (!d) return;
+  s.device = 'Smartphone'; s.issue = d.slice(0, 200); s.step = 3;
+  setTimeout(function () { var r = document.getElementById('rdv'); if (r) r.scrollIntoView({ block: 'start' }); }, 400);
 })();
 render();
 })();
