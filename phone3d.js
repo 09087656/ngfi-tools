@@ -153,7 +153,9 @@
   P3D.mount = function (el) {
     if (!el) return;
     if (canvas.parentNode !== el) el.appendChild(canvas);
+    P3D._observe(el);
     resize();
+    requestAnimationFrame(resize);
   };
   P3D.focus = function (testId) {
     clearFx(); autoSpin = false; dragOff = { x: 0, y: 0 }; tiltV = { x: 0, y: 0 };
@@ -196,6 +198,7 @@
     camera.updateProjectionMatrix();
   }
   window.addEventListener('resize', resize);
+  if (window.ResizeObserver) { var ro = new ResizeObserver(function () { resize(); }); P3D._observe = function (el) { ro.disconnect(); ro.observe(el); }; } else { P3D._observe = noop; }
 
   var clock = new T.Clock(), cycleCols = [new T.Color('#FF2020'), new T.Color('#20FF40'), new T.Color('#2060FF'), new T.Color('#FFFFFF')];
   function frame() {
