@@ -53,6 +53,9 @@ video{width:100%;max-height:52vh;border-radius:18px;background:#000;object-fit:c
 .meter i{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--a),var(--ok));transition:width .08s}
 .bubble{width:96px;height:96px;border-radius:50%;border:2px solid var(--a);margin:10px auto;transition:transform .1s;box-shadow:0 0 30px -6px var(--a)}
 .big{font-family:'Chakra Petch',sans-serif;font-size:48px;font-weight:700;color:#fff;text-align:center}
+.stage3d{position:relative;border-radius:20px;background:radial-gradient(60% 60% at 50% 45%,rgba(79,140,255,.18),transparent 70%);margin:-4px 0}
+.stage3d:empty{display:none}
+.has3d #t-ico{display:none}
 .note{background:#11161C;border:1px solid #222932;border-radius:14px;padding:14px 16px;font-size:14px;color:#B9C2CD}
 /* Plein écran : grille tactile et pixels */
 #full{position:fixed;inset:0;z-index:50;background:#000;touch-action:none;user-select:none;-webkit-user-select:none}
@@ -80,6 +83,7 @@ button.pill{cursor:pointer}
 <span class="kicker">DIAGNOSTIC GRATUIT</span>
 <h1>Votre téléphone,<br><span style="color:var(--a)">testé en 2 minutes.</span></h1>
 <p class="muted">Faites ce test <b style="color:#fff">directement sur le téléphone à vérifier</b>, depuis ce site. Aucune application à installer, rien n’est envoyé : tout reste sur votre appareil.</p>
+<div class="stage3d" id="i-3d" style="height:260px"></div>
 <ul class="list" id="intro-list"></ul>
 <p class="note">Votre navigateur va vous demander l’accès à la caméra et au micro pendant les tests : acceptez pour qu’on puisse les vérifier. Vous pouvez passer n’importe quel test.</p>
 <button class="btn" id="start">Lancer le diagnostic</button>
@@ -93,6 +97,7 @@ button.pill{cursor:pointer}
 </div>
 <div class="progress" id="progress"></div>
 <div class="ico" id="t-ico"></div>
+<div class="stage3d" id="t-3d" style="height:240px"></div>
 <div style="display:flex;flex-direction:column;gap:8px">
 <h2 id="t-title"></h2>
 <p class="muted" id="t-desc"></p>
@@ -105,6 +110,8 @@ button.pill{cursor:pointer}
 <span class="kicker">RÉSULTAT DU DIAGNOSTIC</span>
 <h2 id="r-title" style="font-size:32px"></h2>
 <p class="muted" id="r-sub"></p>
+<div class="stage3d" id="r-3d" style="height:300px"></div>
+<p class="small muted" id="r-3d-hint" style="text-align:center;margin-top:-8px" hidden>Tournez le téléphone avec le doigt · en rouge : les pièces à réparer</p>
 <ul class="list" id="r-list"></ul>
 <div id="r-reco" class="note" hidden></div>
 <p class="note small">Ce test en ligne ne remplace pas un diagnostic en atelier : certains éléments (santé réelle de la batterie, Face ID, boutons, réseau) se vérifient en boutique, gratuitement.</p>
@@ -192,6 +199,7 @@ function runCurrent() {
   var p = $('#progress'); p.innerHTML = '';
   active.forEach(function (_, i) { var b = document.createElement('i'); if (i <= idx) b.className = 'on'; p.appendChild(b); });
   $('#t-ico').innerHTML = ICONS[t.ico];
+  if (window.P3D && P3D.ok) { document.body.classList.add('has3d'); P3D.mount($('#t-3d')); P3D.focus(t.id); }
   $('#t-title').textContent = t.title; $('#t-desc').textContent = t.desc;
   var body = $('#t-body'); body.innerHTML = '';
   t.run(body);
@@ -200,6 +208,7 @@ function runCurrent() {
 
 function done(status, detail) {
   var t = active[idx];
+  if (!t) return;
   results[t.id] = { status: status, detail: detail || '' };
   if (cleanup) { try { cleanup(); } catch (e) {} cleanup = null; }
   closeFull();
@@ -403,7 +412,7 @@ function runSensors(body) {
     handler = function (e) {
       var g = e.accelerationIncludingGravity; if (!g || g.x == null) return;
       var x = Math.max(-1, Math.min(1, g.x / 9.8)), y = Math.max(-1, Math.min(1, g.y / 9.8));
-      bub.style.transform = 'translate(' + (-x * 90) + 'px,' + (y * 60) + 'px)';
+      bub.style.transform = 'translate(' + (-x * 90) + 'px,' + (y * 60) + 'px)'; if (window.P3D) P3D.tilt(-x, y);
       if (last) moved += Math.abs(g.x - last.x) + Math.abs(g.y - last.y);
       last = { x: g.x, y: g.y };
       if (moved > 60) { st.textContent = 'Les capteurs réagissent bien ✓'; window.removeEventListener('devicemotion', handler); setTimeout(function () { done('ok'); }, 800); }
@@ -435,7 +444,7 @@ function runSensors(body) {
 function runVib(body) {
   var b = el('<button class="btn" type="button">Faire vibrer</button>');
   b.onclick = function () {
-    navigator.vibrate([400, 150, 400, 150, 600]);
+    navigator.vibrate([400, 150, 400, 150, 600]); if (window.P3D) P3D.shake();
     b.textContent = 'Refaire vibrer';
     if (!body.querySelector('.yes')) askYesNo(body, 'Le téléphone a-t-il vibré ?', 'Oui, il a vibré', 'Non, rien', 'Le vibreur ne fonctionne pas');
   };
@@ -475,6 +484,7 @@ function runCharge(body) {
 /* ---------- Résultat ---------- */
 function showResult() {
   show('result');
+  if (window.P3D && P3D.ok) { P3D.mount($('#r-3d')); P3D.results(results); $('#r-3d-hint').hidden = false; }
   var ul = $('#r-list'); ul.innerHTML = '';
   var ko = [], ok = 0, skip = 0;
   active.forEach(function (t) {
@@ -503,9 +513,13 @@ function showResult() {
 
 $('#start').onclick = start;
 $('#skip').onclick = function () { done('skip'); };
-$('#r-again').onclick = function () { buildIntro(); show('intro'); };
+$('#r-again').onclick = function () { buildIntro(); show('intro'); mountIntro(); };
 buildIntro();
+function mountIntro() { if (window.P3D && P3D.ok) { P3D.mount($('#i-3d')); P3D.results({}); } }
+window.addEventListener('load', mountIntro);
 })();
 </script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="phone3d.js"></script>
 </body>
 </html>
